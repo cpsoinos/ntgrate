@@ -18,3 +18,23 @@
     <p>You've sold <%= @listings.sold.count %> <%= @listings.sold.count == 1 ? "property" : "properties" %>.</p>
   <% end %>
 <% end %>
+
+<!-- social media accounts -->
+
+<% if @facebook_page.present? %>
+  <!-- something -->
+<% else %>
+  <%= link_to "Add a Facebook page", "#" %>
+<% end %>
+
+<% if @twitter_account.present? %>
+  <!-- something -->
+<% else %>
+  <%= link_to "Add a Twitter account", "#" %>
+<% end %>
+
+<% if @instagram_account.present? %>
+  <!-- something -->
+<% else %>
+  <%= link_to "Add an Instagram account", "#" %>
+<% end %>
