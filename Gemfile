@@ -23,6 +23,7 @@ group :development, :local, :test do
   gem 'sextant'
   gem 'better_errors'
   gem 'lograge'
+  gem 'faker'
 end
 
 group :test do
