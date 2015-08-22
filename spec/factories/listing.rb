@@ -19,6 +19,7 @@ FactoryGirl.define do
     listing_type "for_sale"
     pets_allowed true
     square_feet 1200
+    user
 
     trait :sold do
       sold_at Faker::Date.backward(2)
