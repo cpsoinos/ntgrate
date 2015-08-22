@@ -56,6 +56,14 @@ class User < ActiveRecord::Base
         # user.skip_confirmation!
         user.save!
       end
+    else
+      # Update the user's attributes from the new OAuth
+      user.update_attributes({
+        first_name: auth.info.first_name,
+        last_name: auth.info.last_name,
+        full_name: auth.info.name,
+        image: auth.info.image
+      })
     end
 
     # Associate the identity with the user if needed
