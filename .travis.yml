@@ -3,8 +3,8 @@ rvm:
   - 2.2.0
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - psql -c "CREATE ROLE real_estate WITH PASSWORD 'real_estate';" -U postgres
-  - psql -c "ALTER ROLE real_estate WITH CREATEDB;" -U postgres
+  # - psql -c "CREATE ROLE real_estate WITH PASSWORD 'real_estate';" -U postgres
+  # - psql -c "ALTER ROLE real_estate WITH CREATEDB;" -U postgres
   # - psql -c "CREATE USER real_estate WITH PASSWORD 'password1';" -U postgres
-  - psql -c 'CREATE DATABASE real_estate_test;' -U real_estate -P password1
+  # - psql -c 'CREATE DATABASE real_estate_test;' -U real_estate -P password1
   # - psql -c "ALTER DATABASE real_estate_test OWNER TO real_estate;" -U postgres

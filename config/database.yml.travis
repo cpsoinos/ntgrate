@@ -1,6 +1,4 @@
 test:
   adapter: postgresql
-  encoding: unicode
-  database: real_estate_test
-  username: real_estate
-  password: password1
+  database: travis_ci_test
+  username: postgres
