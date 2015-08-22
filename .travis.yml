@@ -3,4 +3,4 @@ rvm:
   - 2.2.0
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database real_estate_test;' -U real_estate
+  - psql -c 'create database real_estate_test;' -U postgres
