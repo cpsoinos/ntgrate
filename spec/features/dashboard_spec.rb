@@ -85,17 +85,18 @@ feature "user dashboard:" do
       scenario "visit dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Facebook")
-        expect(page).to have_content("Add a Facebook business page")
+        expect(page).not_to have_link("Share")
+        expect(page).to have_content("Connect your Facebook account")
       end
     end
 
     context "has a Facebook page connected" do
       scenario "visit dashboard" do
+        pending("facebook graph api implementation")
         facebook_page = create(:facebook_page, user: user)
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_content("Add a Facebook business page")
+        expect(page).not_to have_content("Add a Facebook page")
         expect(page).to have_link(user.facebook_page.name)
       end
     end
@@ -104,15 +105,15 @@ feature "user dashboard:" do
       scenario "visit dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Twitter")
-        expect(page).to have_content("Add a Twitter account")
+        expect(page).not_to have_link("Tweet")
+        expect(page).to have_content("Connect your Twitter account")
       end
     end
 
     context "has a Twitter account connected" do
       scenario "visits dashboard" do
+        pending("twitter api implementation")
         twitter_account = create(:twitter_account, user: user)
-
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_content("Add a Twitter account")
@@ -124,13 +125,14 @@ feature "user dashboard:" do
       scenario "visits dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Instagram")
-        expect(page).to have_content("Add an Instagram account")
+        expect(page).not_to have_link("Post")
+        expect(page).to have_content("Connect your Instagram account")
       end
     end
 
     context "has an Instagram account connected" do
       scenario "visits dashboard" do
+        pending("instagram api implementation")
         instagram_account = create(:instagram_account, user: user)
 
         visit dashboard_path(user.dashboard)

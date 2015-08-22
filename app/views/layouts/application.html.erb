@@ -49,8 +49,9 @@
             <% if current_user.present? %>
               <li><%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %></li>
             <% else %>
-              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "#{icon('facebook')}Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-block btn-social btn-facebook" %></li>
               <li><%= link_to "Sign in", new_user_session_path %></li>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
             <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->
