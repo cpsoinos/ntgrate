@@ -22,8 +22,12 @@ feature "user dashboard:" do
   end
 
   context "registered user" do
-    scenario "visits root path" do
+    before :each do
       sign_in user
+    end
+
+    scenario "visits root path" do
+      visit root_path
 
       expect(page).to have_content("Welcome")
       expect(page).to have_content("Sign out")
@@ -31,7 +35,6 @@ feature "user dashboard:" do
 
     context "does not have listings" do
       scenario "visits dashboard" do
-        sign_in user
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_content("Active Listings")
@@ -42,21 +45,21 @@ feature "user dashboard:" do
 
     context "has listings" do
       it "shows number of active listings" do
-        create_list(:listings, 3, :active, user: user)
+        create_list(:listing, 3, :active, user: user)
         visit dashboard_path(user.dashboard)
 
         expect(page).to have_content("You have 3 active listings")
       end
 
       it "shows number of inactive listings" do
-        create_list(:listings, 3, :inactive, user: user)
+        create_list(:listing, 3, :inactive, user: user)
         visit dashboard_path(user.dashboard)
 
         expect(page).to have_content("You have 3 inactive listings")
       end
 
       it "shows number of sold listings" do
-        listings = create_list(:listings, 1, :sold, user: user)
+        listings = create_list(:listing, 1, :sold, user: user)
         visit dashboard_path(user.dashboard)
 
         expect(page).to have_content("You've sold 1 property")
@@ -65,7 +68,7 @@ feature "user dashboard:" do
 
     context "has inactive or sold but no current listings" do
       it "suggests ways to reach new prospective clients" do
-        create_list(:listings, 3, :inactive, user: user)
+        create_list(:listing, 3, :inactive, user: user)
         visit dashboard_path(user.dashboard)
 
         expect(page).to have_content("You have no active listings.")

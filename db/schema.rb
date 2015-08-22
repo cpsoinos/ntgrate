@@ -30,9 +30,20 @@ ActiveRecord::Schema.define(version: 20150822020735) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.integer  "asking_price"
-    t.integer  "mls_number"
-    t.date     "date_listed"
+    t.money    "asking_price",           scale: 2
+    t.money    "sold_for",               scale: 2
+    t.integer  "mls_number",   limit: 8
+    t.date     "listed_at"
+    t.date     "sold_at"
+    t.string   "status",                           null: false
+    t.text     "description"
+    t.float    "bedrooms"
+    t.float    "bathrooms"
+    t.integer  "built"
+    t.string   "listing_type"
+    t.boolean  "pets_allowed"
+    t.integer  "square_feet"
+    t.integer  "user_id",                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

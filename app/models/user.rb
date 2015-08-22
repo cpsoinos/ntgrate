@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :dashboard
+  has_many :listings
 
   validates :email, presence: true, uniqueness: true
   # validates :dashboard, presence: true, uniqueness: true
