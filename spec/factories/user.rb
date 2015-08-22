@@ -3,8 +3,7 @@ require 'factory_girl'
 FactoryGirl.define do
 
   factory :user do
-    first_name "John"
-    last_name  "Doe"
+    name Faker::Name.name
     email
     password "supersecret"
     password_confirmation "supersecret"

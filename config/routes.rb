@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
+  root 'landing_pages#index'
+
   devise_for :users, controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    :omniauth_callbacks => 'users/omniauth_callbacks'
   }
-  root "landing_pages#index"
+  devise_scope :user do
+    # delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+    match '/users/:id/finish_signup' => 'users/registrations#finish_signup', via: [:get, :patch], :as => :finish_signup
+  end
 
   resources :dashboards, only: :show
   resources :landing_pages, only: :index
+  resources :facebook_pages, only: [:create, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
