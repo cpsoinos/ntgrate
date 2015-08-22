@@ -8,7 +8,6 @@ FactoryGirl.define do
     email
     password "supersecret"
     password_confirmation "supersecret"
-
   end
 
   sequence :email do |n|
