@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'puma'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'autoprefixer-rails'
 
 group :development, :local, :test do
   gem 'byebug'
@@ -18,6 +20,9 @@ group :development, :local, :test do
   gem 'spring'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-rails'
+  gem 'sextant'
+  gem 'better_errors'
+  gem 'lograge'
 end
 
 group :test do
