@@ -13,6 +13,7 @@ gem 'devise'
 gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
+gem 'coveralls', require: false
 
 group :development, :local, :test do
   gem 'byebug'
