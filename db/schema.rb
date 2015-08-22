@@ -63,10 +63,8 @@ ActiveRecord::Schema.define(version: 20150822020735) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "dashboard_id"
   end
 
-  add_index "users", ["dashboard_id"], name: "index_users_on_dashboard_id", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 

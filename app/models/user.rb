@@ -8,5 +8,4 @@ class User < ActiveRecord::Base
   has_many :listings
 
   validates :email, presence: true, uniqueness: true
-  # validates :dashboard, presence: true, uniqueness: true
 end
