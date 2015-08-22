@@ -8,6 +8,8 @@ FactoryGirl.define do
     email
     password "supersecret"
     password_confirmation "supersecret"
+
+    after(:create) { |user| user.create_dashboard }
   end
 
   sequence :email do |n|

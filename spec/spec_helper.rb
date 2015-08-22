@@ -1,6 +1,7 @@
 require 'capybara/rspec'
 require 'factory_girl_rails'
 require 'rails_helper'
+require 'helpers/user_helper_spec.rb'
 
 ENV["RAILS_ENV"] = 'test'
 
