@@ -4,3 +4,4 @@ rvm:
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database real_estate_test;' -U postgres
+  - psql -c "CREATE USER real_estate WITH PASSWORD 'password1';" -U postgres
