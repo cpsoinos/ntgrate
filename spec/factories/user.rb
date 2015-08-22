@@ -3,12 +3,12 @@ require 'factory_girl'
 FactoryGirl.define do
 
   factory :user do
-    name Faker::Name.name
+    first_name Faker::Name.first_name
+    last_name Faker::Name.last_name
     email
     password "supersecret"
     password_confirmation "supersecret"
 
-    after(:create) { |user| user.create_dashboard }
   end
 
   sequence :email do |n|
