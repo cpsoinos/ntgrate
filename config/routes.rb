@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root "homes#index"
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+  root "landing_pages#index"
+
+  resources :dashboards, only: :show
+  resources :landing_pages, only: :index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
