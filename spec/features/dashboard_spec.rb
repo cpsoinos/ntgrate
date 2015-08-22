@@ -86,7 +86,7 @@ feature "user dashboard:" do
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_link("Share")
-        expect(page).to have_content("Add a Facebook page")
+        expect(page).to have_content("Connect your Facebook account")
       end
     end
 
@@ -106,7 +106,7 @@ feature "user dashboard:" do
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_link("Tweet")
-        expect(page).to have_content("Add a Twitter account")
+        expect(page).to have_content("Connect your Twitter account")
       end
     end
 
@@ -126,7 +126,7 @@ feature "user dashboard:" do
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_link("Post")
-        expect(page).to have_content("Add an Instagram account")
+        expect(page).to have_content("Connect your Instagram account")
       end
     end
 
