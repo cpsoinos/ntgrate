@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
 gem 'coveralls', require: false
 gem 'badgerbadgerbadger'
+gem 'koala', '~> 2.2'
 
 group :development, :local, :test do
   gem 'byebug'
