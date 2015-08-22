@@ -1,2 +1,6 @@
-before_script:
-  - cp config/database.yml.travis config/database.yml
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: real_estate_test
+  username: real_estate
+  password: password1
