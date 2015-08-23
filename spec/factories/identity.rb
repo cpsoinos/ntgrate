@@ -4,7 +4,6 @@ FactoryGirl.define do
 
   factory :identity do
     uid "123abc"
-    token "789xyz"
     user
 
     trait :facebook do
