@@ -71,6 +71,7 @@ class User < ActiveRecord::Base
       identity.user = user
       identity.save!
     end
+    identity.check_for_account(auth)
     user
   end
 

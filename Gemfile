@@ -22,6 +22,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-linkedin'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
+gem 'rails_12factor'
 
 group :development, :local, :test do
   gem 'byebug'
@@ -31,7 +32,6 @@ group :development, :local, :test do
   gem 'pry-rails'
   gem 'sextant'
   gem 'better_errors'
-  gem 'lograge'
   gem 'faker'
 end
 
