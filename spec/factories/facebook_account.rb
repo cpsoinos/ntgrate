@@ -5,7 +5,7 @@ FactoryGirl.define do
   factory :facebook_account do
     uid "123"
     token "xyz"
-    identity
+    identity { create(:identity, :facebook) }
   end
 
 end

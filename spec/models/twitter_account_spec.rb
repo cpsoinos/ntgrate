@@ -2,7 +2,7 @@ describe TwitterAccount do
   let(:twitter_account) { create(:twitter_account) }
 
   it "has an identity" do
-    expect(twitter_account.identity).not_to eq(nil)
+    expect(twitter_account.identity.provider).to eq("twitter")
   end
 
   it "has a uid" do

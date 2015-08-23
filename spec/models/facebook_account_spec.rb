@@ -2,7 +2,7 @@ describe FacebookAccount do
   let(:facebook_account) { create(:facebook_account) }
 
   it "has an identity" do
-    expect(facebook_account.identity).not_to eq(nil)
+    expect(facebook_account.identity.provider).to eq("facebook")
   end
 
   it "has a uid" do
