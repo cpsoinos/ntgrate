@@ -12,4 +12,10 @@ describe User do
   it "has a dashboard" do
     expect(user.dashboard).not_to eq(nil)
   end
+
+  it "can have an identity" do
+    create(:identity, :facebook, user: user)
+
+    expect(user.identities.first.provider).to eq("facebook")
+  end
 end

@@ -23,7 +23,7 @@ feature "user dashboard:" do
 
   context "registered user" do
     before :each do
-      sign_in user
+      sign_in(user)
     end
 
     scenario "visits root path" do
