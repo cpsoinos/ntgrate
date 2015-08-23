@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822211805) do
+ActiveRecord::Schema.define(version: 20150823005332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20150822211805) do
 
   add_index "dashboards", ["user_id"], name: "index_dashboards_on_user_id", unique: true, using: :btree
 
+  create_table "facebook_accounts", force: :cascade do |t|
+    t.integer  "identity_id"
+    t.string   "token",       null: false
+    t.string   "uid",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "facebook_pages", force: :cascade do |t|
     t.integer "user_id",           null: false
     t.string  "short_lived_token"
@@ -34,7 +42,6 @@ ActiveRecord::Schema.define(version: 20150822211805) do
     t.integer  "user_id"
     t.string   "provider",   null: false
     t.string   "uid",        null: false
-    t.string   "token",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,6 +68,16 @@ ActiveRecord::Schema.define(version: 20150822211805) do
     t.boolean  "pets_allowed"
     t.integer  "square_feet"
     t.integer  "user_id",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "twitter_accounts", force: :cascade do |t|
+    t.integer  "identity_id"
+    t.string   "token",       null: false
+    t.string   "secret",      null: false
+    t.string   "handle",      null: false
+    t.string   "uid",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
