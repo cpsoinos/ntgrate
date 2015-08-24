@@ -3,7 +3,7 @@ class MoveTokenFromIdentityToFacebookAndTwitterAccounts < ActiveRecord::Migratio
     remove_column :identities, :token, :string
 
     create_table :twitter_accounts do |t|
-      t.references :identity
+      t.references :identity, index: true, foreign_key: true, null: false
       t.string :token, null: false
       t.string :secret, null: false
       t.string :handle, null: false, unique: true
@@ -12,7 +12,7 @@ class MoveTokenFromIdentityToFacebookAndTwitterAccounts < ActiveRecord::Migratio
     end
 
     create_table :facebook_accounts do |t|
-      t.references :identity
+      t.references :identity, index: true, foreign_key: true, null: false
       t.string :token, null: false
       t.string :uid, null: false
       t.timestamps
