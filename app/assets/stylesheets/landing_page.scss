@@ -1,0 +1,39 @@
+#intro {
+  background: asset-data-url("AdobeStock_80919672_WM.png") 50% 0 fixed;
+  background-size: cover;
+  height: 60em;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#home {
+  background: url(images/home.jpg) 50% 0 fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 200px 0;
+}
+
+#about {
+  background: url(images/about.png) 50% 0 fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+  color: #fff;
+}
+
+#taglines-listings {
+  margin-top: 20em;
+}
+
+#taglines-brand {
+  margin-top: 30em;
+}
