@@ -38,19 +38,19 @@
   <!-- something -->
 <% else %>
   <p>Connect your Facebook account</p>
-  <%= link_to "#{icon('facebook')}Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-block btn-social btn-facebook" %>
+  <%= link_to "#{icon('facebook')} Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-block btn-social btn-facebook" %>
 <% end %>
 
 <% if @twitter_account.present? %>
   <!-- something -->
 <% else %>
   <p>Connect your Twitter account</p>
-  <%= link_to "#{icon('twitter')}Sign in with Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-block btn-social btn-twitter" %>
+  <%= link_to "#{icon('twitter')} Sign in with Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-block btn-social btn-twitter" %>
 <% end %>
 
 <% if @instagram_account.present? %>
   <!-- something -->
 <% else %>
   <p>Connect your Instagram account</p>
-  <%= link_to "Add an Instagram account", "#" %>
+  <%= link_to "#{icon('instagram')} Sign in with Instagram".html_safe, user_omniauth_authorize_path(:instagram), class: "btn btn-block btn-social btn-instagram" %>
 <% end %>
