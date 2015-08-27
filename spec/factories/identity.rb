@@ -13,5 +13,9 @@ FactoryGirl.define do
     trait :twitter do
       provider "twitter"
     end
+
+    trait :instagram do
+      provider "instagram"
+    end
   end
 end
