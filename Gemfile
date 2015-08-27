@@ -23,7 +23,10 @@ gem 'omniauth-linkedin'
 gem 'omniauth-instagram'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
-gem 'rails_12factor'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :local, :test do
   gem 'byebug'
