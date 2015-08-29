@@ -18,3 +18,62 @@
  @import "bootstrap";
  @import "font-awesome-sprockets";
  @import "font-awesome";
+
+.parallax-1 {
+  background-size: cover;
+  height: 60em;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 0 auto;
+}
+
+.parallax-2 {
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 200px 0;
+}
+
+.parallax-3 {
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+  color: #fff;
+}
+
+div.well {
+ background-color: rgba(245,245,245,0.75);
+}
+
+#flash-container {
+  height: 5em;
+  padding-top: 52px;
+  text-align: center;
+}
+
+body > nav > div {
+  background-color: rgba(35,119,186,0.5);
+
+  div.navbar-header > a {
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+#bs-example-navbar-collapse-1 > ul.nav.navbar-nav > li > a {
+  color: white;
+
+  &:hover {
+    color: black;
+  }
+}

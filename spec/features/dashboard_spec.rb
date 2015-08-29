@@ -4,19 +4,20 @@ feature "user dashboard:" do
 
   context "guest" do
 
-    scenario "visits root path" do
-      visit root_path
-
-      expect(page).to have_content("Sign in")
-      expect(page).to have_content("Sign up")
-      expect(page).not_to have_content("Welcome")
-      expect(page).to have_content("Please sign in or register")
-    end
+    # scenario "visits root path" do
+    #   visit root_path
+    #
+    #   expect(page).to have_content("Sign in")
+    #   expect(page).to have_content("Sign up")
+    #   expect(page).not_to have_content("Welcome")
+    #   expect(page).to have_content("Please sign in or register")
+    # end
 
     scenario "visits dashboard" do
       visit dashboard_path(user.dashboard)
 
-      expect(page).to have_content("Please sign in or register")
+      expect(page).to have_content("Sign in")
+      expect(page).to have_content("You need to sign in or sign up before continuing.")
       expect(page).not_to have_content("Welcome")
     end
   end
@@ -81,23 +82,23 @@ feature "user dashboard:" do
     ## ADVERTISING ##
     #################
 
-    context "does not have a Facebook page connected" do
+    context "does not have a Facebook account connected" do
       scenario "visit dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Share")
+        expect(page).not_to have_link("Share on Facebook")
         expect(page).to have_content("Connect your Facebook account")
       end
     end
 
-    context "has a Facebook page connected" do
+    context "has a Facebook account connected" do
       scenario "visit dashboard" do
-        pending("facebook graph api implementation")
-        facebook_page = create(:facebook_page, user: user)
+        identity = create(:identity, :facebook, user: user)
+        facebook_account = create(:facebook_account, identity: identity)
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_content("Add a Facebook page")
-        expect(page).to have_link(user.facebook_page.name)
+        expect(page).not_to have_content("Connect your Facebook account")
+        expect(page).to have_link("Share on Facebook")
       end
     end
 
@@ -105,19 +106,19 @@ feature "user dashboard:" do
       scenario "visit dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Tweet")
+        expect(page).not_to have_link("Post to Twitter")
         expect(page).to have_content("Connect your Twitter account")
       end
     end
 
     context "has a Twitter account connected" do
       scenario "visits dashboard" do
-        pending("twitter api implementation")
-        twitter_account = create(:twitter_account, user: user)
+        identity = create(:identity, :twitter, user: user)
+        twitter_account = create(:twitter_account, identity: identity)
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_content("Add a Twitter account")
-        expect(page).to have_link(user.twitter_account.name)
+        expect(page).not_to have_content("Connect your Twitter account")
+        expect(page).to have_link("Post to Twitter")
       end
     end
 
@@ -125,20 +126,20 @@ feature "user dashboard:" do
       scenario "visits dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Post")
+        expect(page).not_to have_link("Post to Instagram")
         expect(page).to have_content("Connect your Instagram account")
       end
     end
 
     context "has an Instagram account connected" do
       scenario "visits dashboard" do
-        pending("instagram api implementation")
-        instagram_account = create(:instagram_account, user: user)
+        identity = create(:identity, :instagram, user: user)
+        instagram_account = create(:instagram_account, identity: identity)
 
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_content("Add an Instagram account")
-        expect(page).to have_link(user.instagram_account.name)
+        expect(page).not_to have_content("Connect your Instagram account")
+        expect(page).to have_link("Post to Instagram")
       end
     end
   end
