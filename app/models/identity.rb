@@ -2,9 +2,16 @@ class Identity < ActiveRecord::Base
   belongs_to :user, dependent: :destroy
   has_one :twitter_account, dependent: :destroy
   has_one :facebook_account, dependent: :destroy
+  has_one :instagram_account, dependent: :destroy
+  has_one :linkedin_account, dependent: :destroy
 
   validates_presence_of :user, :uid, :provider
   validates_uniqueness_of :uid, scope: :provider
+
+  scope :facebook, -> { where(provider: "facebook") }
+  scope :twitter, -> { where(provider: "twitter") }
+  scope :instagram, -> { where(provider: "instagram") }
+  scope :linkedin, -> { where(provider: "linkedin") }
 
   def self.find_for_oauth(auth)
     find_or_create_by(uid: auth.uid, provider: auth.provider)

@@ -6,6 +6,10 @@ class DashboardsController < ApplicationController
       redirect_to new_user_session_path
     end
     @listings = Dashboard.find(params[:id]).user.listings
+    @facebook_account = current_user.facebook_account
+    @twitter_account = current_user.twitter_account
+    @instagram_account = current_user.instagram_account
+    @linkedin_account = current_user.twitter_account
   end
 
 end

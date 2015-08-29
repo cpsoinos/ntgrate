@@ -18,7 +18,6 @@ class User < ActiveRecord::Base
 
   after_create :create_dashboard
 
-
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity and user if they exist
     identity = Identity.find_for_oauth(auth)
@@ -77,5 +76,21 @@ class User < ActiveRecord::Base
 
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
+  end
+
+  def facebook_account
+    identities.facebook.present? ? identities.facebook.first.facebook_account : nil
+  end
+
+  def twitter_account
+    identities.twitter.present? ? identities.twitter.first.twitter_account : nil
+  end
+
+  def instagram_account
+    identities.instagram.present? ? identities.instagram.first.instagram_account : nil
+  end
+
+  def linkedin_account
+    identities.linkedin.present? ? identities.linkedin.first.linkedin_account : nil
   end
 end

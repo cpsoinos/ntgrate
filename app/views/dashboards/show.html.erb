@@ -11,52 +11,55 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12">
         <div class="well">
           <h3>Welcome</h3>
+
+          <!-- listings -->
+          <% if @listings.empty? %>
+            <h4>You don't have any listings yet.</h4>
+            <%= link_to "Get started #{icon('arrow-circle-right')}".html_safe, "#", class: "btn" %>
+          <% else %>
+            <% if @listings.active.present? %>
+              <p>You have <%= @listings.active.count %> active <%= @listings.active.count == 1 ? "listing" : "listings" %>.</p>
+            <% else %>
+              <p>You have no active listings. Here are some things you can do to attract more clients: %></p>
+            <% end %>
+            <% if @listings.inactive.present? %>
+              <p>You have <%= @listings.inactive.count %> inactive <%= @listings.inactive.count == 1 ? "listing" : "listings" %>.</p>
+            <% end %>
+            <% if @listings.sold.present? %>
+              <p>You've sold <%= @listings.sold.count %> <%= @listings.sold.count == 1 ? "property" : "properties" %>.</p>
+            <% end %>
+          <% end %>
+
+          <!-- social media accounts -->
+          <h4>Here are a few things for you to do.</h4>
+          <% if @facebook_account.present? %>
+            <%= link_to "#{icon('facebook')} Share on Facebook".html_safe, "#", class: "btn btn-social btn-facebook" %>
+          <% else %>
+            <p>Connect your Facebook account</p>
+            <%= link_to "#{icon('facebook')} Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-social btn-facebook" %>
+          <% end %>
+
+          <% if @twitter_account.present? %>
+            <%= link_to "#{icon('twitter')} Post to Twitter".html_safe, "#", class: "btn btn-social btn-twitter" %>
+          <% else %>
+            <p>Connect your Twitter account</p>
+            <%= link_to "#{icon('twitter')} Sign in with Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-social btn-twitter" %>
+          <% end %>
+
+          <% if @instagram_account.present? %>
+            <%= link_to "#{icon('instagram')} Post to Instagram".html_safe, "#", class: "btn btn-social btn-instagram" %>
+          <% else %>
+            <p>Connect your Instagram account</p>
+            <%= link_to "#{icon('instagram')} Sign in with Instagram".html_safe, user_omniauth_authorize_path(:instagram), class: "btn btn-social btn-instagram" %>
+          <% end %>
         </div>
       </div>
     </div>
 
-      <% if @listings.empty? %>
-        <p>You don't have any listings yet.</p>
-        <%= link_to "Get started", "#" %>
-      <% else %>
-        <% if @listings.active.present? %>
-          <p>You have <%= @listings.active.count %> active <%= @listings.active.count == 1 ? "listing" : "listings" %>.</p>
-        <% else %>
-          <p>You have no active listings. Here are some things you can do to attract more clients: %></p>
-        <% end %>
-        <% if @listings.inactive.present? %>
-          <p>You have <%= @listings.inactive.count %> inactive <%= @listings.inactive.count == 1 ? "listing" : "listings" %>.</p>
-        <% end %>
-        <% if @listings.sold.present? %>
-          <p>You've sold <%= @listings.sold.count %> <%= @listings.sold.count == 1 ? "property" : "properties" %>.</p>
-        <% end %>
-      <% end %>
 
-      <!-- social media accounts -->
-
-      <% if @facebook_page.present? %>
-        <!-- something -->
-      <% else %>
-        <p>Connect your Facebook account</p>
-        <%= link_to "#{icon('facebook')} Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-block btn-social btn-facebook" %>
-      <% end %>
-
-      <% if @twitter_account.present? %>
-        <!-- something -->
-      <% else %>
-        <p>Connect your Twitter account</p>
-        <%= link_to "#{icon('twitter')} Sign in with Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-block btn-social btn-twitter" %>
-      <% end %>
-
-      <% if @instagram_account.present? %>
-        <!-- something -->
-      <% else %>
-        <p>Connect your Instagram account</p>
-        <%= link_to "#{icon('instagram')} Sign in with Instagram".html_safe, user_omniauth_authorize_path(:instagram), class: "btn btn-block btn-social btn-instagram" %>
-      <% end %>
     </div>
   </div>
 </section>
