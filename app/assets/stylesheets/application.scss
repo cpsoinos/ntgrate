@@ -23,3 +23,23 @@
   height: 5em;
   text-align: center;
 }
+
+body > nav > div {
+  background-color: rgba(35,119,186,0.5);
+
+  div.navbar-header > a {
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li > a {
+  color: white;
+
+  &:hover {
+    color: black;
+  }
+}
