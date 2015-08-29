@@ -24,7 +24,7 @@ gem 'omniauth-instagram'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
 
-group :production do
+group :development, :local, :production do
   gem 'rails_12factor'
 end
 
