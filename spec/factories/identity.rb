@@ -3,7 +3,7 @@ require 'factory_girl'
 FactoryGirl.define do
 
   factory :identity do
-    uid "123abc"
+    uid
     user
 
     trait :facebook do
@@ -17,5 +17,9 @@ FactoryGirl.define do
     trait :instagram do
       provider "instagram"
     end
+  end
+
+  sequence :uid do |n|
+    "abc#{n}"
   end
 end
