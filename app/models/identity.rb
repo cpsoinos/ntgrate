@@ -26,6 +26,12 @@ class Identity < ActiveRecord::Base
         uid: uid,
         identity: self
       )
+      when "instagram"
+        InstagramAccount.find_or_create_by(
+          token: auth.credentials.token,
+          uid: uid,
+          identity: self
+        )
     end
   end
 

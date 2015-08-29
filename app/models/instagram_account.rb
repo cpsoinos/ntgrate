@@ -1,4 +1,4 @@
-class FacebookAccount < ActiveRecord::Base
+class InstagramAccount < ActiveRecord::Base
   belongs_to :identity
 
   validates_presence_of :token, :uid, :identity
