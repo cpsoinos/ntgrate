@@ -1,8 +1,12 @@
-<div id="flash-container">
-  <% if flash[:notice] %>
-    <div class="notice alert alert-info" role="alert"><%= flash[:notice] %></div>
-  <% end %>
-  <% if flash[:alert] %>
-    <div class="alert alert alert-danger" role="alert"><%= flash[:alert] %></div>
-  <% end %>
+<div class="row">
+  <div class="col-xs-12 col-md-4 col-md-offset-4">
+    <div id="flash-container" class="text-center">
+      <% if flash[:notice] %>
+        <div class="notice alert alert-info" role="alert"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert alert-danger" role="alert"><%= flash[:alert] %></div>
+      <% end %>
+    </div>
+  </div>
 </div>

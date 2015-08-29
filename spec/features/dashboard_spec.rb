@@ -4,19 +4,20 @@ feature "user dashboard:" do
 
   context "guest" do
 
-    scenario "visits root path" do
-      visit root_path
-
-      expect(page).to have_content("Sign in")
-      expect(page).to have_content("Sign up")
-      expect(page).not_to have_content("Welcome")
-      expect(page).to have_content("Please sign in or register")
-    end
+    # scenario "visits root path" do
+    #   visit root_path
+    #
+    #   expect(page).to have_content("Sign in")
+    #   expect(page).to have_content("Sign up")
+    #   expect(page).not_to have_content("Welcome")
+    #   expect(page).to have_content("Please sign in or register")
+    # end
 
     scenario "visits dashboard" do
       visit dashboard_path(user.dashboard)
 
-      expect(page).to have_content("Please sign in or register")
+      expect(page).to have_content("Sign in")
+      expect(page).to have_content("Please sign in or register to continue.")
       expect(page).not_to have_content("Welcome")
     end
   end

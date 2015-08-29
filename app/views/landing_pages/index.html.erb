@@ -1,8 +1,7 @@
-
 <!-- Section 1 -->
-<section id="intro" data-speed="6" data-type="background">
-  <%= render 'layouts/flash_messages' %>
+<section class="parallax-1" id="intro-<%= controller_name %>" data-speed="6" data-type="background">
   <div class="container">
+    <%= render "layouts/flash_messages" %>
     <div class="row">
       <div class="col-xs-12 col-md-3 text-center" id="taglines-clients">
         <div class="well">
@@ -35,7 +34,7 @@
   </div>
 </section>
 <!-- Section 2 -->
-<section id="home" data-speed="4" data-type="background">
+<section class="parallax-2" id="home-<%= controller_name %>" data-speed="4" data-type="background">
   <div class="container">
     <div class="col-xs-12 col-md-3 text-center">
       <h3>Create and share content on these channels.</h3>
@@ -63,5 +62,5 @@
   </div>
 </section>
 <!-- Section 3 -->
-<section id="about" data-speed="2" data-type="background">
+<section class="parallax-3" id="about-<%= controller_name %>" data-speed="2" data-type="background">
 </section>
