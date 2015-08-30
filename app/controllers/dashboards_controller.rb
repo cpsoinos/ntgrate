@@ -11,6 +11,8 @@ class DashboardsController < ApplicationController
     @twitter_account = current_user.twitter_account
     @instagram_account = current_user.instagram_account
     @linkedin_account = current_user.twitter_account
+
+    @facebook_share = FacebookShare.new
   end
 
 end

@@ -98,7 +98,7 @@ feature "user dashboard:" do
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_content("Connect your Facebook account")
-        expect(page).to have_link("Share on Facebook")
+        expect(page).to have_button("Share on Facebook")
       end
     end
 

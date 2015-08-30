@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824115811) do
+ActiveRecord::Schema.define(version: 20150830005005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,11 +34,18 @@ ActiveRecord::Schema.define(version: 20150824115811) do
 
   add_index "facebook_accounts", ["identity_id"], name: "index_facebook_accounts_on_identity_id", using: :btree
 
-  create_table "facebook_pages", force: :cascade do |t|
-    t.integer "user_id",           null: false
-    t.string  "short_lived_token"
-    t.string  "long_lived_token"
+  create_table "facebook_shares", force: :cascade do |t|
+    t.text     "content"
+    t.string   "link"
+    t.string   "share_url"
+    t.string   "share_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "facebook_account_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "facebook_shares", ["deleted_at"], name: "index_facebook_shares_on_deleted_at", using: :btree
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"

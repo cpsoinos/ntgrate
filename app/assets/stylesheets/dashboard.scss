@@ -10,3 +10,15 @@
 #about-dashboards {
   background: url(images/about.png) 50% 0 fixed;
 }
+
+div.panel {
+  background-color: rgba(0,0,0,0.0);
+
+  div.panel-heading {
+    background-color: rgba(0,0,0,0.0);
+  }
+}
+
+.well-dashboard {
+  height: 60em;
+}

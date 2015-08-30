@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :dashboards, only: :show
   resources :landing_pages, only: :index
-  resources :facebook_pages, only: [:create, :update]
+  resources :facebook_shares, only: [:new, :create, :update, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
