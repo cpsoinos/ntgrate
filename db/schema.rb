@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830005005) do
+ActiveRecord::Schema.define(version: 20150830031339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150830005005) do
     t.datetime "updated_at"
     t.integer  "facebook_account_id"
     t.datetime "deleted_at"
+    t.string   "share_type"
   end
 
   add_index "facebook_shares", ["deleted_at"], name: "index_facebook_shares_on_deleted_at", using: :btree

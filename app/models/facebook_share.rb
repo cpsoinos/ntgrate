@@ -6,7 +6,13 @@ class FacebookShare < ActiveRecord::Base
   acts_as_paranoid
 
   def share
-    response = graph.put_wall_post(content)
+    get_share_type
+    case share_type
+    when "text"
+      response = graph.put_wall_post(content)
+    when "link"
+      response = graph.put_connections("me", "links", { name: name, link: link })
+    end
     update_attribute("share_id", response["id"])
   end
 
@@ -25,4 +31,13 @@ class FacebookShare < ActiveRecord::Base
   def graph
     Koala::Facebook::API.new(facebook_account.token, ENV["FACEBOOK_APP_SECRET"])
   end
+
+  def get_share_type
+    if link.present?
+      update_attribute("share_type", "link")
+    else
+      update_attribute("share_type", "text")
+    end
+  end
+
 end

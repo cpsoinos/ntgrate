@@ -1,13 +1,35 @@
 <%= form_for @facebook_share do |f| %>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_field :content, autofocus: true %>
+  <div id="share-type">
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary active">
+        <input type="radio" name="options" id="text-share" autocomplete="off" checked>Text share
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="link-share" autocomplete="off">Link share
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="photo-share" autocomplete="off">Photo share
+      </label>
+    </div>
+  </div>
+
+  <div class="field hide" id="link-field">
+    <div class="col-xs-12 col-md-6">
+      <%= f.label :link %>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= f.url_field :link, autofocus: true %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :link %>
-    <%= f.text_field :link, autofocus: true %>
+    <div class="col-xs-12 col-md-6">
+      <%= f.label :content %>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :content, autofocus: true %>
+    </div>
   </div>
 
   <div class="actions">
