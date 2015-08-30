@@ -1,0 +1,17 @@
+<%= form_for @facebook_share do |f| %>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link %>
+    <%= f.text_field :link, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Share on Facebook" %>
+  </div>
+
+<% end %>
