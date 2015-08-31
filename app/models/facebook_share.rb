@@ -11,7 +11,7 @@ class FacebookShare < ActiveRecord::Base
     when "text"
       response = graph.put_wall_post(content)
     when "link"
-      response = graph.put_connections("me", "links", { name: name, link: link })
+      response = graph.put_connections("me", "links", { link: link })
     end
     update_attribute("share_id", response["id"])
   end
