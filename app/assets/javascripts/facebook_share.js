@@ -1,5 +1,9 @@
 $(document).ready(function() {
-  $("#link-share").click(function() {
-    alert('clicked');
+  $("input[name=options]").on("change", function() {
+    var shareType = "." + this.id;
+    $(shareType).show();
+    if(this.id === "text-share") {
+      $(".link-share").hide();
+    }
   });
 });
