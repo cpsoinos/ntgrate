@@ -5,8 +5,8 @@ class Identity < ActiveRecord::Base
   has_one :instagram_account, dependent: :destroy
   has_one :linkedin_account, dependent: :destroy
 
-  validates :user, presence: true, uniqueness: true
-  validates :uid, presence: true, uniqueness: true
+  validates :user, presence: true
+  validates :uid, presence: true
   validates :provider, presence: true
 
   acts_as_paranoid
