@@ -27,6 +27,14 @@ div.panel {
   padding-bottom: 1em;
 }
 
-.link-share {
+.link-share, .photo-share {
   display: none;
+}
+
+.social-form {
+  margin: 1em;
+}
+
+.share-input {
+  width: 100%;
 }
