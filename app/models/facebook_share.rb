@@ -23,7 +23,6 @@ class FacebookShare < ActiveRecord::Base
 
   # def get_share_url
   #   graph.get_object(share_id)
-  #   binding.pry
   # end
 
   def get_share_type
