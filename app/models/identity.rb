@@ -5,8 +5,11 @@ class Identity < ActiveRecord::Base
   has_one :instagram_account, dependent: :destroy
   has_one :linkedin_account, dependent: :destroy
 
-  validates_presence_of :user, :uid, :provider
-  validates_uniqueness_of :uid, scope: :provider
+  validates :user, presence: true
+  validates :uid, presence: true
+  validates :provider, presence: true
+
+  acts_as_paranoid
 
   scope :facebook, -> { where(provider: "facebook") }
   scope :twitter, -> { where(provider: "twitter") }
@@ -20,13 +23,14 @@ class Identity < ActiveRecord::Base
   def check_for_account(auth)
     case provider
     when "facebook"
-      FacebookAccount.find_or_create_by(
+      account = FacebookAccount.find_or_create_by(
         token: auth.credentials.token,
         uid: uid,
         identity: self
       )
+      account.create_facebook_pages
     when "twitter"
-      TwitterAccount.find_or_create_by(
+      account = TwitterAccount.find_or_create_by(
         token: auth.credentials.token,
         secret: auth.credentials.secret,
         handle: "@#{auth.info.nickname}",
@@ -34,7 +38,7 @@ class Identity < ActiveRecord::Base
         identity: self
       )
       when "instagram"
-        InstagramAccount.find_or_create_by(
+        account = InstagramAccount.find_or_create_by(
           token: auth.credentials.token,
           uid: uid,
           identity: self

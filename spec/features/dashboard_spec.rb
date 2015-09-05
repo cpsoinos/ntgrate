@@ -4,15 +4,6 @@ feature "user dashboard:" do
 
   context "guest" do
 
-    # scenario "visits root path" do
-    #   visit root_path
-    #
-    #   expect(page).to have_content("Sign in")
-    #   expect(page).to have_content("Sign up")
-    #   expect(page).not_to have_content("Welcome")
-    #   expect(page).to have_content("Please sign in or register")
-    # end
-
     scenario "visits dashboard" do
       visit dashboard_path(user.dashboard)
 
@@ -92,14 +83,29 @@ feature "user dashboard:" do
     end
 
     context "has a Facebook account connected" do
-      scenario "visit dashboard" do
-        identity = create(:identity, :facebook, user: user)
-        facebook_account = create(:facebook_account, identity: identity)
-        visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_content("Connect your Facebook account")
-        expect(page).to have_button("Share on Facebook")
+      context "does not have any Facebook pages connected" do
+        scenario "visit dashboard" do
+          identity = create(:identity, :facebook, user: user)
+          facebook_account = create(:facebook_account, identity: identity)
+          visit dashboard_path(user.dashboard)
+
+          expect(page).to have_content("You do not have any Facebook pages.")
+        end
       end
+
+      context "has a Facebook page connected" do
+
+        scenario "visit dashboard" do
+          identity = create(:identity, :facebook, user: user)
+          facebook_account = create(:facebook_account, identity: identity)
+          facebook_page = create(:facebook_page, facebook_account: facebook_account)
+          visit dashboard_path(user.dashboard)
+
+          expect(page).to have_button("Share on Facebook")
+        end
+      end
+
     end
 
     context "does not have a Twitter account connected" do

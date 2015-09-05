@@ -234,7 +234,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"],
-    info_fields: 'name,first_name,last_name,email,work', scope: 'public_profile,publish_actions,manage_pages,publish_pages'
+    info_fields: 'email, name, first_name, last_name', scope: 'publish_actions, manage_pages, publish_pages', display: 'popup'
   config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_SECRET"]
   config.omniauth :instagram, ENV["INSTAGRAM_CLIENT_ID"], ENV["INSTAGRAM_CLIENT_SECRET"]
 

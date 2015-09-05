@@ -22,3 +22,23 @@ div.panel {
 .well-dashboard {
   height: 60em;
 }
+
+#share-type {
+  padding-bottom: 1em;
+}
+
+.link-share, .photo-share, .video-share {
+  display: none;
+}
+
+.social-form {
+  margin: 1em;
+}
+
+.share-input {
+  width: 100%;
+}
+
+#facebook-errors {
+  display: none;
+}

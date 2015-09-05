@@ -82,6 +82,10 @@ class User < ActiveRecord::Base
     identities.facebook.present? ? identities.facebook.first.facebook_account : nil
   end
 
+  def facebook_pages
+    facebook_account.facebook_pages
+  end
+
   def twitter_account
     identities.twitter.present? ? identities.twitter.first.twitter_account : nil
   end

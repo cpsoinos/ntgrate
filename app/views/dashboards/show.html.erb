@@ -43,7 +43,11 @@
               </div>
               <div class="panel-body">
                 <% if @facebook_account.present? %>
-                  <%= render "facebook_shares/form" %>
+                  <% if @facebook_pages.empty? %>
+                    <p>You do not have any Facebook pages. Please create one on Facebook and re-authenticate here with your Facebook account.</p>
+                  <% else %>
+                    <%= render "facebook_shares/form" %>
+                  <% end %>
                 <% else %>
                   <p>Connect your Facebook account</p>
                   <%= link_to "#{icon('facebook')} Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-social btn-facebook" %>

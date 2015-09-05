@@ -6,8 +6,8 @@ class FacebookSharesController < ApplicationController
   end
 
   def create
-    @facebook_account = current_user.facebook_account
-    @facebook_share = @facebook_account.facebook_shares.new(facebook_share_params)
+    @facebook_page = FacebookPage.find(params[:facebook_share][:facebook_page_id])
+    @facebook_share = @facebook_page.facebook_shares.new(facebook_share_params)
     if @facebook_share.save
       @facebook_share.share
       flash[:notice] = "Shared successfully to Facebook!"
@@ -26,10 +26,10 @@ class FacebookSharesController < ApplicationController
     @facebook_share.delete_share
   end
 
-  private
+  protected
 
   def facebook_share_params
-    params.require(:facebook_share).permit([:content, :link])
+    params.require(:facebook_share).permit([:content, :link, :photo, :remote_photo_url, :video])
   end
 
 end

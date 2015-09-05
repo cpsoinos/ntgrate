@@ -24,6 +24,7 @@ gem 'omniauth-instagram'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
 gem 'paranoia'
+gem 'carrierwave'
 
 group :development, :local, :production do
   gem 'rails_12factor'

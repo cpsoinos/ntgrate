@@ -1,16 +1,103 @@
-<%= form_for @facebook_share do |f| %>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_field :content, autofocus: true %>
+<%= form_for @facebook_share, html: {multipart: true} do |f| %>
+  <div class="error_messages">
+    <% @facebook_share.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    <div class="notice alert alert-danger" id="facebook-errors" role="alert"></div>
   </div>
 
-  <div class="field">
-    <%= f.label :link %>
-    <%= f.text_field :link, autofocus: true %>
+  <div id="share-type">
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary active">
+        <input type="radio" name="options" id="text-share" autocomplete="off" checked>Text share
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="link-share" autocomplete="off">Link share
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="photo-share" autocomplete="off">Photo share
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="video-share" autocomplete="off">Video share
+      </label>
+    </div>
   </div>
 
-  <div class="actions">
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :facebook_page %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.select :facebook_page_id, options_for_select(@facebook_pages.collect { |page| [page.name, page.id] }) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field share-field link-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :link %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.url_field :link, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field share-field photo-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :photo %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.file_field :photo,
+          onchange: "validateFiles(this);",
+          data: {max_file_size: 5.megabytes},
+          autofocus: true,
+          class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field share-field photo-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :remote_photo_url, "or image URL" %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_field :remote_photo_url, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field share-field video-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :video %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.file_field :video,
+        onchange: "validateFiles(this);",
+        data: {max_file_size: 500.megabytes},
+        autofocus: true,
+        class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :content %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_area :content, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions pull-right">
     <%= f.submit "Share on Facebook" %>
   </div>
 
