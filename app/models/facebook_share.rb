@@ -4,8 +4,6 @@ class FacebookShare < ActiveRecord::Base
 
   validates :facebook_page, presence: true
 
-  # attr_accessible :photo, :remote_photo_url
-
   acts_as_paranoid
 
   def share
