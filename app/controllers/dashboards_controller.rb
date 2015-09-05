@@ -8,6 +8,8 @@ class DashboardsController < ApplicationController
     end
     @listings = Dashboard.find(params[:id]).user.listings
     @facebook_account = current_user.facebook_account
+    @facebook_pages = @facebook_account.try(:facebook_pages)
+
     @twitter_account = current_user.twitter_account
     @instagram_account = current_user.instagram_account
     @linkedin_account = current_user.twitter_account

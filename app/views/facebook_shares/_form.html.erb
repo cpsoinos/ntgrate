@@ -14,6 +14,13 @@
     </div>
   </div>
 
+  <div class="field">
+    <%= f.label :facebook_page %>
+    <%= f.select :facebook_page_id,
+        options_for_select(@facebook_pages.collect { |page| [page.name, page.id] }),
+        class: "dropdown-select" %>
+  </div>
+
   <div class="field link-share">
     <div class="col-xs-12 col-md-6">
       <%= f.label :link %>

@@ -1,7 +1,8 @@
 class FacebookShare < ActiveRecord::Base
   belongs_to :facebook_account
+  belongs_to :facebook_page
 
-  validates_presence_of :facebook_account
+  validates :facebook_page, presence: true
 
   acts_as_paranoid
 
@@ -29,7 +30,7 @@ class FacebookShare < ActiveRecord::Base
   private
 
   def graph
-    Koala::Facebook::API.new(facebook_account.token, ENV["FACEBOOK_APP_SECRET"])
+    Koala::Facebook::API.new(facebook_page.token, ENV["FACEBOOK_APP_SECRET"])
   end
 
   def get_share_type

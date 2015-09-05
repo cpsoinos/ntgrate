@@ -43,6 +43,7 @@ class User < ActiveRecord::Base
 
       # Create the user if it's a new registration
       if user.nil?
+        binding.pry
         user = User.new(
           first_name: auth.info.first_name,
           last_name: auth.info.last_name,
@@ -80,6 +81,10 @@ class User < ActiveRecord::Base
 
   def facebook_account
     identities.facebook.present? ? identities.facebook.first.facebook_account : nil
+  end
+
+  def facebook_pages
+    facebook_account.facebook_pages
   end
 
   def twitter_account
