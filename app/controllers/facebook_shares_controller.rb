@@ -29,7 +29,15 @@ class FacebookSharesController < ApplicationController
   protected
 
   def facebook_share_params
-    params.require(:facebook_share).permit([:content, :link])
+    params.require(:facebook_share).permit([:content, :link, :photo, :remote_photo_url])
   end
+  #
+  # def photo?
+  #   params[:photo].present?
+  # end
+  #
+  # def whitelist_photo
+  #   params[:facebook_share].delete(:photo).tempfile
+  # end
 
 end

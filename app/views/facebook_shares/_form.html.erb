@@ -1,4 +1,4 @@
-<%= form_for @facebook_share do |f| %>
+<%= form_for @facebook_share, html: {multipart: true} do |f| %>
 
   <div id="share-type">
     <div class="btn-group" data-toggle="buttons">
@@ -8,38 +8,68 @@
       <label class="btn btn-primary">
         <input type="radio" name="options" id="link-share" autocomplete="off">Link share
       </label>
-      <!-- <label class="btn btn-primary">
+      <label class="btn btn-primary">
         <input type="radio" name="options" id="photo-share" autocomplete="off">Photo share
-      </label> -->
+      </label>
     </div>
   </div>
 
-  <div class="field">
-    <%= f.label :facebook_page %>
-    <%= f.select :facebook_page_id,
-        options_for_select(@facebook_pages.collect { |page| [page.name, page.id] }),
-        class: "dropdown-select" %>
-  </div>
-
-  <div class="field link-share">
-    <div class="col-xs-12 col-md-6">
-      <%= f.label :link %>
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <%= f.url_field :link, autofocus: true %>
+  <div class="row social-form">
+    <div class="field">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :facebook_page %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.select :facebook_page_id, options_for_select(@facebook_pages.collect { |page| [page.name, page.id] }) %>
+      </div>
     </div>
   </div>
 
-  <div class="field">
-    <div class="col-xs-12 col-md-6">
-      <%= f.label :content %>
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <%= f.text_area :content, autofocus: true %>
+  <div class="row social-form">
+    <div class="field share-field link-share">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :link %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.url_field :link, autofocus: true, class: "share-input" %>
+      </div>
     </div>
   </div>
 
-  <div class="actions">
+  <div class="row social-form">
+    <div class="field share-field photo-share">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :photo %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.file_field :photo, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row social-form">
+    <div class="field share-field photo-share">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :remote_photo_url, "or image URL" %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_field :remote_photo_url, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row social-form">
+    <div class="field">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :content %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_area :content, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions pull-right">
     <%= f.submit "Share on Facebook" %>
   </div>
 
