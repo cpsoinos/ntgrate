@@ -11,11 +11,14 @@
       <label class="btn btn-primary">
         <input type="radio" name="options" id="photo-share" autocomplete="off">Photo share
       </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="video-share" autocomplete="off">Video share
+      </label>
     </div>
   </div>
 
-  <div class="row social-form">
-    <div class="field">
+  <div class="row">
+    <div class="field social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :facebook_page %>
       </div>
@@ -25,8 +28,8 @@
     </div>
   </div>
 
-  <div class="row social-form">
-    <div class="field share-field link-share">
+  <div class="row">
+    <div class="field share-field link-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :link %>
       </div>
@@ -36,8 +39,8 @@
     </div>
   </div>
 
-  <div class="row social-form">
-    <div class="field share-field photo-share">
+  <div class="row">
+    <div class="field share-field photo-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :photo %>
       </div>
@@ -47,8 +50,8 @@
     </div>
   </div>
 
-  <div class="row social-form">
-    <div class="field share-field photo-share">
+  <div class="row">
+    <div class="field share-field photo-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :remote_photo_url, "or image URL" %>
       </div>
@@ -58,8 +61,19 @@
     </div>
   </div>
 
-  <div class="row social-form">
-    <div class="field">
+  <div class="row">
+    <div class="field share-field video-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :video %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.file_field :video, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :content %>
       </div>

@@ -1,5 +1,6 @@
 class FacebookShare < ActiveRecord::Base
   mount_uploader :photo, PhotoUploader
+  mount_uploader :video, VideoUploader
   belongs_to :facebook_page
 
   validates :facebook_page, presence: true
@@ -15,6 +16,8 @@ class FacebookShare < ActiveRecord::Base
       response = graph.put_connections(facebook_page.uid, 'feed', :message => content, :link => link)
     when "photo"
       response = graph.put_picture(photo.current_path, {message: content})
+    when "video"
+      response = graph.put_video(video.current_path, {message: content})
     end
     update_attribute("share_id", response["id"])
   end
@@ -29,6 +32,8 @@ class FacebookShare < ActiveRecord::Base
       update_attribute("share_type", "link")
     elsif photo.present?
       update_attribute("share_type", "photo")
+    elsif video.present?
+      update_attribute("share_type", "video")
     else
       update_attribute("share_type", "text")
     end
