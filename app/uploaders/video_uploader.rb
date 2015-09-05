@@ -38,9 +38,9 @@ class VideoUploader < CarrierWave::Uploader::Base
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
-  # def extension_white_list
-  #   %w(jpg jpeg gif png)
-  # end
+  def extension_white_list
+    %w(3g2 3gp 3gpp asf avi dat divx dv f4v flv m2ts m4v mkv mod mov mp4 mpe mpeg mpeg4 mpg  mts nsv ogm ogv qt tod ts vob wm)
+  end
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.

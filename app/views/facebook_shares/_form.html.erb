@@ -1,4 +1,10 @@
 <%= form_for @facebook_share, html: {multipart: true} do |f| %>
+  <div class="error_messages">
+    <% @facebook_share.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    <div class="notice alert alert-danger" id="facebook-errors" role="alert"></div>
+  </div>
 
   <div id="share-type">
     <div class="btn-group" data-toggle="buttons">
@@ -45,7 +51,11 @@
         <%= f.label :photo %>
       </div>
       <div class="col-xs-12 col-md-8">
-        <%= f.file_field :photo, autofocus: true, class: "share-input" %>
+        <%= f.file_field :photo,
+          onchange: "validateFiles(this);",
+          data: {max_file_size: 5.megabytes},
+          autofocus: true,
+          class: "share-input" %>
       </div>
     </div>
   </div>
@@ -67,7 +77,11 @@
         <%= f.label :video %>
       </div>
       <div class="col-xs-12 col-md-8">
-        <%= f.file_field :video, autofocus: true, class: "share-input" %>
+        <%= f.file_field :video,
+        onchange: "validateFiles(this);",
+        data: {max_file_size: 500.megabytes},
+        autofocus: true,
+        class: "share-input" %>
       </div>
     </div>
   </div>

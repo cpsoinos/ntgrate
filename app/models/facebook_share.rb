@@ -4,6 +4,8 @@ class FacebookShare < ActiveRecord::Base
   belongs_to :facebook_page
 
   validates :facebook_page, presence: true
+  validate :photo_size_validation
+  validate :video_size_validation
 
   acts_as_paranoid
 
@@ -43,6 +45,14 @@ class FacebookShare < ActiveRecord::Base
 
   def graph
     Koala::Facebook::API.new(facebook_page.token, ENV["FACEBOOK_APP_SECRET"])
+  end
+
+  def photo_size_validation
+    errors[:photo] << "should be less than 5MB" if photo.size > 5.megabytes
+  end
+
+  def video_size_validation
+    errors[:video] << "should be less than 500MB" if video.size > 500.megabytes
   end
 
 end
