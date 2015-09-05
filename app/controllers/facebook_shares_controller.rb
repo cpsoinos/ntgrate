@@ -8,7 +8,6 @@ class FacebookSharesController < ApplicationController
   def create
     @facebook_page = FacebookPage.find(params[:facebook_share][:facebook_page_id])
     @facebook_share = @facebook_page.facebook_shares.new(facebook_share_params)
-    binding.pry
     if @facebook_share.save
       @facebook_share.share
       flash[:notice] = "Shared successfully to Facebook!"
