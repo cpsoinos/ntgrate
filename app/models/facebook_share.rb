@@ -1,5 +1,4 @@
 class FacebookShare < ActiveRecord::Base
-  belongs_to :facebook_account
   belongs_to :facebook_page
 
   validates :facebook_page, presence: true
@@ -27,18 +26,18 @@ class FacebookShare < ActiveRecord::Base
   #   binding.pry
   # end
 
-  private
-
-  def graph
-    Koala::Facebook::API.new(facebook_page.token, ENV["FACEBOOK_APP_SECRET"])
-  end
-
   def get_share_type
     if link.present?
       update_attribute("share_type", "link")
     else
       update_attribute("share_type", "text")
     end
+  end
+
+  private
+
+  def graph
+    Koala::Facebook::API.new(facebook_page.token, ENV["FACEBOOK_APP_SECRET"])
   end
 
 end
