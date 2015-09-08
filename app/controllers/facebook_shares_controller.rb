@@ -1,9 +1,9 @@
 class FacebookSharesController < ApplicationController
   before_filter :authenticate_user!
 
-  def new
-    @facebook_share = FacebookShare.new
-  end
+  # def new
+  #   @facebook_share = FacebookShare.new
+  # end
 
   def create
     @facebook_page = FacebookPage.find(params[:facebook_share][:facebook_page_id])
