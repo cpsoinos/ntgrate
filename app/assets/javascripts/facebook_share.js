@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("input[name=options]").on("change", function() {
+  $("input[name=facebook_options]").on("change", function() {
     // first, set the share type
     var shareType = "." + this.id;
     // second, hide all but text field types
@@ -35,7 +35,7 @@ function validateFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
-  var shareType = $("input[name=options]:checked").attr("id");
+  var shareType = $("input[name=facebook_options]:checked").attr("id");
 
   if (shareType === "photo-share") {
     maxExceededMessage = "This file exceeds the maximum allowed file size (5 MB). ";
