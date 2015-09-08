@@ -26,6 +26,7 @@ gem 'font-awesome-sass'
 gem 'paranoia'
 gem 'carrierwave'
 gem 'twitter'
+gem 'mandrill-api'
 
 group :development, :local, :production do
   gem 'rails_12factor'

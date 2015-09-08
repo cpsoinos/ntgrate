@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -40,4 +40,16 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # config.logger = Logger.new(STDOUT)
+
+  # mandrill settings
+  config.action_mailer.smtp_settings = {
+    address: ENV["SMTP_ADDRESS"],
+    authentication: :plain,
+    domain: ENV["SMTP_DOMAIN"],
+    enable_starttls_auto: true,
+    password: ENV["SMTP_PASSWORD"],
+    port: "587",
+    user_name: ENV["SMTP_USERNAME"]
+  }
+  config.action_mailer.default_url_options = { host: ENV["SMTP_DOMAIN"] }
 end
