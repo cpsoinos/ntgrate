@@ -63,7 +63,8 @@
               </div>
               <div class="panel-body">
                 <% if @twitter_account.present? %>
-                  <%= link_to "#{icon('twitter')} Post to Twitter".html_safe, "#", class: "btn btn-social btn-twitter" %>
+                  <%= render "twitter_shares/form" %>
+                  <%#= link_to "#{icon('twitter')} Post to Twitter".html_safe, "#", class: "btn btn-social btn-twitter" %>
                 <% else %>
                   <p>Connect your Twitter account</p>
                   <%= link_to "#{icon('twitter')} Sign in with Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-social btn-twitter" %>

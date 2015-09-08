@@ -1,0 +1,79 @@
+<%= form_for @twitter_share, html: {multipart: true} do |f| %>
+  <div class="error_messages">
+    <% @twitter_share.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    <div class="notice alert alert-danger" id="twitter-errors" role="alert"></div>
+  </div>
+
+  <div id="share-type">
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary active">
+        <input type="radio" name="twitter_options" id="text-share" autocomplete="off" checked>Text share
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="twitter_options" id="photo-share" autocomplete="off">Photo share
+      </label>
+      <!-- <label class="btn btn-primary">
+        <input type="radio" name="twitter_options" id="video-share" autocomplete="off">Video share
+      </label> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field share-field photo-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :photo %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.file_field :photo,
+          onchange: "validateFiles(this);",
+          data: {max_file_size: 5.megabytes},
+          autofocus: true,
+          class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field share-field photo-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :remote_photo_url, "or image URL" %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_field :remote_photo_url, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+<!--
+  <div class="row">
+    <div class="field share-field video-share social-form">
+      <div class="col-xs-12 col-md-4">
+        <%#= f.label :video %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%#= f.file_field :video,
+        onchange: "validateFiles(this);",
+        data: {max_file_size: 15.megabytes},
+        autofocus: true,
+        class: "share-input" %>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :content %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_area :content, autofocus: true, class: "share-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions pull-right">
+    <%= f.submit "Share on Twitter" %>
+  </div>
+
+<% end %>

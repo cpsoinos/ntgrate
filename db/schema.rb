@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905152233) do
+ActiveRecord::Schema.define(version: 20150907161922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -132,6 +132,23 @@ ActiveRecord::Schema.define(version: 20150905152233) do
   add_index "twitter_accounts", ["deleted_at"], name: "index_twitter_accounts_on_deleted_at", using: :btree
   add_index "twitter_accounts", ["identity_id"], name: "index_twitter_accounts_on_identity_id", using: :btree
 
+  create_table "twitter_shares", force: :cascade do |t|
+    t.string   "content"
+    t.string   "link"
+    t.string   "share_url"
+    t.string   "share_id"
+    t.string   "share_type"
+    t.string   "photo"
+    t.string   "video"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "deleted_at"
+    t.integer  "twitter_account_id"
+  end
+
+  add_index "twitter_shares", ["deleted_at"], name: "index_twitter_shares_on_deleted_at", using: :btree
+  add_index "twitter_shares", ["twitter_account_id"], name: "index_twitter_shares_on_twitter_account_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -162,4 +179,5 @@ ActiveRecord::Schema.define(version: 20150905152233) do
   add_foreign_key "identities", "users"
   add_foreign_key "instagram_accounts", "identities"
   add_foreign_key "twitter_accounts", "identities"
+  add_foreign_key "twitter_shares", "twitter_accounts"
 end
