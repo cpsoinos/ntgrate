@@ -20,6 +20,7 @@ class TwitterShare < ActiveRecord::Base
     # when "video"
     #   client.update_with_media(content, video_file)
     end
+    update_attribute("share_id", response["id"])
   end
 
   def delete_share
