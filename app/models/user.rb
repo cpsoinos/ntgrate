@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
-  after_create :create_dashboard
+  after_create :create_dashboard, :send_welcome_email
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity and user if they exist
@@ -97,4 +97,12 @@ class User < ActiveRecord::Base
   def linkedin_account
     identities.linkedin.present? ? identities.linkedin.first.linkedin_account : nil
   end
+
+  private
+
+  def send_welcome_email
+    binding.pry
+    UserMailer.welcome(id)
+  end
+
 end
