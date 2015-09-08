@@ -3,6 +3,8 @@ class FacebookShare < ActiveRecord::Base
   mount_uploader :video, VideoUploader
   belongs_to :facebook_page
 
+  include Shareable
+
   validates :facebook_page, presence: true
   validate :photo_size_validation
   validate :video_size_validation
@@ -27,18 +29,6 @@ class FacebookShare < ActiveRecord::Base
   def delete_share
     graph.delete_object(share_id)
     self.destroy
-  end
-
-  def get_share_type
-    if link.present?
-      update_attribute("share_type", "link")
-    elsif photo.present?
-      update_attribute("share_type", "photo")
-    elsif video.present?
-      update_attribute("share_type", "video")
-    else
-      update_attribute("share_type", "text")
-    end
   end
 
   private

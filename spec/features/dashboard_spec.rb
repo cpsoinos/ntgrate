@@ -112,7 +112,7 @@ feature "user dashboard:" do
       scenario "visit dashboard" do
         visit dashboard_path(user.dashboard)
 
-        expect(page).not_to have_link("Post to Twitter")
+        expect(page).not_to have_button("Post to Twitter")
         expect(page).to have_content("Connect your Twitter account")
       end
     end
@@ -124,7 +124,7 @@ feature "user dashboard:" do
         visit dashboard_path(user.dashboard)
 
         expect(page).not_to have_content("Connect your Twitter account")
-        expect(page).to have_link("Post to Twitter")
+        expect(page).to have_button("Post to Twitter")
       end
     end
 

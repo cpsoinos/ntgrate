@@ -25,6 +25,7 @@ gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
 gem 'paranoia'
 gem 'carrierwave'
+gem 'twitter'
 
 group :development, :local, :production do
   gem 'rails_12factor'
