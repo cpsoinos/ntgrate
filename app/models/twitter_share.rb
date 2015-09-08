@@ -14,9 +14,9 @@ class TwitterShare < ActiveRecord::Base
     get_share_type
     case share_type
     when "text"
-      client.update(content)
+      response = client.update(content)
     when "photo"
-      client.update_with_media(content, photo_file)
+      response = client.update_with_media(content, photo_file)
     # when "video"
     #   client.update_with_media(content, video_file)
     end
