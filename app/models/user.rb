@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook, :twitter, :instagram]
 
@@ -13,10 +13,12 @@ class User < ActiveRecord::Base
   has_many :identities
   has_one :facebook_page
 
+  before_validation :validate_full_name
+
   validates :email, presence: true, uniqueness: true
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
-  after_create :create_dashboard, :send_welcome_email
+  after_create :create_dashboard
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity and user if they exist
@@ -100,9 +102,10 @@ class User < ActiveRecord::Base
 
   private
 
-  def send_welcome_email
-    binding.pry
-    UserMailer.welcome(id)
+  def validate_full_name
+    if full_name.nil?
+      full_name = "#{first_name} #{last_name}"
+    end
   end
 
 end

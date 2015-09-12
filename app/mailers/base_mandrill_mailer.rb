@@ -1,7 +1,9 @@
-class BaseMandrillMailer < ActionMailer::Base
+require "mandrill"
+
+class BaseMandrillMailer < Devise::Mailer
   default(
-    from: "hello@example.com",
-    reply_to: "hello@example.com"
+    from: "coreypsoinos@gmail.com",
+    reply_to: "coreypsoinos@gmail.com"
   )
 
   private
@@ -11,12 +13,14 @@ class BaseMandrillMailer < ActionMailer::Base
   end
 
   def mandrill_template(template_name, attributes)
-    mandrill = Mandrill::API.new(ENV["SMTP_PASSWORD"])
-
     merge_vars = attributes.map do |key, value|
       { name: key, content: value }
     end
 
     mandrill.templates.render(template_name, [], merge_vars)["html"]
+  end
+
+  def mandrill
+    @_mandrill = Mandrill::API.new(ENV["SMTP_PASSWORD"])
   end
 end
