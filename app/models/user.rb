@@ -54,7 +54,7 @@ class User < ActiveRecord::Base
           image: auth.info.image
         )
         # Skip confirmation for OAuth if confirmable
-        # user.skip_confirmation!
+        user.skip_confirmation!
         user.save!
       end
     else
