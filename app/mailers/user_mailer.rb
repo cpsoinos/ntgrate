@@ -23,10 +23,6 @@ class UserMailer < BaseMandrillMailer
     mandrill_send(options)
   end
 
-  # def unlock_instructions(record, token, opts={})
-  #   # code to be added here later
-  # end
-
   def mandrill_send(opts={})
     message = {
       subject: opts[:subject],
@@ -47,13 +43,4 @@ class UserMailer < BaseMandrillMailer
       raise
   end
 
-  def welcome
-    subject = "Welcome to GetReal!"
-    merge_vars = {
-      "FIRST_NAME" => @user.first_name,
-      "DASHBOARD_URL" => dashboard_url(@user.dashboard),
-    }
-    body = mandrill_template("welcome", merge_vars)
-    send_mail(@user.email, subject, body)
-  end
 end

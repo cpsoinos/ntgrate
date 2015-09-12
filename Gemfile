@@ -49,4 +49,5 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
+  gem 'email_spec'
 end

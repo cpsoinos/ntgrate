@@ -3,6 +3,7 @@ require 'factory_girl_rails'
 require 'rails_helper'
 require 'helpers/user_helper_spec.rb'
 require 'coveralls'
+require 'email_spec'
 
 Coveralls.wear!('rails')
 
@@ -31,6 +32,8 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
   config.include FactoryGirl::Syntax::Methods
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 
   config.before(:all) do
     FactoryGirl.reload
