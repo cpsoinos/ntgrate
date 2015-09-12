@@ -21,6 +21,10 @@ class BaseMandrillMailer < Devise::Mailer
   end
 
   def mandrill
-    @_mandrill = Mandrill::API.new(ENV["SMTP_PASSWORD"])
+    if Rails.env == "test"
+      @_mandrill = Mandrill::API.new(ENV["MANDRILL_TEST_API_KEY"])
+    else
+      @_mandrill = Mandrill::API.new(ENV["SMTP_PASSWORD"])
+    end
   end
 end
