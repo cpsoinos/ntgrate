@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook, :twitter, :instagram]
 
@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   has_many :listings
   has_many :identities
   has_one :facebook_page
+
+  before_validation :validate_full_name
 
   validates :email, presence: true, uniqueness: true
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
@@ -97,4 +99,13 @@ class User < ActiveRecord::Base
   def linkedin_account
     identities.linkedin.present? ? identities.linkedin.first.linkedin_account : nil
   end
+
+  private
+
+  def validate_full_name
+    if full_name.nil?
+      full_name = "#{first_name} #{last_name}"
+    end
+  end
+
 end

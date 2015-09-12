@@ -1,6 +1,6 @@
 feature "user dashboard:" do
 
-  let(:user) { create(:user) }
+  let(:user) { create(:confirmed_user) }
 
   context "guest" do
 
