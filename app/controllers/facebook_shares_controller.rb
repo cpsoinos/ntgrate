@@ -1,5 +1,6 @@
 class FacebookSharesController < ApplicationController
   before_filter :authenticate_user!
+  respond_to :html, :js
 
   # def new
   #   @facebook_share = FacebookShare.new
@@ -11,7 +12,14 @@ class FacebookSharesController < ApplicationController
     if @facebook_share.save
       @facebook_share.share
       flash[:notice] = "Shared successfully to Facebook!"
-      redirect_to dashboard_path(current_user.dashboard)
+      respond_to do |format|
+        format.html do
+          redirect_to dashboard_path(current_user.dashboard)
+        end
+        format.js do
+          flash.now[:notice] = "Shared successfully to Facebook!"
+        end
+      end
     else
       redirect_to :back
     end
