@@ -25,49 +25,53 @@ feature "user dashboard:" do
       expect(page).to have_content("Sign out")
     end
 
-    context "does not have listings" do
-      scenario "visits dashboard" do
-        visit dashboard_path(user.dashboard)
+    ##################
+    #### LISTINGS ####
+    ##################
 
-        expect(page).not_to have_content("Active Listings")
-        expect(page).to have_content("You don't have any listings yet.")
-        expect(page).to have_link("Get started")
-      end
-    end
-
-    context "has listings" do
-      it "shows number of active listings" do
-        create_list(:listing, 3, :active, user: user)
-        visit dashboard_path(user.dashboard)
-
-        expect(page).to have_content("You have 3 active listings")
-      end
-
-      it "shows number of inactive listings" do
-        create_list(:listing, 3, :inactive, user: user)
-        visit dashboard_path(user.dashboard)
-
-        expect(page).to have_content("You have 3 inactive listings")
-      end
-
-      it "shows number of sold listings" do
-        listings = create_list(:listing, 1, :sold, user: user)
-        visit dashboard_path(user.dashboard)
-
-        expect(page).to have_content("You've sold 1 property")
-      end
-    end
-
-    context "has inactive or sold but no current listings" do
-      it "suggests ways to reach new prospective clients" do
-        create_list(:listing, 3, :inactive, user: user)
-        visit dashboard_path(user.dashboard)
-
-        expect(page).to have_content("You have no active listings.")
-        expect(page).not_to have_content("You don't have any listings yet.")
-        expect(page).to have_content("Here are some things you can do to attract more clients")
-      end
-    end
+    # context "does not have listings" do
+    #   scenario "visits dashboard" do
+    #     visit dashboard_path(user.dashboard)
+    #
+    #     expect(page).not_to have_content("Active Listings")
+    #     expect(page).to have_content("You don't have any listings yet.")
+    #     expect(page).to have_link("Get started")
+    #   end
+    # end
+    #
+    # context "has listings" do
+    #   it "shows number of active listings" do
+    #     create_list(:listing, 3, :active, user: user)
+    #     visit dashboard_path(user.dashboard)
+    #
+    #     expect(page).to have_content("You have 3 active listings")
+    #   end
+    #
+    #   it "shows number of inactive listings" do
+    #     create_list(:listing, 3, :inactive, user: user)
+    #     visit dashboard_path(user.dashboard)
+    #
+    #     expect(page).to have_content("You have 3 inactive listings")
+    #   end
+    #
+    #   it "shows number of sold listings" do
+    #     listings = create_list(:listing, 1, :sold, user: user)
+    #     visit dashboard_path(user.dashboard)
+    #
+    #     expect(page).to have_content("You've sold 1 property")
+    #   end
+    # end
+    #
+    # context "has inactive or sold but no current listings" do
+    #   it "suggests ways to reach new prospective clients" do
+    #     create_list(:listing, 3, :inactive, user: user)
+    #     visit dashboard_path(user.dashboard)
+    #
+    #     expect(page).to have_content("You have no active listings.")
+    #     expect(page).not_to have_content("You don't have any listings yet.")
+    #     expect(page).to have_content("Here are some things you can do to attract more clients")
+    #   end
+    # end
 
     #################
     ## ADVERTISING ##
