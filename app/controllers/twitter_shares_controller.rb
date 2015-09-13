@@ -1,5 +1,6 @@
 class TwitterSharesController < ApplicationController
   before_filter :authenticate_user!
+  respond_to :html, :js
 
   def create
     @twitter_account = current_user.twitter_account
@@ -7,7 +8,14 @@ class TwitterSharesController < ApplicationController
     if @twitter_share.save
       @twitter_share.share
       flash[:notice] = "Shared successfully to Twitter!"
-      redirect_to dashboard_path(current_user.dashboard)
+      respond_to do |format|
+        format.html do
+          redirect_to dashboard_path(current_user.dashboard)
+        end
+        format.js do
+          flash.now[:notice] = "Shared successfully to Twitter!"
+        end
+      end
     else
       redirect_to :back
     end
