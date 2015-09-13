@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("input[name=twitter_options]").on("change", function() {
     // first, set the share type
-    var shareType = "." + this.id;
+    var shareType = ".twitter_" + this.id;
     // second, hide all but text field types
     $(".share-field").hide();
     // third, show the selected field type
@@ -26,7 +26,7 @@ $(document).ready(function() {
   });
 });
 
-function validateFiles(inputFile) {
+function validateTwFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
