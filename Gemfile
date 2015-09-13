@@ -27,6 +27,11 @@ gem 'paranoia'
 gem 'carrierwave'
 gem 'twitter'
 gem 'mandrill-api'
+gem 'sidekiq'
+gem 'devise-async'
+gem 'sinatra', require: false
+gem 'slim'
+gem 'remotipart'
 
 group :development, :local, :production do
   gem 'rails_12factor'
