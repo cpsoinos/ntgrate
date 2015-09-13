@@ -3,6 +3,11 @@
   background-size: cover;
 }
 
+#js-flash {
+  z-index: 1;
+  position: absolute;
+}
+
 #home-dashboards {
   background: url(images/home.jpg) 50% 0 fixed;
 }
@@ -19,15 +24,26 @@ div.panel {
   }
 }
 
+.social-panel {
+  height: 25em;
+  position: relative;
+}
+
+.social-submit {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
 .well-dashboard {
-  height: 60em;
+  height: 62em;
 }
 
 #share-type {
   padding-bottom: 1em;
 }
 
-.link-share, .photo-share, .video-share {
+.facebook_link-share, .facebook_photo-share, .facebook_video-share, .twitter_link-share, .twitter_photo-share, .twitter_video-share {
   display: none;
 }
 
@@ -41,4 +57,8 @@ div.panel {
 
 #facebook-errors, #twitter-errors {
   display: none;
+}
+
+.minus {
+  color: red;
 }

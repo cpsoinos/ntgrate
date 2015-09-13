@@ -1,29 +1,29 @@
 $(document).ready(function() {
   $("input[name=facebook_options]").on("change", function() {
     // first, set the share type
-    var shareType = "." + this.id;
+    var shareType = ".facebook_" + this.id;
     // second, hide all but text field types
     $(".share-field").hide();
     // third, show the selected field type
     $(shareType).show();
 
     // fourth, empty the photo or link fields if different share type selected
-    if(shareType === ".text-share") {
+    if(shareType === ".facebook_text-share") {
       $("#facebook_share_photo").val("");
       $("#facebook_share_remote_photo_url").val("");
       $("#facebook_share_video").val("");
       $("#facebook_share_remote_video_url").val("");
       $("#facebook_share_link").val("");
-    } else if(shareType === ".link-share") {
+    } else if(shareType === ".facebook_link-share") {
       $("#facebook_share_photo").val("");
       $("#facebook_share_remote_photo_url").val("");
       $("#facebook_share_video").val("");
       $("#facebook_share_remote_video_url").val("");
-    } else if(shareType === ".photo-share") {
+    } else if(shareType === ".facebook_photo-share") {
       $("#facebook_share_link").val("");
       $("#facebook_share_video").val("");
       $("#facebook_share_remote_video_url").val("");
-    } else if(shareType === ".video-share") {
+    } else if(shareType === ".facebook_video-share") {
       $("#facebook_share_link").val("");
       $("#facebook_share_photo").val("");
       $("#facebook_share_remote_photo_url").val("");
@@ -31,7 +31,7 @@ $(document).ready(function() {
   });
 });
 
-function validateFiles(inputFile) {
+function validateFbFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
@@ -96,6 +96,7 @@ function validateFiles(inputFile) {
   }
 
   if (extError) {
+    debugger;
     $("#facebook-errors").show();
     $("#facebook-errors").append(extErrorMessage);
     $(inputFile).val('');

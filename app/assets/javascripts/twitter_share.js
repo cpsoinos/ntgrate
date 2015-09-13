@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("input[name=twitter_options]").on("change", function() {
     // first, set the share type
-    var shareType = "." + this.id;
+    var shareType = ".twitter_" + this.id;
     // second, hide all but text field types
     $(".share-field").hide();
     // third, show the selected field type
@@ -26,7 +26,7 @@ $(document).ready(function() {
   });
 });
 
-function validateFiles(inputFile) {
+function validateTwFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
@@ -100,4 +100,23 @@ function validateFiles(inputFile) {
 // set twitter error div to fade out after 15 sec
 $(document).ready( function() {
   $('#twitter-errors').delay(15000).fadeOut();
+});
+
+// character counter
+$(document).ready(function() {
+  $("#tweet").attr("disabled", "disabled");
+  $("#twitter_share_content").keyup(function(){
+    var chars=$(this).val().length;
+
+      $("#message").text(140-chars);
+
+      if(chars > 140 || chars <=0) {
+        $("#tweet").attr("disabled", "disabled");
+        $("#message").addClass("minus");
+
+      } else {
+        $("#tweet").removeAttr("disabled");
+        $("#message").removeClass("minus");
+      }
+   });
 });

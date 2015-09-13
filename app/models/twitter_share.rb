@@ -7,40 +7,21 @@ class TwitterShare < ActiveRecord::Base
   include Shareable
 
   validates :twitter_account, presence: true
+  validates :content, length: { maximum: 140 }
 
   acts_as_paranoid
 
   def share
     get_share_type
-    case share_type
-    when "text"
-      response = client.update(content)
-    when "photo"
-      response = client.update_with_media(content, photo_file)
-    # when "video"
-    #   client.update_with_media(content, video_file)
-    end
-    update_attribute("share_id", response["id"])
+    TwitterShareJob.perform_later(self)
   end
 
   def delete_share
     client.destroy_status(share_id)
   end
 
-  def retweet
-    client.retweet(share_id)
-  end
-
   def retweeters
     client.retweeters_of(share_id)
-  end
-
-  def photo_file
-    open(photo.file.file)
-  end
-
-  def video_file
-    open(video.file.file)
   end
 
 end

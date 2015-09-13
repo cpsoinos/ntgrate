@@ -1,0 +1,12 @@
+// reset the form fields
+$("#new_facebook_share").each(function(){
+  this.reset();
+});
+
+// add the flash message
+$("#js-flash").html('<%= j render partial: "layouts/flash_messages" %>');
+
+// clear the flash message
+$("#js-flash").delay(10000).fadeOut(function() {
+  $(this).empty().show();
+});
