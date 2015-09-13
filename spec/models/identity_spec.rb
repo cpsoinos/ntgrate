@@ -42,3 +42,26 @@ describe "scopes" do
     expect(Identity.facebook.any? { |i| i.provider != "instagram" }).to eq(false)
   end
 end
+
+describe "#check_for_account(auth)" do
+  before do
+    mock_auth_hash
+  end
+
+
+  it "finds an existing Facebook account" do
+    user = create_from_omniauth
+    identity = user.identities.first
+    facebook_account = user.facebook_account
+    identity.check_for_account(mock_auth_hash)
+
+    expect(identity.facebook_account).to eq(facebook_account)
+  end
+
+  it "creates a new Facebook account if not present" do
+    expect(FacebookAccount.count).to be(0)
+    create_from_omniauth
+
+    expect(FacebookAccount.count).to be(1)
+  end
+end
