@@ -85,7 +85,8 @@ class User < ActiveRecord::Base
   end
 
   def facebook_pages
-    facebook_account.facebook_pages
+    facebook_account.present? ?
+    facebook_account.facebook_pages : nil
   end
 
   def twitter_account
@@ -104,7 +105,7 @@ class User < ActiveRecord::Base
 
   def validate_full_name
     if full_name.nil?
-      full_name = "#{first_name} #{last_name}"
+      update_attribute("full_name", "#{first_name} #{last_name}")
     end
   end
 
