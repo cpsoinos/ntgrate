@@ -55,4 +55,5 @@ group :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'email_spec'
+  gem 'rspec-sidekiq'
 end
