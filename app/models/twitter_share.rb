@@ -7,6 +7,7 @@ class TwitterShare < ActiveRecord::Base
   include Shareable
 
   validates :twitter_account, presence: true
+  validates :content, length: { maximum: 140 }
 
   acts_as_paranoid
 
