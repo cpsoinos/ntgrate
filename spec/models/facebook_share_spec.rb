@@ -9,19 +9,65 @@ describe FacebookShare do
 end
 
 describe FacebookShare, "#share" do
+  include ActiveJob::TestHelper
 
   let(:user) { create_from_omniauth }
-  # let(:facebook_share) { create(:facebook_share) }
 
-  it "shares to a Facebook page" do
-    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test")
-  # expect(Object.method :is_a?).to be_delayed(Object)
+  it "creates a FacebookShareJob" do
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test5")
     facebook_share.share
-    binding.pry
-    expect(FacebookShareJob).to have(1).enqueued.job
-    # expect(facebook_share.share).to be_delayed(FacebookShareJob)
-    # expect(facebook_share.share).to change(FacebookShareJob.jobs, :size).by(1)
+
+    expect(enqueued_jobs.size).to eq(1)
   end
+
+  it "shares to Facebook" do
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test4")
+    facebook_share.share
+
+    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
+    }
+
+    expect(facebook_share.share_id).not_to be(nil)
+    # expect(facebook_share.share_url).not_to be(nil)
+  end
+
+end
+
+describe FacebookShare, "#delete_share" do
+  include ActiveJob::TestHelper
+
+  let(:user) { create_from_omniauth }
+
+  it "creates a FacebookShareDeleteJob" do
+    pending("stubbing fb")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test2")
+    facebook_share.share
+
+    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
+    }
+
+    facebook_share.delete_share
+
+    expect(enqueued_jobs.size).to eq(1)
+  end
+
+  it "deletes a share from Facebook" do
+    pending("stubbing fb")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test3")
+    facebook_share.share
+
+    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
+    }
+
+    facebook_share.delete_share
+
+    perform_enqueued_jobs {
+      FacebookShareDeleteJob.perform_now(facebook_share)
+    }
+
+    expect(facebook_share.deleted_at).not_to be(nil)
+  end
+
 end
 
 describe FacebookShare, "#delete_share" do
