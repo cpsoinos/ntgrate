@@ -18,6 +18,19 @@ class FacebookSharer
       response = graph.put_video(@share.video.current_path, {message: @share.content})
     end
     @share.update_attribute("share_id", response["id"])
+    get_share_url
+  end
+
+  def delete
+    if graph.delete_object(@share.id)
+      self.destroy
+    end
+  end
+
+  def get_share_url
+    share_id_parts = @share.share_id.split("_")
+    url = "https://www.facebook.com/#{share_id_parts.first}/posts/#{share_id_parts.last}"
+    @share.update_attribute("share_url", url)
   end
 
 end

@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :get_fb_app_id
 
   def show
     unless current_user.present? && current_user.dashboard.id = params[:id].to_i
@@ -17,6 +17,12 @@ class DashboardsController < ApplicationController
 
     @facebook_share = FacebookShare.new
     @twitter_share = TwitterShare.new
+  end
+
+  private
+
+  def get_fb_app_id
+    gon.facebook_app_id = ENV["FACEBOOK_APP_ID"]
   end
 
 end

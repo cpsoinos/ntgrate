@@ -9,12 +9,65 @@ describe FacebookShare do
 end
 
 describe FacebookShare, "#share" do
-  it "shares to a Facebook page" do
-    pending("testing with apis")
-    facebook_share = create(:facebook_share)
+  include ActiveJob::TestHelper
 
-    expect(facebook_share.share.response).to eq("success")
+  let(:user) { create_from_omniauth }
+
+  it "creates a FacebookShareJob" do
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test5")
+    facebook_share.share
+
+    expect(enqueued_jobs.size).to eq(1)
   end
+
+  it "shares to Facebook" do
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test4")
+    facebook_share.share
+
+    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
+    }
+
+    expect(facebook_share.share_id).not_to be(nil)
+    # expect(facebook_share.share_url).not_to be(nil)
+  end
+
+end
+
+describe FacebookShare, "#delete_share" do
+  include ActiveJob::TestHelper
+
+  let(:user) { create_from_omniauth }
+
+  it "creates a FacebookShareDeleteJob" do
+    pending("stubbing fb")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test2")
+    facebook_share.share
+
+    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
+    }
+
+    facebook_share.delete_share
+
+    expect(enqueued_jobs.size).to eq(1)
+  end
+
+  it "deletes a share from Facebook" do
+    pending("stubbing fb")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test3")
+    facebook_share.share
+
+    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
+    }
+
+    facebook_share.delete_share
+
+    perform_enqueued_jobs {
+      FacebookShareDeleteJob.perform_now(facebook_share)
+    }
+
+    expect(facebook_share.deleted_at).not_to be(nil)
+  end
+
 end
 
 describe FacebookShare, "#delete_share" do

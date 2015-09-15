@@ -18,8 +18,7 @@ class FacebookShare < ActiveRecord::Base
   end
 
   def delete_share
-    graph.delete_object(share_id)
-    self.destroy
+    FacebookShareDeleteJob.perform_later(self)
   end
 
   private

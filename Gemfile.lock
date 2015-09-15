@@ -166,6 +166,11 @@ GEM
     git (1.2.9.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gon (6.0.1)
+      actionpack (>= 3.0)
+      json
+      multi_json
+      request_store (>= 1.0)
     hashie (3.4.2)
     hitimes (1.2.2)
     http (0.9.6)
@@ -292,6 +297,7 @@ GEM
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
     remotipart (1.2.1)
+    request_store (1.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rest-client (1.8.0)
@@ -319,6 +325,9 @@ GEM
       rspec-expectations (~> 3.3.0)
       rspec-mocks (~> 3.3.0)
       rspec-support (~> 3.3.0)
+    rspec-sidekiq (2.1.0)
+      rspec (~> 3.0, >= 3.0.0)
+      sidekiq (>= 2.4.0)
     rspec-support (3.3.0)
     ruby-progressbar (1.7.5)
     sass (3.4.18)
@@ -421,6 +430,7 @@ DEPENDENCIES
   faker
   font-awesome-sass
   fuubar
+  gon
   jbuilder (~> 2.0)
   jquery-rails
   koala (~> 2.2)
@@ -439,6 +449,7 @@ DEPENDENCIES
   rails_12factor
   remotipart
   rspec-rails (~> 3.0)
+  rspec-sidekiq
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sextant
