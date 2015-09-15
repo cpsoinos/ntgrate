@@ -32,6 +32,7 @@ gem 'devise-async'
 gem 'sinatra', require: false
 gem 'slim'
 gem 'remotipart'
+gem 'gon'
 
 group :development, :local, :production do
   gem 'rails_12factor'
