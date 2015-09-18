@@ -96,7 +96,6 @@ function validateFbFiles(inputFile) {
   }
 
   if (extError) {
-    debugger;
     $("#facebook-errors").show();
     $("#facebook-errors").append(extErrorMessage);
     $(inputFile).val('');
@@ -106,4 +105,14 @@ function validateFbFiles(inputFile) {
 // set facebook error div to fade out after 15 sec
 $(document).ready( function() {
   $('#facebook-errors').delay(15000).fadeOut();
+  var selectedPageId = $("#facebook_share_facebook_page_id").val();
+  getFeed(selectedPageId);
 });
+
+function getFeed(pageId) {
+  $.ajax({
+    url: ("/facebook_pages/feed"),
+    type: "GET",
+    data: {page_id: pageId}
+  });
+}

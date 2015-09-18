@@ -4,7 +4,7 @@ class FacebookShare < ActiveRecord::Base
   belongs_to :facebook_page
 
   include Shareable
-  include FacebookGraphable
+  # include FacebookGraphable
 
   validates :facebook_page, presence: true
   validate :photo_size_validation

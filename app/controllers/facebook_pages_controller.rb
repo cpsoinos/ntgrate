@@ -1,4 +1,5 @@
 class FacebookPagesController < ApplicationController
+  respond_to :js, :html
   before_filter :authenticate_user!
 
   def new
@@ -15,6 +16,16 @@ class FacebookPagesController < ApplicationController
 
   def destroy
 
+  end
+
+  def feed
+    respond_to do |format|
+      format.js do
+        @facebook_page = FacebookPage.find(params[:page_id].to_i)
+        @feed = FacebookFeedRetriever.new(@facebook_page).get_feed
+        binding.pry
+      end
+    end
   end
 
   protected

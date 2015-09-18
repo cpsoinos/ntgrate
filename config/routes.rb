@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   resources :facebook_shares, only: [:new, :create, :update, :destroy]
   resources :twitter_shares, only: [:new, :create, :update, :destroy]
 
+  get '/facebook_pages/feed', to: 'facebook_pages#feed'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
