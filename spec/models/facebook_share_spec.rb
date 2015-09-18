@@ -14,14 +14,14 @@ describe FacebookShare, "#share" do
   let(:user) { create_from_omniauth }
 
   it "creates a FacebookShareJob" do
-    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test5")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
     expect(enqueued_jobs.size).to eq(1)
   end
 
   it "shares to Facebook" do
-    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test4")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
     perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
@@ -40,7 +40,7 @@ describe FacebookShare, "#delete_share" do
 
   it "creates a FacebookShareDeleteJob" do
     pending("stubbing fb")
-    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test2")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
     perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
@@ -53,7 +53,7 @@ describe FacebookShare, "#delete_share" do
 
   it "deletes a share from Facebook" do
     pending("stubbing fb")
-    facebook_share = user.facebook_pages.first.facebook_shares.new(content: "this is a test3")
+    facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
     perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
