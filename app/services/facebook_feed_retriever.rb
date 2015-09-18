@@ -7,7 +7,6 @@ class FacebookFeedRetriever
 
   def get_feed
     @feed = graph.get_connections("me", "feed")
-    binding.pry
   end
 
   def get_share(share_id)

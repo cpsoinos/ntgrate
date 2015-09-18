@@ -23,7 +23,6 @@ class FacebookPagesController < ApplicationController
       format.js do
         @facebook_page = FacebookPage.find(params[:page_id].to_i)
         @feed = FacebookFeedRetriever.new(@facebook_page).get_feed
-        binding.pry
       end
     end
   end
