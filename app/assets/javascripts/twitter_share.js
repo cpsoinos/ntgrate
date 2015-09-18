@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("input[name=twitter_options]").on("change", function() {
     // first, set the share type
-    var shareType = ".twitter_" + this.id;
+    var shareType = ".twitter_" + this.className;
     // second, hide all but text field types
     $(".share-field").hide();
     // third, show the selected field type

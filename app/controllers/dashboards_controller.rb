@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-  before_filter :authenticate_user!, :get_fb_app_id
+  before_filter :authenticate_user!
 
   def show
     unless current_user.present? && current_user.dashboard.id = params[:id].to_i

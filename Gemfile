@@ -53,7 +53,12 @@ group :test do
   gem 'fuubar'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'poltergeist'
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'email_spec'
+  gem 'rspec-sidekiq'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  # gem 'webmock'
 end
