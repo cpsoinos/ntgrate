@@ -15,7 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
 gem 'coveralls', require: false
 gem 'badgerbadgerbadger'
-gem 'dotenv-rails', :require => 'dotenv/rails-now'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
