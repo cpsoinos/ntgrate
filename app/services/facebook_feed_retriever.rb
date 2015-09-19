@@ -6,11 +6,19 @@ class FacebookFeedRetriever
   end
 
   def get_feed
-    @feed = graph.get_connections("me", "feed")
-  end
-
-  def get_share(share_id)
-    graph.get_object(share_id)
+    @feed = graph.get_connection("me", "posts", {
+      limit: 5,
+      fields: [
+        'message',
+        'id',
+        'from',
+        'type',
+        'picture',
+        'link',
+        'created_time',
+        'updated_time'
+      ]
+    })
   end
 
 end
