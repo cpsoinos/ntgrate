@@ -25,7 +25,7 @@ div.panel {
 }
 
 .social-panel {
-  height: 28.5em;
+  min-height: 28.5em;
   position: relative;
 }
 
@@ -42,7 +42,7 @@ div.panel {
 }
 
 .well-dashboard {
-  height: 62em;
+  overflow: auto;
 }
 
 #share-type {
