@@ -1,5 +1,5 @@
 <div class="share-info">
-  Shared at: <%= share[:created_time] %>
+  <%= @facebook_page.name %> shared at: <%= share[:created_time] %>
   <% if share[:updated_time] != share[:created_time] %>
     Updated at: <%= share[:updated_time] %>
   <% end %>

@@ -10,11 +10,11 @@ feature "facebook feed" do
   end
 
   it "shows the 5 most recent posts", js: true do
+    pending("VCR")
     visit dashboard_path(user.dashboard)
-    find("#fb-newsfeed-button").trigger("click")
+    find("#show-newsfeed").trigger("click")
 
-    expect(page).to have_content("Shared at:")
-    expect(page).to have_content("by #{user.full_name}")
+    expect(page).to have_content("#{facebook_page.name} shared at:")
   end
 
 end
