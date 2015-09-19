@@ -18,14 +18,15 @@ class FacebookPagesController < ApplicationController
 
   end
 
-  def feed
-    respond_to do |format|
-      format.js do
-        @facebook_page = FacebookPage.find(params[:page_id].to_i)
-        @feed = FacebookFeedRetriever.new(@facebook_page).get_feed
-      end
-    end
-  end
+  # def feed
+  #   respond_to do |format|
+  #     format.js do
+  #       @facebook_page = FacebookPage.find(params[:page_id].to_i)
+  #       @feed = FacebookFeedRetriever.new(@facebook_page).get_feed
+  #       render nothing: true
+  #     end
+  #   end
+  # end
 
   protected
 

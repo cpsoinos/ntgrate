@@ -7,9 +7,9 @@ class DashboardsController < ApplicationController
       redirect_to new_user_session_path
     end
 
-    @listings = Dashboard.find(params[:id]).user.listings
     @facebook_account = current_user.facebook_account
     @facebook_pages = @facebook_account.try(:facebook_pages)
+    gon.facebookPage = @facebook_pages.first
 
     @twitter_account = current_user.twitter_account
     @instagram_account = current_user.instagram_account

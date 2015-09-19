@@ -33,6 +33,7 @@ gem 'sinatra', require: false
 gem 'slim'
 gem 'remotipart'
 gem 'gon'
+gem 'bower-rails', '~> 0.10.0'
 
 group :development, :local, :production do
   gem 'rails_12factor'

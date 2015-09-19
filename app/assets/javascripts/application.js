@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
-//= require bootstrap-sprockets
+//= require bootstrap
+//= require codebird-js
+//= require doT/doT.min
+//= require moment/min/moment.min
+//= require social-feed/js/jquery.socialfeed
 //= require_tree .
 
 $(document).ready( function() {

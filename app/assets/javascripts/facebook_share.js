@@ -106,13 +106,13 @@ function validateFbFiles(inputFile) {
 $(document).ready( function() {
   $('#facebook-errors').delay(15000).fadeOut();
   var selectedPageId = $("#facebook_share_facebook_page_id").val();
-  getFeed(selectedPageId);
+  // getFeed(selectedPageId);
 });
 
-function getFeed(pageId) {
-  $.ajax({
-    url: ("/facebook_pages/feed"),
-    type: "GET",
-    data: {page_id: pageId}
-  });
-}
+// function getFeed(pageId) {
+//   $.ajax({
+//     url: ("/facebook_pages/feed"),
+//     type: "GET",
+//     data: {page_id: pageId}
+//   });
+// }
