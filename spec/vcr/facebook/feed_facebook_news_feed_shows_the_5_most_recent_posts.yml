@@ -1,0 +1,2197 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBAKISEsY5pftgsXU7HKtMHwKQ3pbWLF02icsutmCN1pZCzzrfmk7CZB032IfR8ruWlWEsH3sGY9E2IAp54J9lwWmTzxofx83uJ7q48zdKH8ZAX5MwTkXVngzoZAo1alNAQjotiHSqYRKhbGMz0Lec85HS9qtyT6qbZCr8ZAXxUgz7Q36YRmNGiz93BApDKwhAZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - F5DqFBgX5kS
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - q6P9hjKwjFlXLCVxIMKBo8dFIZ271zfJ4gzc+7zDI3sNH1WLrQE71CRO/9pxG6urbTpULKrN8yYJoWDoSE1DjQ==
+      date:
+      - Sat, 19 Sep 2015 16:16:33 GMT
+      connection:
+      - close
+      content-length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:16:33 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBAKISEsY5pftgsXU7HKtMHwKQ3pbWLF02icsutmCN1pZCzzrfmk7CZB032IfR8ruWlWEsH3sGY9E2IAp54J9lwWmTzxofx83uJ7q48zdKH8ZAX5MwTkXVngzoZAo1alNAQjotiHSqYRKhbGMz0Lec85HS9qtyT6qbZCr8ZAXxUgz7Q36YRmNGiz93BApDKwhAZDZD&appsecret_proof=4f1a7a6a2a57e29ea82d2919b151bcf5774757652d0f8e198786f02aa34db770
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - Gev2FbqjnHp
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"6ee178dfc3117bf73ec0ec2119f927ba500be7ca"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - lN+Se/sZA4tKBchQGbodKcXbZ+682EuWHuIHQProFD1WrGFVOEU/zPdbWTyugSTKxTLu3A5VRsCUtIEIBUynRg==
+      date:
+      - Sat, 19 Sep 2015 16:16:34 GMT
+      connection:
+      - close
+      content-length:
+      - '553'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:16:33 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50103/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:16:34 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70286135829160'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:16:34 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD&appsecret_proof=dd7d1099c84a12641f18320fd090d8ce018fb5c02688fda0b6b1bcd50bc3bd99&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - FsaRFHIyh5H
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"afc510edd3763c72f05a694baee29a67490ab1cd"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - FuXPbAQdrnYPvFv4mVVuT4Ruxoe2FW1v542lRKsvo7Px+1VCBVRm9jLvHM7SbWKgdsiJ2OwxmX7NMPZ1EvroAw==
+      date:
+      - Sat, 19 Sep 2015 16:16:40 GMT
+      connection:
+      - close
+      content-length:
+      - '1154'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:16:40 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD&appsecret_proof=dd7d1099c84a12641f18320fd090d8ce018fb5c02688fda0b6b1bcd50bc3bd99&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - G/7EduKCUUO
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"afc510edd3763c72f05a694baee29a67490ab1cd"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - hrYXLsNPbxq2V7U/ZoGY32ZHSD5wRTcAX7gvZ75ImqIq8UTRm+NAG7OQMG4BSnOIJUXKo52Uhw2n/hNdoRGt6A==
+      date:
+      - Sat, 19 Sep 2015 16:16:41 GMT
+      connection:
+      - close
+      content-length:
+      - '1154'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAJR6xmtSXtQdeZCa3jUGywy6ZA0CG477sePts9QfqiBOc9ZA6wUiZCEb5o8ulyJiZCTlLXmtHdjxVWKDJwD4EmbANJxZAzTkrAB0IKkdW3tveDbORgM36m2K7ZCKVBU6lUte6eFHGzPQ3DBeJLqiXUJ39wecvbX2iC1wMIlaQ0VIjKrJeiZBBN9Un842KTHhiAZDZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:16:41 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBAD2nWbkD6e1OXcajfTwYbIWwRvRpj1VzuuBlNnNb2AYVOc1wV4IXxYrd7Cbys2qmotsUyBQeYgBiZCH6ZBZBySt6E032pJSRJZASfDCuShi9Lj5ZBEsDCZBZB2Ywij3blblDIIsAqzl2Lg2GAisL73g6ApEQlNFiK7JBZA1wI0JSvBvkDTKpU70ZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - Da9fWZXJUWg
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - oPc2J/09IYOKFWjKUe2IIcvgG9x/Y7bCqAlr4HDeYEsqeBecLGJSAXO4rQgD1C74ISPyjWo+rjpWwiATBbyxSw==
+      date:
+      - Sat, 19 Sep 2015 16:21:19 GMT
+      connection:
+      - close
+      content-length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:19 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBAD2nWbkD6e1OXcajfTwYbIWwRvRpj1VzuuBlNnNb2AYVOc1wV4IXxYrd7Cbys2qmotsUyBQeYgBiZCH6ZBZBySt6E032pJSRJZASfDCuShi9Lj5ZBEsDCZBZB2Ywij3blblDIIsAqzl2Lg2GAisL73g6ApEQlNFiK7JBZA1wI0JSvBvkDTKpU70ZD&appsecret_proof=349d4d3c264aa8b4caf55eb850c55acb5ce83c76eaf0b16ecdbc533738deb2b9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - BYzMAjtNBYv
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"623bf27482f58fee6d30ef8042ea011e2a48ea30"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - yCxx0EYLRQyeLyWKS5Xow/+fYKemFt15yh+gOj3WhSDqQgPBv99E7r/OtEiPDN3Sx/ffIT5n89INk5mCdPNsbg==
+      date:
+      - Sat, 19 Sep 2015 16:21:20 GMT
+      connection:
+      - close
+      content-length:
+      - '543'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:19 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50235/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:21:20 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70352043683180'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:20 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD&appsecret_proof=da369a3320fbf9ec5321ae2462f5d66bb975ef72908e5d154a3b61f70bda8622&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - GIFxQbAFTbu
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"db62eec2c5465db3214cfa4dae40a427ec4137bf"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - SgTZL5M3x/Dg9R3ajbYp48xm42I0GSiTl1rJ0E4ipWvTskhWmsbMnXonx5Y0rxHTq1EmizdN1CF9jMdp+b002g==
+      date:
+      - Sat, 19 Sep 2015 16:21:26 GMT
+      connection:
+      - close
+      content-length:
+      - '1152'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:26 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD&appsecret_proof=da369a3320fbf9ec5321ae2462f5d66bb975ef72908e5d154a3b61f70bda8622&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - FwZI4p9ML9/
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"db62eec2c5465db3214cfa4dae40a427ec4137bf"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - JDyfxUa67zECaU4/GCV5xLVsjIer+EFASus7kyL+xFlFdGcvfTVqX7+CjiBmErx2IfDEJpNXC/+LtBH9PHNsCw==
+      date:
+      - Sat, 19 Sep 2015 16:21:27 GMT
+      connection:
+      - close
+      content-length:
+      - '1152'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAHSdLMHVcjbSOYYCXGQgvX0oxFVKxYmNDVqS42aW1nS7GQtZANUCy5s5fwm6rMwrZBZCKxxgNy1GOWD7Mg3FHZBWdJxz0JQtH4btpCHl5ZA0mBN9UKZAnyD3EaTtYrNZAjL2KT1ShSzoRArnJwTqSZCx3iUZCJkWPcpasPZC66hngpMfZBQDwIHjJkZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:26 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBANZBns23GZBY0v0YuqkkQvcUXJ0uxQJuQM78BVk7oOJUVQlP3LC1Fh8fOIqeCHoNqE0yvbtvFsvL6yiRdBUtWkbs5H3LkOOq9x0YZA4ZBsXCjybGYhP7ojLUvZACjL755AlSx2lIKwfQH6MAzdnIfZCaEapjIRxvQ4h6JUP7kxt2huwmNHwsUZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - GSpScRxXN/M
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - rxNGS2L+bwYWn4CcxGea3/b5IyIvUFgYqoDeOcqXGdz3WgwGZG4/dw7Buk0tZWkI3SIq7bRRcjESYDU9lx34BQ==
+      date:
+      - Sat, 19 Sep 2015 16:21:54 GMT
+      connection:
+      - close
+      content-length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:53 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBANZBns23GZBY0v0YuqkkQvcUXJ0uxQJuQM78BVk7oOJUVQlP3LC1Fh8fOIqeCHoNqE0yvbtvFsvL6yiRdBUtWkbs5H3LkOOq9x0YZA4ZBsXCjybGYhP7ojLUvZACjL755AlSx2lIKwfQH6MAzdnIfZCaEapjIRxvQ4h6JUP7kxt2huwmNHwsUZD&appsecret_proof=c372b5d7371da14c28e7e0a8802039dd8b1da57f71a37e99965f9b5660d05e86
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - CZ0mSDMwael
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"490088f1e0b310f2780d75274039c23e3e1b5913"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - JgEQWQxbbtInEhYZfkpWPPn0PyYC2p166DFcsf4imhC0tKotk89I0XbcokuSspzLnt08uPAhqSVaBa2TjdWkmA==
+      date:
+      - Sat, 19 Sep 2015 16:21:54 GMT
+      connection:
+      - close
+      content-length:
+      - '539'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:53 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50264/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:21:54 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70292770079560'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:21:54 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD&appsecret_proof=38e04aebabbf5cc8df59be85bb42c733a50395d9eca38049a75f6b4c475834ec&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - FgoiaYejnie
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"1f5cca2bd5cb97b008466b1d79696fc2dba8a911"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - mdVWNDsAUegM4cLd9IBmIEUNYw+cl8bMjgdWISTCwhbwRN9cnS/zj0ikYLMGK42KiEpFBag7I8TEfSpA6V4AWg==
+      date:
+      - Sat, 19 Sep 2015 16:22:00 GMT
+      connection:
+      - close
+      content-length:
+      - '1145'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:22:00 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD&appsecret_proof=38e04aebabbf5cc8df59be85bb42c733a50395d9eca38049a75f6b4c475834ec&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - BPgGB+CHKz6
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"1f5cca2bd5cb97b008466b1d79696fc2dba8a911"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - th7wqyoETOY9FrDv3uq/lwtf26Y2IhuyoL4slMVAMP3UqpmlD8NmBac8WofEgkAXoscy0ph4qxZNB6cOEDUuqg==
+      date:
+      - Sat, 19 Sep 2015 16:22:01 GMT
+      connection:
+      - close
+      content-length:
+      - '1145'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAMLS8TDwfiWTEDZAWzW3pcoKZBWu4kRHRbt4vhEaxcK10FO0myIjZAgfrQ9AtRicnmDPAWo23ysH78UK7Hu6JBSeDhhQuS2mOUFZBMLPaEVJ9scxfZA7ZCu9GR73TWmYtT8Cicu7BYf2rpVjSNFcVAfzafQIZB6ARXekTJMS6gRGAYLF4rjFjwZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:22:00 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50320/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:22:52 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70177416843820'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:22:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50341/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:23:10 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70224038686600'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:10 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBAIfZBwKoHhANewxMV9ZBKYudhKiXal8GB7DNduuY5CH6BoFvtTC2PL5iLZBUXcYZBZA8m6ovn41gI0Ci9ZBH8vWCnkWoQKgq2m1ICfIUx68ps5lkfyoincHo8ZAZAaNjj0cZAeIfjZCSP3BR5knmGjheoCHJTDhhjfVMgvJxDZCulcY4mrg1iNNZAFjFzA7ZAaZAOwtQZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - A8Zk8Ch/O8F
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - yltabt5Sdmh55bmIWmMQB3+aCesx126eNZZmmcNJQ4ADKEsJ75PE/yFI3BCHdCaaK6pGqf/4xAkuOjDwV1lgaw==
+      date:
+      - Sat, 19 Sep 2015 16:23:34 GMT
+      connection:
+      - close
+      content-length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:33 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBAIfZBwKoHhANewxMV9ZBKYudhKiXal8GB7DNduuY5CH6BoFvtTC2PL5iLZBUXcYZBZA8m6ovn41gI0Ci9ZBH8vWCnkWoQKgq2m1ICfIUx68ps5lkfyoincHo8ZAZAaNjj0cZAeIfjZCSP3BR5knmGjheoCHJTDhhjfVMgvJxDZCulcY4mrg1iNNZAFjFzA7ZAaZAOwtQZDZD&appsecret_proof=a3b76b3977130c777e50588e62e5e7c5be2981b0f2b32052e10e7bcd13be3495
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - HXuFgmLhkx8
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"a6340813cf688ac6719039e5b40807e6ccfb41a1"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - QwR7eX+6SHvihctGeMHVKA6k1d77nQ2H8TXvae/eibeKlffj/R4YOMsCDDxJqz2KFKk7f+ZyfibhnLNSSlJajw==
+      date:
+      - Sat, 19 Sep 2015 16:23:34 GMT
+      connection:
+      - close
+      content-length:
+      - '540'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:34 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50361/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:23:34 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70269833051040'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:34 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD&appsecret_proof=42db08521c56efd2cf5646e034ff129a4c5f42657853a939b0650f112b924df4&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - Gw2oVhWBRWu
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"55d26a738030aff1966a50ba64eaab6f55e42a4c"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - 3HOntpfHkVLz9nbfYDiXeKsY39LNEaaRiPHuWpDNQrnnPww7D/WoQCWryPGsTHLErHf6TRLfuQFQgZK6IQb1Bg==
+      date:
+      - Sat, 19 Sep 2015 16:23:40 GMT
+      connection:
+      - close
+      content-length:
+      - '1144'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:39 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD&appsecret_proof=42db08521c56efd2cf5646e034ff129a4c5f42657853a939b0650f112b924df4&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - EC3PCFbqzPw
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"55d26a738030aff1966a50ba64eaab6f55e42a4c"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - M0P23OKyh0cNWxgAya7cfTuGXdrjMxccY7rtpHlKs7WMNkwUhvFAoApXDF/Jtm8HSUUv6VzsHUoEoNJnjp26TA==
+      date:
+      - Sat, 19 Sep 2015 16:23:40 GMT
+      connection:
+      - close
+      content-length:
+      - '1144'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAMxm4TcO5XMY3sDJTJkxzDWppto7tqZAGc4ZB0mnwQsw3RRaaA3GmmlXN1ZBslH7E1N7KtcublSBhVSYvkMIQ6hOZCcHNJO5tMR9qQZBAYFC3hI7AvOIDdZCY4aYccJy07EaoBXfuaVv5xqlnkdoMiPQdZCDAU1L4ccqCZA6rMSyjw85wzHtBDQZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:40 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBAP98Eb0qSva8h197KLdrqjbWsk9KgQp7Y8epEkB8fa879EE1bfs1jUQ6xsVreoeZAbGWamyXoOGmaS0idLgXdcmSgEhIoAQuDHOH2LXxtwprQZC7b1KUMkKU540ZBVnL9RLHnn7RTxPzz8ZCWX6L7fSjNVU5iE1BqAuZBk9r9CWw2UTnSfokZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - EcKH5cerUe6
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - 0PFSRmEb03GqnKePyyebAnbJI2a9qYL9mv1cGT2Hq57i3GZQYYK3FWwHhlkGdIwmRnSezPb7SA+kNw3pL9w2Kg==
+      date:
+      - Sat, 19 Sep 2015 16:23:50 GMT
+      connection:
+      - close
+      content-length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:49 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBAP98Eb0qSva8h197KLdrqjbWsk9KgQp7Y8epEkB8fa879EE1bfs1jUQ6xsVreoeZAbGWamyXoOGmaS0idLgXdcmSgEhIoAQuDHOH2LXxtwprQZC7b1KUMkKU540ZBVnL9RLHnn7RTxPzz8ZCWX6L7fSjNVU5iE1BqAuZBk9r9CWw2UTnSfokZD&appsecret_proof=e4dd718a5ad5d99d5319acb549a9b1337bb5b6e5aae87f5e12f309a4adc24cc1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - GvRTlTCJtym
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"b0d7ad76b1b21ff07c37fad1c2ae49f0f8d0117c"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - YMXKYi5qr3ZqqHAsXSlBlDzFpChFeWh9s74W3hAGQbzyoh5Gdmwb3iAWjcMn4tnE6vxMkYX8ghQM/XIeZMPYMA==
+      date:
+      - Sat, 19 Sep 2015 16:23:50 GMT
+      connection:
+      - close
+      content-length:
+      - '540'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:49 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50386/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:23:50 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70161506135780'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:50 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD&appsecret_proof=1e0e7415a4c1e9f83867d34749cee157e903ebfcb31951279fac3d0c72507f62&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - AMiAI2k3b8V
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"3f7764264e0b4774759b35b10eafe17813bb31a1"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - ppCVLY+EhwUhmCCqFfZCFIBn9jZFoq2n1dWSSsJHk0EO/31CW1FKQyzvCEPk75aW6QO1/ETmQEyCDslJQLkHqQ==
+      date:
+      - Sat, 19 Sep 2015 16:23:56 GMT
+      connection:
+      - close
+      content-length:
+      - '1147'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:56 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD&appsecret_proof=1e0e7415a4c1e9f83867d34749cee157e903ebfcb31951279fac3d0c72507f62&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - Hf1xOd2Osik
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"3f7764264e0b4774759b35b10eafe17813bb31a1"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - 3eDjCz82piRvsQJapgCgYMwoDSh+VQaKb0ZStDRHQRx3tN/aA7WguEyAVZwIvwTIEfJSSTeFyqzpBLdxNgNj+Q==
+      date:
+      - Sat, 19 Sep 2015 16:23:57 GMT
+      connection:
+      - close
+      content-length:
+      - '1147'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBACN2Mb5N23tGIyVSKWb0yH1WGmgbyKMezfwZBlGdrItichK8XM5z0BvCVDZBfJzOR4XWzZAWDrIZACpcYcNb7s3zhyxYmmRuREXwADPOruaKY9OeUCYuG5k3tw4ZCzZCyMdqjF1474h9vkIHXVUhZAQr81hK2bixtxE1gdtj3oOZB385DA1MQh8ZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:23:57 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50402/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:24:25 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70146475105920'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:24:25 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50462/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:25:56 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70200248078600'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:25:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50522/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:27:30 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70143348607220'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:27:30 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50554/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:28:22 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70307089508580'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:28:22 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50576/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:28:50 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70361026210240'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:28:50 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50608/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:29:38 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70347947217020'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:29:38 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=<FACEBOOK_APP_ID>&client_secret=<FACEBOOK_APP_SECRET>&grant_type=client_credentials
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      content-type:
+      - application/x-www-form-urlencoded
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - text/plain; charset=UTF-8
+      x-fb-trace-id:
+      - F0qVTbxEQ8z
+      x-fb-rev:
+      - '1944458'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.0
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - JdgCW3UJeR+Pw4YMWMp4SyJDVH6UEqhoPP3jqtZ8cpRcjBb/USdJ+Qeb849Sh2q/YvHJmHBUHQm+Lml3QhinNA==
+      date:
+      - Sat, 19 Sep 2015 16:30:03 GMT
+      connection:
+      - close
+      content-length:
+      - '56'
+    body:
+      encoding: UTF-8
+      string: access_token=<FACEBOOK_APP_ID>|iDHv8n3aycEcaFwwbRdP3yuB9-A
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:02 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/<FACEBOOK_APP_ID>/accounts/test-users?access_token=<FACEBOOK_APP_ID>%7CiDHv8n3aycEcaFwwbRdP3yuB9-A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - AbrtReliyeT
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"a30511261190b587ea1743564929373ea2513e99"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - lAQGZcu8fLJLs0HhROfH9CVYBPIlln6MafWMHRDozNmakuBBEeowDvuXEI+gv3LQcpdMfYoMZ5tn2LWx9qeJUA==
+      date:
+      - Sat, 19 Sep 2015 16:30:03 GMT
+      connection:
+      - close
+      content-length:
+      - '730'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"150992381911621","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/150992381911621\/","access_token":"CAABZCqcXkxuUBAOvGlNK4E0SNdthvgp0BHQDTCoUFhCczh0Cl1N5hH5JTwI7L0DkZBH4iYBxHrFsxO7xBsDYOmEPXgVSyZAxzZAK087GABp05K8dQ4YXiZA4cdBEVS8Xv3ZB9O9yHMQSpudnZB2tKGwG7ZBkm5CXynYDIZByo8OX357e2docWEWNWGC63pW2cemVPZAZCTxrkBZBXAZDZD"},{"id":"140052546339795","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/140052546339795\/","access_token":"CAABZCqcXkxuUBAGAVu0Ixdeg3Dx4IcUl4hapdArpjNNYJsXqA437n4pRp9yoA1OxAZAfa9GI1tiDb4ZCroJJPOqfrvZAPl1DhGtnZCiPtu0Q4whGqEaBfI6ivaGEMzPpQycw2jEZBDQr0enqUVoUUmZA8dKm4QnECxeI64HHM86CTtPvg5xil2icFEB2VdmdZCm8bLQZAdl4FyQZDZD"},{"id":"124481027903659","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/124481027903659\/","access_token":"CAABZCqcXkxuUBACFBR10pjxVQJiGOWKgvfUeZAJElAyHEiYQ7occqQe5EmJvFSFIDIzMOqcHEYs7j280jiD0XtKbfcPc1cZBo7KoosmHxJcU7mlfoM1skynEhxeCak2MhBBaZAAZCSY3PifEnfdlR1MiueFoSubPlNzexL83Wznmjc7l4t6f7PT97HvvvDHIttr8wyDgmUAZDZD"}],"paging":{"cursors":{"before":"MTUwOTkyMzgxOTExNjIx","after":"MTI0NDgxMDI3OTAzNjU5"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:02 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBACFBR10pjxVQJiGOWKgvfUeZAJElAyHEiYQ7occqQe5EmJvFSFIDIzMOqcHEYs7j280jiD0XtKbfcPc1cZBo7KoosmHxJcU7mlfoM1skynEhxeCak2MhBBaZAAZCSY3PifEnfdlR1MiueFoSubPlNzexL83Wznmjc7l4t6f7PT97HvvvDHIttr8wyDgmUAZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - FOUjByeCiEp
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - YmsxoaX4PY5FOXY4d1vt/swe2p379DsOQ6SLTj6eG/DYbhExBZ97NApH1/gA+0HCPSkm0MCjsm8dhLrQQNhhDQ==
+      date:
+      - Sat, 19 Sep 2015 16:30:03 GMT
+      connection:
+      - close
+      content-length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:03 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBACFBR10pjxVQJiGOWKgvfUeZAJElAyHEiYQ7occqQe5EmJvFSFIDIzMOqcHEYs7j280jiD0XtKbfcPc1cZBo7KoosmHxJcU7mlfoM1skynEhxeCak2MhBBaZAAZCSY3PifEnfdlR1MiueFoSubPlNzexL83Wznmjc7l4t6f7PT97HvvvDHIttr8wyDgmUAZDZD&appsecret_proof=9d7b5fc9e04e31f92a7c42b5cb2d6d633975c8b499197ee67dc7106f96836416
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - CAhQZbsqX8z
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"a49dc5746a3ce0f3a22b4da29b44484ade869291"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-fb-debug:
+      - 2T7zUIpD9lUJcgD5s8lwh4OLTyavatXOmGrQz+1xKbN9u9wstq6zsrSeBRpfS6SMRPgmkuC1n//ASaNBJAU/nQ==
+      date:
+      - Sat, 19 Sep 2015 16:30:03 GMT
+      connection:
+      - close
+      content-length:
+      - '552'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:03 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50634/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:30:03 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70322516180380'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:03 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&appsecret_proof=cef41c2912e50d898f76dfbaadc8a6a6b7bf76e351c008350d1eb9e9572d5202&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - Bwh+AHlxZOA
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ffa8b0d840d1a3b416b013742a7d81e9b1231586"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - Rxv6DMqMs1nf22oNnBkPVKyfSbU300b05WjWy9THGmcoKu0px2pMEZOT7r+xI4Zq4eNyUeHxUxX58yP1+T8Kig==
+      date:
+      - Sat, 19 Sep 2015 16:30:09 GMT
+      connection:
+      - close
+      content-length:
+      - '1155'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:09 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&appsecret_proof=cef41c2912e50d898f76dfbaadc8a6a6b7bf76e351c008350d1eb9e9572d5202&fields=message%2Cid%2Cfrom%2Ctype%2Cpicture%2Clink%2Ccreated_time%2Cupdated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Faraday v0.9.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=UTF-8
+      x-fb-trace-id:
+      - HetcRbkQX23
+      x-fb-rev:
+      - '1944458'
+      etag:
+      - '"ffa8b0d840d1a3b416b013742a7d81e9b1231586"'
+      pragma:
+      - no-cache
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      facebook-api-version:
+      - v2.4
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      x-fb-debug:
+      - 0ulDiDDQ2PJIpDrtJmAUQw26C1pA939kbyilrUu3wfGRZHfpVEd5DcXkBDRxcxVgNWrR13iUfmx84bAQliPytA==
+      date:
+      - Sat, 19 Sep 2015 16:30:10 GMT
+      connection:
+      - close
+      content-length:
+      - '1155'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50657/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - "*/*"
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      date:
+      - Sat, 19 Sep 2015 16:30:35 GMT
+      content-length:
+      - '14'
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70132010615540'
+    http_version: '1.1'
+  recorded_at: Sat, 19 Sep 2015 16:30:35 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:50704/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      Date:
+      - Sat, 19 Sep 2015 16:31:55 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70156931946860'
+    http_version: 
+  recorded_at: Sat, 19 Sep 2015 16:31:55 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&appsecret_proof=cef41c2912e50d898f76dfbaadc8a6a6b7bf76e351c008350d1eb9e9572d5202&fields=message,id,from,type,picture,link,created_time,updated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - HxCrcExF3FE
+      X-Fb-Rev:
+      - '1944458'
+      Etag:
+      - '"ffa8b0d840d1a3b416b013742a7d81e9b1231586"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - 0/C9ZKejP2AgbpMmxUOXRRLDMJLKDr1xI7Ti8AF2LpalnLxrqsPJ3YKhcMKzHTAodq8YSVmqi6TWOjVBFxrWuw==
+      Date:
+      - Sat, 19 Sep 2015 16:32:01 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1155'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: 
+  recorded_at: Sat, 19 Sep 2015 16:32:00 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&appsecret_proof=cef41c2912e50d898f76dfbaadc8a6a6b7bf76e351c008350d1eb9e9572d5202&fields=message,id,from,type,picture,link,created_time,updated_time&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - HhfwrHG9zlT
+      X-Fb-Rev:
+      - '1944458'
+      Etag:
+      - '"ffa8b0d840d1a3b416b013742a7d81e9b1231586"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - tF48FSj2qRxqD5JlFzsbtn1KpB47UimIlv+cYEF9sqROiU8Ttg4fZwkGxTJtgtfuhm2EeGbj2rKsLwFFvOYuqQ==
+      Date:
+      - Sat, 19 Sep 2015 16:32:01 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1155'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"Necessitatibus quia quia. Nisi quasi et sapiente
+        error totam. Autem maiores debitis. Qui deserunt quo inventore ut ad quisquam
+        possimus.","id":"436126599913853_437839226409257","from":{"name":"Tester Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:20:09+0000","updated_time":"2015-09-19T15:20:09+0000"},{"message":"Aut
+        impedit asperiores quia sit. Iusto ipsam inventore quidem facilis voluptatum
+        voluptatem. Reprehenderit eum facere rerum soluta officiis. Debitis sequi
+        in. Cum maiores aperiam porro alias.","id":"436126599913853_437839183075928","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:51+0000","updated_time":"2015-09-19T15:19:51+0000"},{"message":"Id
+        veritatis cumque illo. Quia vitae accusamus. In reiciendis amet.","id":"436126599913853_437839169742596","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T15:19:50+0000","updated_time":"2015-09-19T15:19:50+0000"},{"message":"Magnam
+        consequatur illo sit rem ducimus est fuga. Id eum ipsa neque nihil. Laudantium
+        ea rerum nam et est blanditiis.","id":"436126599913853_437799583079888","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:32:01+0000","updated_time":"2015-09-19T12:32:01+0000"},{"message":"Autem
+        dolores omnis reprehenderit sed quo nostrum. Earum quis iure quia sit. Minus
+        praesentium illum iste.","id":"436126599913853_437799473079899","from":{"name":"Tester
+        Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-19T12:31:28+0000","updated_time":"2015-09-19T12:31:28+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&since=1442676009&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&__paging_token=enc_AdBjPqx9cc7of9afS6ZBCLQ86JI6bWKDur5wgErLIwb5uSvZBsZCuUiae3aHyMVZA4wOtnE8cuc9S5msYI8A6xPJZBXfymvJ66R1tzmZC8MxpiDQqRewZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,picture,link,created_time,updated_time&limit=5&access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&until=1442665888&__paging_token=enc_AdD84n1QIZBvZAXpDForP7dqiJHZCOdZAqzOQH8YuMCxParcXDie8kIUrRkaHETQxVZAVmz8Qu0MVSZC6CmrK5CuZCRIirm3ZAL2yRIRTuXaLbAvQ4TWZBgZDZD"}}'
+    http_version: 
+  recorded_at: Sat, 19 Sep 2015 16:32:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:51358/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      Date:
+      - Sat, 19 Sep 2015 16:58:56 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70158512514800'
+    http_version: 
+  recorded_at: Sat, 19 Sep 2015 16:58:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:51505/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+      Date:
+      - Sat, 19 Sep 2015 17:07:06 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70099985539600'
+    http_version: 
+  recorded_at: Sat, 19 Sep 2015 17:07:06 GMT
+recorded_with: VCR 2.9.3

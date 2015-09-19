@@ -60,5 +60,7 @@ group :test do
   gem 'rspec-sidekiq'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  # gem 'webmock'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'capybara-mechanize'
 end

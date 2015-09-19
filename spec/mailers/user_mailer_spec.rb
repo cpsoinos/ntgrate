@@ -17,20 +17,20 @@ describe UserMailer do
 
   context 'confirmation email' do
 
-    it 'should send a confirmation email' do
+    it 'should send a confirmation email', :vcr, record: :new_episodes do
       confirmation_email.deliver_now
       expect(ActionMailer::Base.deliveries.count).to be(1)
     end
 
-    it 'should send to the correct recipient' do
+    it 'should send to the correct recipient', :vcr, record: :new_episodes do
       expect(confirmation_email).to deliver_to(user.email)
     end
 
-    it 'should set the correct subject' do
+    it 'should set the correct subject', :vcr, record: :new_episodes do
       expect(confirmation_email).to have_subject("Email confirmation")
     end
 
-    it 'should send from the correct address' do
+    it 'should send from the correct address', :vcr, record: :new_episodes do
       expect(confirmation_email).to deliver_from("coreypsoinos@gmail.com")
     end
 
@@ -38,21 +38,21 @@ describe UserMailer do
 
   context 'password reset email' do
 
-    it 'should send a reset password email' do
+    it 'should send a reset password email', :vcr, record: :new_episodes do
       password_reset_email.deliver_now
       expect(ActionMailer::Base.deliveries.count).to be(1)
     end
 
-    it 'should send to the correct recipient' do
+    it 'should send to the correct recipient', :vcr, record: :new_episodes do
       expect(password_reset_email).to deliver_to(user.email)
     end
 
-    it 'should set the correct subject' do
+    it 'should set the correct subject', :vcr, record: :new_episodes do
       expect(password_reset_email).to have_subject("Password Reset")
     end
 
-    it 'should send from the correct address' do
-      expect(password_reset_email).to deliver_from("coreypsoinos@gmail.com")
+    it 'should send from the correct address', :vcr, record: :new_episodes do
+      expect(password_reset_email).to deliver_from(ENV["SMTP_USERNAME"])
     end
 
   end

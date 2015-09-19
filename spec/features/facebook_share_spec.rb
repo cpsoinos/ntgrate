@@ -8,7 +8,7 @@ feature "facebook share" do
     sign_in(user)
   end
 
-  scenario "user clicks 'link share'", js: true do
+  scenario "user clicks 'link share'", :js do
     visit dashboard_path(user.dashboard)
     find("#fb-link-option").trigger("click")
 
@@ -16,7 +16,7 @@ feature "facebook share" do
     expect(page).to have_field("facebook_share[content]")
   end
 
-  scenario "user clicks 'photo share'", js: true do
+  scenario "user clicks 'photo share'", :js do
     visit dashboard_path(user.dashboard)
     find("#fb-photo-option").trigger("click")
 
@@ -25,7 +25,7 @@ feature "facebook share" do
     expect(page).to have_field("facebook_share[content]")
   end
 
-  scenario "user clicks 'video share'", js: true do
+  scenario "user clicks 'video share'", :js do
     visit dashboard_path(user.dashboard)
     find("#fb-video-option").trigger("click")
 
@@ -33,7 +33,7 @@ feature "facebook share" do
     expect(page).to have_field("facebook_share[content]")
   end
 
-  scenario "user clicks 'text share' after selecting a different type", js: true do
+  scenario "user clicks 'text share' after selecting a different type", :js do
     visit dashboard_path(user.dashboard)
     find("#fb-link-option").trigger("click")
 

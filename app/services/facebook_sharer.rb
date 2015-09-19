@@ -22,8 +22,8 @@ class FacebookSharer
   end
 
   def delete
-    if graph.delete_object(@share.id)
-      self.destroy
+    if graph.delete_object(@share.share_id)
+      @share.destroy
     end
   end
 
