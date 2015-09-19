@@ -103,7 +103,7 @@ function validateFbFiles(inputFile) {
 }
 
 // set facebook error div to fade out after 15 sec
-$(document).ready( function() {
+$(document).ready(function() {
   $('#facebook-errors').delay(15000).fadeOut();
   var selectedPageId = $("#facebook_share_facebook_page_id").val();
   getFeed(selectedPageId);
