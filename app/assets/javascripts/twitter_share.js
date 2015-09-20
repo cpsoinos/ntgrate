@@ -120,7 +120,9 @@ $(document).ready(function() {
     }
   });
 
-  getTimeline(gon.accountId);
+  var accountId = $("#twitter-account-id").attr("data");
+  debugger;
+  getTimeline(accountId);
 
 });
 
