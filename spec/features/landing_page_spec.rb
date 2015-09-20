@@ -11,7 +11,6 @@ feature "landing_page" do
       expect(page).to have_content("Sign up")
       expect(page).not_to have_content("Welcome")
       expect(page).to have_content("Attract more clients.")
-      expect(page).to have_content("Manage your listings.")
       expect(page).to have_content("Promote your brand.")
       expect(page).to have_content("Why wait?")
       expect(page).to have_link("Get started")
