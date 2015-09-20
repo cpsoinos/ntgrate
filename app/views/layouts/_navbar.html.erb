@@ -9,9 +9,9 @@
         <span class="icon-bar"></span>
       </button>
       <% if current_user.present? %>
-        <%= link_to "GetReal", dashboard_path(current_user), class: "navbar-brand" %>
+        <%= link_to "Minion", dashboard_path(current_user), class: "navbar-brand" %>
       <% else %>
-        <%= link_to "GetReal", landing_pages_path, class: "navbar-brand" %>
+        <%= link_to "Minion", landing_pages_path, class: "navbar-brand" %>
       <% end %>
     </div>
 
