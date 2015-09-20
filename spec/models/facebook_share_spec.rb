@@ -13,14 +13,14 @@ describe FacebookShare, "#share" do
 
   let(:user) { create_from_omniauth }
 
-  it "creates a FacebookShareJob" do
+  it "creates a FacebookShareJob", :vcr, record: :new_episodes do
     facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
     expect(enqueued_jobs.size).to eq(1)
   end
 
-  it "shares to Facebook" do
+  it "shares to Facebook", :vcr, record: :new_episodes do
     facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
@@ -28,7 +28,7 @@ describe FacebookShare, "#share" do
     }
 
     expect(facebook_share.share_id).not_to be(nil)
-    # expect(facebook_share.share_url).not_to be(nil)
+    expect(facebook_share.share_url).not_to be(nil)
   end
 
 end
@@ -38,21 +38,15 @@ describe FacebookShare, "#delete_share" do
 
   let(:user) { create_from_omniauth }
 
-  it "creates a FacebookShareDeleteJob" do
-    pending("stubbing fb")
+  it "creates a FacebookShareDeleteJob", :vcr, record: :new_episodes do
     facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
-
-    perform_enqueued_jobs { FacebookShareJob.perform_now(facebook_share)
-    }
-
     facebook_share.delete_share
 
-    expect(enqueued_jobs.size).to eq(1)
+    expect(enqueued_jobs.size).to eq(2)
   end
 
-  it "deletes a share from Facebook" do
-    pending("stubbing fb")
+  it "deletes a share from Facebook", :vcr, record: :new_episodes do
     facebook_share = user.facebook_pages.first.facebook_shares.new(content: Faker::Lorem.paragraph)
     facebook_share.share
 
@@ -68,15 +62,6 @@ describe FacebookShare, "#delete_share" do
     expect(facebook_share.deleted_at).not_to be(nil)
   end
 
-end
-
-describe FacebookShare, "#delete_share" do
-  it "deletes a share from Facebook" do
-    pending("testing with apis")
-    facebook_share = create(:facebook_share)
-
-    expect(facebook_share.delete_share.response).to eq("success")
-  end
 end
 
 describe FacebookShare, "#get_share_type" do
@@ -97,15 +82,5 @@ describe FacebookShare, "#get_share_type" do
 
       expect(facebook_share.share_type).to eq("text")
     end
-  end
-end
-
-describe FacebookShare, "#get_share_url" do
-  it "gets the Facebook url of a share" do
-    pending("figuring out how to get the url of a share")
-    facebook_share = create(:facebook_share)
-    facebook_share.get_share_url
-
-    expect(facebook_share.url).not_to eq(nil)
   end
 end

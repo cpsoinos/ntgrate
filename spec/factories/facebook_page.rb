@@ -8,6 +8,7 @@ FactoryGirl.define do
     category "Real Estate"
     token "abcdefg"
     facebook_account
+    page_url "https://www.facebook.com/some_page_url"
   end
 
 end

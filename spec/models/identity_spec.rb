@@ -48,8 +48,7 @@ describe "#check_for_account(auth)" do
     mock_auth_hash
   end
 
-
-  it "finds an existing Facebook account" do
+  it "finds an existing Facebook account", :vcr, record: :new_episodes do
     user = create_from_omniauth
     identity = user.identities.first
     facebook_account = user.facebook_account
@@ -58,7 +57,7 @@ describe "#check_for_account(auth)" do
     expect(identity.facebook_account).to eq(facebook_account)
   end
 
-  it "creates a new Facebook account if not present" do
+  it "creates a new Facebook account if not present", :vcr, record: :new_episodes do
     expect(FacebookAccount.count).to be(0)
     create_from_omniauth
 

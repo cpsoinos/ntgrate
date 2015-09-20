@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150912015737) do
+ActiveRecord::Schema.define(version: 20150919175201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150912015737) do
     t.string   "token",               null: false
     t.integer  "facebook_account_id"
     t.datetime "deleted_at"
+    t.string   "page_url"
   end
 
   add_index "facebook_pages", ["deleted_at"], name: "index_facebook_pages_on_deleted_at", using: :btree

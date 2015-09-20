@@ -6,7 +6,20 @@ class FacebookPage < ActiveRecord::Base
   validates :token, presence: true
   validates :uid, presence: true, uniqueness: true
   validates :facebook_account, presence: true
+  validates :page_url, presence: true
+
+  include FacebookGraphable
 
   acts_as_paranoid
+
+  def feed
+    @_feed ||= FacebookFeedRetriever.new(self).get_feed
+  end
+
+  private
+
+  def graph
+    Koala::Facebook::API.new(token, ENV["FACEBOOK_APP_SECRET"])
+  end
 
 end

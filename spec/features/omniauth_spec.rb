@@ -4,7 +4,7 @@ feature "omniauthable" do
      mock_auth_hash
   end
 
-  scenario "logs in with Facebook" do
+  scenario "logs in with Facebook", :vcr, record: :new_episodes do
     sign_in_with_facebook
     expect(page).to have_content("Successfully authenticated from Facebook account")
     expect(page).to have_content("Dashboard")
