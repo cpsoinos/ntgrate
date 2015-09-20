@@ -14,4 +14,12 @@ $(document).ready(function() {
     $("#show-newsfeed").show();
   });
 
+  $("#facebook_share_facebook_page_id").change(function() {
+    $(".facebook-newsfeed").empty().hide();
+    $("#show-newsfeed").show();
+    $("#hide-newsfeed").hide();
+    newPageId = $(this).val();
+    getFeed(newPageId);
+  });
+
 });
