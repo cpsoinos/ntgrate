@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get '/facebook_pages/feed', to: 'facebook_pages#feed'
 
+  get '/twitter_accounts/timeline', to: 'twitter_accounts#timeline'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,4 +1,5 @@
 <%= form_for @twitter_share, remote: true, html: {multipart: true, class: "dashboard-form"} do |f| %>
+  <div class="hidden" id="twitter-account-id" data="<%= @twitter_account.id %>"></div>
   <div class="error_messages">
     <% @twitter_share.errors.full_messages.each do |msg| %>
       <p><%= msg %></p>
