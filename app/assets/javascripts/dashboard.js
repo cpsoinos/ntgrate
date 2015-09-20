@@ -1,14 +1,12 @@
 $(document).ready(function() {
 
   $("#show-newsfeed").click(function() {
-    // alert( "Handler for .click() called." );
     $(".facebook-newsfeed").toggle("slow");
     $("#show-newsfeed").hide();
     $("#hide-newsfeed").show();
   });
 
   $("#hide-newsfeed").click(function() {
-    // alert( "Handler for .click() called." );
     $(".facebook-newsfeed").toggle("slow");
     $("#hide-newsfeed").hide();
     $("#show-newsfeed").show();
@@ -22,16 +20,13 @@ $(document).ready(function() {
     getFeed(newPageId);
   });
 
-
   $("#show-timeline").click(function() {
-    // alert( "Handler for .click() called." );
     $(".twitter-timeline").toggle("slow");
     $("#show-timeline").hide();
     $("#hide-timeline").show();
   });
 
   $("#hide-timeline").click(function() {
-    // alert( "Handler for .click() called." );
     $(".twitter-timeline").toggle("slow");
     $("#hide-timeline").hide();
     $("#show-timeline").show();
