@@ -16,7 +16,9 @@ class FacebookFeedRetriever
         'picture',
         'link',
         'created_time',
-        'updated_time'
+        'updated_time',
+        'likes',
+        'comments'
       ]
     })
   end

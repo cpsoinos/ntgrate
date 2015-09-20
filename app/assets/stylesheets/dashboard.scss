@@ -1,3 +1,5 @@
+@import "variables";
+
 #intro-dashboards {
   background: asset-data-url("AdobeStock_51487213_WM.jpg") 50% 0 fixed;
   background-size: cover;
@@ -67,4 +69,28 @@ div.panel {
 
 .minus {
   color: red;
+}
+
+.page-name {
+  font-weight: bold;
+}
+
+.shared-at {
+  color: #9197a3;
+  font-size: 12px;
+}
+
+.facebook-blue {
+  color: $facebook-blue;
+}
+
+.feed {
+  position: relative;
+}
+
+.statistics {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 12px;
 }

@@ -9,10 +9,19 @@ feature "facebook feed" do
 
   describe "FacebookNewsFeed" do
     it "shows the 5 most recent posts", :js, :vcr, record: :new_episodes do
+      pending("ajax load testing")
       visit dashboard_path(user.dashboard)
       find("#show-newsfeed").trigger("click")
 
-      expect(page).to have_content("Tester Realty shared at:")
+      expect(page).to have_link("Tester Realty")
+    end
+
+    it "has a 'boost' button", :js, :vcr, record: :new_episodes do
+      pending("ajax load testing")
+      visit dashboard_path(user.dashboard)
+      find("#show-newsfeed").trigger("click")
+
+      expect(page).to have_button("Boost")
     end
   end
 

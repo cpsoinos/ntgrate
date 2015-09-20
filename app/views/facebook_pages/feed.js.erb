@@ -1,3 +1,3 @@
 <% @feed.each do |share| %>
-  $("<%= escape_javascript(render 'facebook_shares/share', share: share.symbolize_keys) %>").appendTo(".facebook-newsfeed");
+  $("<%= escape_javascript(render 'facebook_shares/share', share: share.deep_symbolize_keys) %>").appendTo(".facebook-newsfeed");
 <% end %>

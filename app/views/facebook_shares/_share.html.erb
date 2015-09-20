@@ -1,21 +1,51 @@
-<div class="share-info">
-  <%= @facebook_page.name %> shared at: <%= share[:created_time] %>
-  <% if share[:updated_time] != share[:created_time] %>
-    Updated at: <%= share[:updated_time] %>
-  <% end %>
-  By: <%= share[:from][:name] %>
-</div>
-<div class="share-message">
-  <% if share[:message].present? %>
-    Message: <%= share[:message] %>
-  <% end %>
-  <% if share[:link].present? %>
-    Link: <%= share[:link] %>
-  <% end %>
-  <% if share[:picture].present? %>
-    <%= image_tag(share[:picture]) %>
-  <% end %>
-  <% if share[:video].present? %>
-    <% video_tag(share[:video]) %>
-  <% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <span class="page-name"><%= link_to @facebook_page.name, @facebook_page.page_url %></span>
+    <span>
+      <% unless share[:type] == "status" %>
+        shared a <%= share[:type] %>
+      <% end %>
+    </span>
+    <span class="shared-at pull-right">
+      <%= time_ago_in_words(share[:created_time]) %> ago
+    </span>
+  </div>
+
+  <div class="panel-body feed">
+    <% if share[:type] == "status" %>
+      <p><%= share[:message] %></p>
+    <% else %>
+      <% if share[:message].present? || share[:link].present? %>
+        <div class="col-xs-6">
+          <% if share[:picture].present? %>
+            <p class="text-center"><%= image_tag(share[:picture]) %></p>
+          <% elsif share[:video].present? %>
+            <p class="text-center"><% video_tag(share[:video]) %></p>
+          <% end %>
+        </div>
+        <div class="col-xs-6">
+          <% if share[:message].present? %>
+            <p><%= share[:message] %></p>
+          <% end %>
+          <% if share[:type] == "link" %>
+            <p><%= link_to share[:link], share[:link] %></p>
+          <% end %>
+        </div>
+      <% else %>
+      <% if share[:picture].present? %>
+        <p class="text-center"><%= image_tag(share[:picture]) %></p>
+      <% elsif share[:video].present? %>
+        <p class="text-center"><% video_tag(share[:video]) %></p>
+      <% end %>
+      <% end %>
+    <% end %>
+    <div class="statistics">
+      <% if share[:likes].present? %>
+        <%= share[:likes][:data].count %> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
+      <% end %>
+      <% if share[:comments].present? %>
+        <%= share[:comments][:data].count %> <span class="facebook-blue"><%= icon('comments-o') %></span>
+      <% end %>
+    </div>
+  </div>
 </div>
