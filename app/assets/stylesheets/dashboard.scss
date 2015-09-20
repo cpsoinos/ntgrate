@@ -59,13 +59,17 @@ div.panel {
   margin: 1em;
 }
 
+.dashboard-form {
+  margin-bottom: 3em;
+}
+
 .share-input {
   width: 100%;
 }
 
-#facebook-errors, #twitter-errors {
-  display: none;
-}
+// #facebook-errors, #twitter-errors {
+//   display: none;
+// }
 
 .minus {
   color: red;

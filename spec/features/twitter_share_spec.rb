@@ -37,4 +37,27 @@ feature "twitter share" do
     expect(page).to have_field("twitter_share[content]")
   end
 
+  describe "validation" do
+
+    context "photo-share" do
+
+      scenario "user tries to upload file with incorrect extension", :js do
+        visit dashboard_path(user.dashboard)
+        find("#tw-photo-option").trigger("click")
+        attach_file("Photo", "spec/fixtures/video.mov")
+
+        expect(page).to have_content("Only image files with extension: .jpg, .jpeg, .gif or .png are allowed.")
+      end
+
+      scenario "user tries to upload valid file", :js do
+        visit dashboard_path(user.dashboard)
+        find("#tw-photo-option").trigger("click")
+        attach_file("Photo", "spec/fixtures/test.png")
+
+        expect(find_field("Photo").value).to have_content("test.png")
+      end
+
+    end
+  end
+
 end

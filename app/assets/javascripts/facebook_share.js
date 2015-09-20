@@ -3,7 +3,7 @@ $(document).ready(function() {
     // first, set the share type
     var shareType = ".facebook_" + this.className;
     // second, hide all but text field types
-    $(".share-field").hide();
+    $(".fb-share-field").hide();
     // third, show the selected field type
     $(shareType).show();
 
@@ -35,7 +35,7 @@ function validateFbFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
-  var shareType = $("input[name=facebook_options]:checked").attr("id");
+  var shareType = $("input[name=facebook_options]:checked").attr("class");
 
   if (shareType === "photo-share") {
     maxExceededMessage = "This file exceeds the maximum allowed file size (5 MB). ";
@@ -83,28 +83,32 @@ function validateFbFiles(inputFile) {
   var extError = false;
 
   $.each(inputFile.files, function() {
-    if (this.size && maxFileSize && this.size > parseInt(maxFileSize)) {
+    if(this.size && maxFileSize && this.size > parseInt(maxFileSize)) {
       sizeExceeded = true;
     }
     extName = this.name.split('.').pop();
-    if ($.inArray(extName, allowedExtension) == -1) {extError=true;}
+    if($.inArray(extName, allowedExtension) == -1) {extError=true;}
   });
-  if (sizeExceeded) {
-    $("#facebook-errors").show();
+
+  if(sizeExceeded) {
     $("#facebook-errors").append(maxExceededMessage);
-    $(inputFile).val('');
   }
 
-  if (extError) {
-    $("#facebook-errors").show();
+  if(extError) {
     $("#facebook-errors").append(extErrorMessage);
+  }
+
+  if(sizeExceeded || extError) {
+    $("#facebook-errors").toggle("slow");
     $(inputFile).val('');
+    $("#facebook-errors").delay(10000).toggle("slow");
+    setTimeout(function() {
+      $("#facebook-errors").empty();
+    }, 13000);
   }
 }
 
-// set facebook error div to fade out after 15 sec
 $(document).ready(function() {
-  $('#facebook-errors').delay(15000).fadeOut();
   var selectedPageId = $("#facebook_share_facebook_page_id").val();
   getFeed(selectedPageId);
 });

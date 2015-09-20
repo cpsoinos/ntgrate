@@ -3,7 +3,7 @@ $(document).ready(function() {
     // first, set the share type
     var shareType = ".twitter_" + this.className;
     // second, hide all but text field types
-    $(".share-field").hide();
+    $(".tw-share-field").hide();
     // third, show the selected field type
     $(shareType).show();
 
@@ -30,7 +30,7 @@ function validateTwFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
-  var shareType = $("input[name=twitter_options]:checked").attr("id");
+  var shareType = $("input[name=twitter_options]:checked").attr("class");
 
   if (shareType === "photo-share") {
     maxExceededMessage = "This file exceeds the maximum allowed file size (5 MB). ";
@@ -78,29 +78,30 @@ function validateTwFiles(inputFile) {
   var extError = false;
 
   $.each(inputFile.files, function() {
-    if (this.size && maxFileSize && this.size > parseInt(maxFileSize)) {
+    if(this.size && maxFileSize && this.size > parseInt(maxFileSize)) {
       sizeExceeded = true;
     }
     extName = this.name.split('.').pop();
-    if ($.inArray(extName, allowedExtension) == -1) {extError=true;}
+    if($.inArray(extName, allowedExtension) == -1) {extError=true;}
   });
-  if (sizeExceeded) {
-    $("#twitter-errors").show();
+
+  if(sizeExceeded) {
     $("#twitter-errors").append(maxExceededMessage);
-    $(inputFile).val('');
   }
 
-  if (extError) {
-    $("#twitter-errors").show();
+  if(extError) {
     $("#twitter-errors").append(extErrorMessage);
+  }
+
+  if(sizeExceeded || extError) {
+    $("#twitter-errors").toggle("slow");
     $(inputFile).val('');
+    $("#twitter-errors").delay(10000).toggle("slow");
+    setTimeout(function() {
+      $("#twitter-errors").empty();
+    }, 13000);
   }
 }
-
-// set twitter error div to fade out after 15 sec
-$(document).ready( function() {
-  $('#twitter-errors').delay(15000).fadeOut();
-});
 
 // character counter
 $(document).ready(function() {
