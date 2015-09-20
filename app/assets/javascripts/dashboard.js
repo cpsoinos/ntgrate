@@ -22,4 +22,19 @@ $(document).ready(function() {
     getFeed(newPageId);
   });
 
+
+  $("#show-timeline").click(function() {
+    // alert( "Handler for .click() called." );
+    $(".twitter-timeline").toggle("slow");
+    $("#show-timeline").hide();
+    $("#hide-timeline").show();
+  });
+
+  $("#hide-timeline").click(function() {
+    // alert( "Handler for .click() called." );
+    $(".twitter-timeline").toggle("slow");
+    $("#hide-timeline").hide();
+    $("#show-timeline").show();
+  });
+
 });

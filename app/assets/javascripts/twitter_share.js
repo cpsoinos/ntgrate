@@ -107,17 +107,44 @@ function validateTwFiles(inputFile) {
 $(document).ready(function() {
   $("#tweet").attr("disabled", "disabled");
   $("#twitter_share_content").keyup(function(){
-    var chars=$(this).val().length;
+    var chars = $(this).val().length;
+    $("#message").text(140 - chars);
 
-      $("#message").text(140-chars);
+    if(chars > 140 || chars <= 0) {
+      $("#tweet").attr("disabled", "disabled");
+      $("#message").addClass("minus");
 
-      if(chars > 140 || chars <=0) {
-        $("#tweet").attr("disabled", "disabled");
-        $("#message").addClass("minus");
+    } else {
+      $("#tweet").removeAttr("disabled");
+      $("#message").removeClass("minus");
+    }
+  });
 
-      } else {
-        $("#tweet").removeAttr("disabled");
-        $("#message").removeClass("minus");
-      }
-   });
+  getTimeline(gon.accountId);
+
 });
+
+function getTimeline(accountId) {
+  $.ajax({
+    url: ("/twitter_accounts/timeline"),
+    type: "GET",
+    data: {account_id: accountId}
+  });
+}
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));

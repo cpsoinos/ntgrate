@@ -69,12 +69,14 @@
               <div class="panel-body">
                 <% if @twitter_account.present? %>
                   <%= render "twitter_shares/form" %>
+                  <%= render "twitter_shares/timeline_buttons" %>
                 <% else %>
                   <p>Connect your Twitter account</p>
                   <%= link_to "#{icon('twitter')} Sign in with Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-social btn-twitter" %>
                 <% end %>
               </div>
             </div>
+            <div class="twitter-timeline well collapse"></div>
           </div>
 
           <div class="col-xs-12 col-md-6">
