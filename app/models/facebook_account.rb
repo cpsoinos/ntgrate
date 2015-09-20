@@ -22,7 +22,8 @@ class FacebookAccount < ActiveRecord::Base
         category: page["category"],
         uid: page["id"],
         token: page["access_token"],
-        facebook_account_id: self.id
+        facebook_account_id: self.id,
+        page_url: "https://www.facebook.com/#{page["id"]}"
       }
     end
   end
