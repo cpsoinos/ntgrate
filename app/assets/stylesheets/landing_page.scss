@@ -4,19 +4,20 @@
 }
 
 #home-landing_pages {
-  background: url(images/home.jpg) 50% 0 fixed;
+  background: asset-data-url("AdobeStock_79268169_WM.jpg") 50% 0 fixed;
+  background-size: cover;
 }
 
 #about-landing_pages {
   background: url(images/about.png) 50% 0 fixed;
 }
 
-// div.well {
-//   background-color: rgba(245,245,245,0.75);
-// }
+.landing-row {
+  margin-bottom: 5em;
+}
 
 .get-started {
-  color: green;
+  color: rgb(35,119,186);
 
   &:hover {
     color: black;
