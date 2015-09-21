@@ -3,7 +3,7 @@ $(document).ready(function() {
     // first, set the share type
     var shareType = ".twitter_" + this.className;
     // second, hide all but text field types
-    $(".share-field").hide();
+    $(".tw-share-field").hide();
     // third, show the selected field type
     $(shareType).show();
 
@@ -30,7 +30,7 @@ function validateTwFiles(inputFile) {
   var maxExceededMessage;
   var extErrorMessage;
   var allowedExtension;
-  var shareType = $("input[name=twitter_options]:checked").attr("id");
+  var shareType = $("input[name=twitter_options]:checked").attr("class");
 
   if (shareType === "photo-share") {
     maxExceededMessage = "This file exceeds the maximum allowed file size (5 MB). ";
@@ -78,45 +78,75 @@ function validateTwFiles(inputFile) {
   var extError = false;
 
   $.each(inputFile.files, function() {
-    if (this.size && maxFileSize && this.size > parseInt(maxFileSize)) {
+    if(this.size && maxFileSize && this.size > parseInt(maxFileSize)) {
       sizeExceeded = true;
     }
     extName = this.name.split('.').pop();
-    if ($.inArray(extName, allowedExtension) == -1) {extError=true;}
+    if($.inArray(extName, allowedExtension) == -1) {extError=true;}
   });
-  if (sizeExceeded) {
-    $("#twitter-errors").show();
+
+  if(sizeExceeded) {
     $("#twitter-errors").append(maxExceededMessage);
-    $(inputFile).val('');
   }
 
-  if (extError) {
-    $("#twitter-errors").show();
+  if(extError) {
     $("#twitter-errors").append(extErrorMessage);
+  }
+
+  if(sizeExceeded || extError) {
+    $("#twitter-errors").toggle("slow");
     $(inputFile).val('');
+    $("#twitter-errors").delay(10000).toggle("slow");
+    setTimeout(function() {
+      $("#twitter-errors").empty();
+    }, 13000);
   }
 }
-
-// set twitter error div to fade out after 15 sec
-$(document).ready( function() {
-  $('#twitter-errors').delay(15000).fadeOut();
-});
 
 // character counter
 $(document).ready(function() {
   $("#tweet").attr("disabled", "disabled");
   $("#twitter_share_content").keyup(function(){
-    var chars=$(this).val().length;
+    var chars = $(this).val().length;
+    $("#message").text(140 - chars);
 
-      $("#message").text(140-chars);
+    if(chars > 140 || chars <= 0) {
+      $("#tweet").attr("disabled", "disabled");
+      $("#message").addClass("minus");
 
-      if(chars > 140 || chars <=0) {
-        $("#tweet").attr("disabled", "disabled");
-        $("#message").addClass("minus");
+    } else {
+      $("#tweet").removeAttr("disabled");
+      $("#message").removeClass("minus");
+    }
+  });
 
-      } else {
-        $("#tweet").removeAttr("disabled");
-        $("#message").removeClass("minus");
-      }
-   });
+  var accountId = $("#twitter-account-id").attr("data");
+  debugger;
+  getTimeline(accountId);
+
 });
+
+function getTimeline(accountId) {
+  $.ajax({
+    url: ("/twitter_accounts/timeline"),
+    type: "GET",
+    data: {account_id: accountId}
+  });
+}
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));

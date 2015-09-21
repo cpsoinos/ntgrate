@@ -8,6 +8,7 @@ class TwitterAccount < ActiveRecord::Base
   validates :uid, presence: true, uniqueness: true
   validates :secret, presence: true
   validates :identity, presence: true
+  validates :account_url, presence: true
 
   acts_as_paranoid
 

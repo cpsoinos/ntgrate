@@ -1,9 +1,10 @@
-<%= form_for @twitter_share, remote: true, html: {multipart: true} do |f| %>
+<%= form_for @twitter_share, remote: true, html: {multipart: true, class: "dashboard-form"} do |f| %>
+  <div class="hidden" id="twitter-account-id" data="<%= @twitter_account.id %>"></div>
   <div class="error_messages">
     <% @twitter_share.errors.full_messages.each do |msg| %>
       <p><%= msg %></p>
     <% end %>
-    <div class="notice alert alert-danger" id="twitter-errors" role="alert"></div>
+    <div class="notice alert alert-danger collapse" id="twitter-errors" role="alert"></div>
   </div>
 
   <div class="text-center" id="share-type">
@@ -21,7 +22,7 @@
   </div>
 
   <div class="row">
-    <div class="field share-field twitter_photo-share social-form">
+    <div class="field tw-share-field twitter_photo-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :photo %>
       </div>
@@ -36,7 +37,7 @@
   </div>
 
   <div class="row">
-    <div class="field share-field twitter_photo-share social-form">
+    <div class="field tw-share-field twitter_photo-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :remote_photo_url, "or image URL" %>
       </div>
@@ -47,7 +48,7 @@
   </div>
 
   <!-- <div class="row">
-    <div class="field share-field twitter_video-share social-form">
+    <div class="field tw-share-field twitter_video-share social-form">
       <div class="col-xs-12 col-md-4">
         <%#= f.label :video %>
       </div>

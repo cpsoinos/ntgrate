@@ -1,9 +1,9 @@
-<%= form_for @facebook_share, remote: true, html: {multipart: true} do |f| %>
+<%= form_for @facebook_share, remote: true, html: {multipart: true, class: "dashboard-form"} do |f| %>
   <div class="error_messages">
     <% @facebook_share.errors.full_messages.each do |msg| %>
       <p><%= msg %></p>
     <% end %>
-    <div class="notice alert alert-danger" id="facebook-errors" role="alert"></div>
+    <div class="notice alert alert-danger collapse" id="facebook-errors" role="alert"></div>
   </div>
 
   <div class="text-center" id="share-type">
@@ -35,7 +35,7 @@
   </div>
 
   <div class="row">
-    <div class="field share-field facebook_link-share social-form">
+    <div class="field fb-share-field facebook_link-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :link %>
       </div>
@@ -46,7 +46,7 @@
   </div>
 
   <div class="row">
-    <div class="field share-field facebook_photo-share social-form">
+    <div class="field fb-share-field facebook_photo-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :photo %>
       </div>
@@ -61,7 +61,7 @@
   </div>
 
   <div class="row">
-    <div class="field share-field facebook_photo-share social-form">
+    <div class="field fb-share-field facebook_photo-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :remote_photo_url, "or image URL" %>
       </div>
@@ -72,13 +72,13 @@
   </div>
 
   <div class="row">
-    <div class="field share-field facebook_video-share social-form">
+    <div class="field fb-share-field facebook_video-share social-form">
       <div class="col-xs-12 col-md-4">
         <%= f.label :video %>
       </div>
       <div class="col-xs-12 col-md-8">
         <%= f.file_field :video,
-        onchange: "validateFiles(this);",
+        onchange: "validateFbFiles(this);",
         data: {max_file_size: 500.megabytes},
         autofocus: true,
         class: "share-input" %>
@@ -98,7 +98,7 @@
   </div>
 
   <div class="actions social-submit">
-    <%= button_tag(class: "btn btn-facebook") do %>
+    <%= button_tag(class: "btn btn-facebook", id: "share") do %>
       <%= icon('facebook') %> Share on Facebook
     <% end %>
   </div>

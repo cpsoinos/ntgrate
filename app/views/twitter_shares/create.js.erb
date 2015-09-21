@@ -3,6 +3,9 @@ $("#new_twitter_share").each(function(){
   this.reset();
 });
 
+// reset the character counter
+$("#message").text(140);
+
 // add the flash message
 $("#js-flash").html('<%= j render partial: "layouts/flash_messages" %>');
 

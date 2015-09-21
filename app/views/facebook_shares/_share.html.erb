@@ -16,21 +16,17 @@
       <p><%= share[:message] %></p>
     <% else %>
       <% if share[:message].present? || share[:link].present? %>
-        <div class="col-xs-6">
           <% if share[:picture].present? %>
             <p class="text-center"><%= image_tag(share[:picture]) %></p>
           <% elsif share[:video].present? %>
             <p class="text-center"><% video_tag(share[:video]) %></p>
           <% end %>
-        </div>
-        <div class="col-xs-6">
           <% if share[:message].present? %>
             <p><%= share[:message] %></p>
           <% end %>
           <% if share[:type] == "link" %>
             <p><%= link_to share[:link], share[:link] %></p>
           <% end %>
-        </div>
       <% else %>
       <% if share[:picture].present? %>
         <p class="text-center"><%= image_tag(share[:picture]) %></p>
