@@ -32,10 +32,7 @@ gem 'devise-async'
 gem 'sinatra', require: false
 gem 'remotipart'
 gem 'gon'
-
-group :development, :local, :staging, :production do
-  gem 'rails_12factor'
-end
+gem 'rails_12factor'
 
 group :development, :local, :test do
   gem 'byebug'
