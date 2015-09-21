@@ -34,7 +34,7 @@ gem 'slim'
 gem 'remotipart'
 gem 'gon'
 
-group :development, :local, :production do
+group :development, :local, :staging, :production do
   gem 'rails_12factor'
 end
 
