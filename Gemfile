@@ -30,7 +30,6 @@ gem 'mandrill-api'
 gem 'sidekiq'
 gem 'devise-async'
 gem 'sinatra', require: false
-gem 'slim'
 gem 'remotipart'
 gem 'gon'
 
