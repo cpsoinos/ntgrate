@@ -10,12 +10,12 @@
   <div class="text-center" id="share-type">
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-twitter active">
-        <input type="radio" name="twitter_options" class="text-share" autocomplete="off" class="btn-twitter" id="tw-text-option" checked>Text share
+        <input type="radio" name="twitter_options" class="text-share" autocomplete="off" id="tw-text-option" checked>Text share
       </label>
       <label class="btn btn-twitter">
         <input type="radio" name="twitter_options" class="photo-share" autocomplete="off" id="tw-photo-option">Photo share
       </label>
-      <!-- <label class="btn btn-primary">
+      <!-- <label class="btn btn-twitter">
         <input type="radio" name="twitter_options" class="video-share" autocomplete="off" id="tw-video-option">Video share
       </label> -->
     </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="col-xs-12 col-md-8">
         <%#= f.file_field :video,
-        onchange: "validateFiles(this);",
+        onchange: "validateTwFiles(this);",
         data: {max_file_size: 15.megabytes},
         autofocus: true,
         class: "share-input" %>
