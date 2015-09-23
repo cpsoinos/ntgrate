@@ -20,7 +20,7 @@ describe VideoUploader do
     @uploader.remove!
   end
 
-  it "uploads a video" do
+  it "uploads a video", :vcr, record: :new_episodes do
     expect(facebook_share.video).not_to be(nil)
   end
 
