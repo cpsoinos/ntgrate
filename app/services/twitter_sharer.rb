@@ -13,18 +13,18 @@ class TwitterSharer
     when "photo"
       response = client.update_with_media(@share.content, photo_file)
     # when "video"
-    #   client.update_with_media(@share.content, video_file)
+    #   response = client.update_with_media(@share.content, video_file)
     end
     @share.update_attribute("share_id", response)
   end
 
   def photo_file
-    open(@share.photo.file.file)
+    open(@share.photo.file.url)
   end
 
-  def video_file
-    open(@share.video.file.file)
-  end
+  # def video_file
+  #   open(@share.video.file.url)
+  # end
 
   def retweet
     client.retweet(share_id)
