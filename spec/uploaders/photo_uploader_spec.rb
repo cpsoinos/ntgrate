@@ -20,7 +20,7 @@ describe PhotoUploader do
     @uploader.remove!
   end
 
-  it "uploads a photo" do
+  it "uploads a photo", :vcr, record: :new_episodes do
     expect(facebook_share.photo).not_to be(nil)
   end
 

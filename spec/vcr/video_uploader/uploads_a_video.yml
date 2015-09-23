@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://minion-uploads-development.s3.amazonaws.com/uploads/facebook_share/video/video.mov
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fog/1.34.0 fog-core/1.32.1
+      Content-Type:
+      - video/quicktime
+      X-Amz-Acl:
+      - private
+      X-Amz-Date:
+      - 20150923T130018Z
+      X-Amz-Content-Sha256:
+      - STREAMING-AWS4-HMAC-SHA256-PAYLOAD
+      X-Amz-Decoded-Content-Length:
+      - '24'
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAIIO3HZ276PIROUEA/20150923/us-east-1/s3/aws4_request,
+        SignedHeaders=content-type;host;x-amz-acl;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length,
+        Signature=b88800defa985008f73eddb863c166f79914ec74997e4a98d4f0378cf46a5ee9
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      X-Amz-Id-2:
+      - 80ae5bAW7yuf2GYRiue+slq6BnFgAyn10RQqRa7C2T0pJjO4n2acLMvedX4yVYdP12IB6TAPZOk=
+      X-Amz-Request-Id:
+      - 2C3BE19879B653DC
+      Date:
+      - Wed, 23 Sep 2015 13:00:20 GMT
+      Etag:
+      - '"17ebf1779f779ad8b7dd0b89bdd10100"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 13:00:19 GMT
+- request:
+    method: delete
+    uri: https://minion-uploads-development.s3.amazonaws.com/uploads/facebook_share/video/video.mov
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fog/1.34.0 fog-core/1.32.1
+      X-Amz-Date:
+      - 20150923T130019Z
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAIIO3HZ276PIROUEA/20150923/us-east-1/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=c7de3efe583ca50ee2614a9620eb6d176d0a411d6958e998b4302e44738340f1
+  response:
+    status:
+      code: 204
+      message: ''
+    headers:
+      X-Amz-Id-2:
+      - 5H8jQ+HmqingWwiiNewGt+SnlMwFA8mSYNUjgRlXMxMrato16fXG+zmA5KMTtS33XtMmjYqZfW4=
+      X-Amz-Request-Id:
+      - 3C53D12A70798780
+      Date:
+      - Wed, 23 Sep 2015 13:00:20 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 13:00:19 GMT
+recorded_with: VCR 2.9.3
