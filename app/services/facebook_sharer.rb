@@ -13,9 +13,9 @@ class FacebookSharer
     when "link"
       response = graph.put_connections(@facebook_page.uid, 'feed', :message => @share.content, :link => @share.link)
     when "photo"
-      response = graph.put_picture(@share.photo.current_path, {message: @share.content})
+      response = graph.put_picture(@share.photo.url, {message: @share.content})
     when "video"
-      response = graph.put_video(@share.video.current_path, {message: @share.content})
+      response = graph.put_video(@share.video.url, {message: @share.content})
     end
     @share.update_attribute("share_id", response["id"])
     get_share_url
