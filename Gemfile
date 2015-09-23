@@ -24,6 +24,7 @@ gem 'omniauth-instagram'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
 gem 'paranoia'
+gem 'fog'
 gem 'carrierwave'
 gem 'twitter'
 gem 'mandrill-api'
@@ -33,7 +34,6 @@ gem 'sinatra', require: false
 gem 'slim'
 gem 'remotipart'
 gem 'gon'
-gem 'fog-aws'
 
 group :development, :local, :production do
   gem 'rails_12factor'
