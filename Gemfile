@@ -34,6 +34,7 @@ gem 'sinatra', require: false
 gem 'remotipart'
 gem 'gon'
 gem 'rails_12factor'
+gem 'lightbox2-rails'
 
 group :development, :local, :test do
   gem 'byebug'
@@ -44,6 +45,7 @@ group :development, :local, :test do
   gem 'sextant'
   gem 'better_errors'
   gem 'faker'
+  gem 'parallel_tests'
 end
 
 group :test do

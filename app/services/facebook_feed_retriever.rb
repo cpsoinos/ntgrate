@@ -13,7 +13,7 @@ class FacebookFeedRetriever
         'id',
         'from',
         'type',
-        'picture',
+        'full_picture',
         'link',
         'created_time',
         'updated_time',
