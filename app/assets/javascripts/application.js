@@ -15,6 +15,7 @@
 //= require jquery.remotipart
 //= require jquery-readyselector
 //= require bootstrap-sprockets
+//= require lightbox
 //= require_tree .
 
 $(document).ready(function() {
