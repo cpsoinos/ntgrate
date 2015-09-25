@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :facebook_pages, only: :create
   resources :facebook_shares, only: [:new, :create, :update, :destroy]
   resources :twitter_shares, only: [:new, :create, :update, :destroy]
+  resources :facebook_accounts, only: [:show]
 
   get '/facebook_pages/feed', to: 'facebook_pages#feed'
 

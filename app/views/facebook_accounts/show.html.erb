@@ -1,0 +1,42 @@
+<section id="intro-<%= controller_name %>" data-speed="6" data-type="background">
+  <div class="container">
+    <div class="col-xs-12 col-md-9" id="js-flash"></div>
+    <%= render "layouts/flash_messages" %>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="well">
+          <h1>Facebook</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well well-dashboard">
+          <h3>Details</h3>
+          <div class="panel panel-default social-panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Facebook</h3>
+            </div>
+            <div class="panel-body">
+              <% if @facebook_account.present? %>
+                <% if @facebook_pages.empty? %>
+                  <p>You do not have any Facebook pages. Please create one on Facebook and re-authenticate here with your Facebook account.</p>
+                <% else %>
+                  <%#= render "facebook_shares/form" %>
+                  <%= render "facebook_shares/newsfeed_buttons" %>
+                <% end %>
+              <% else %>
+                <p>Connect your Facebook account</p>
+                <%= link_to "#{icon('facebook')} Sign in with Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-social btn-facebook" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
