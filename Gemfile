@@ -48,6 +48,7 @@ group :development, :local, :test do
   gem 'sextant'
   gem 'better_errors'
   gem 'faker'
+  gem 'parallel_tests'
 end
 
 group :test do

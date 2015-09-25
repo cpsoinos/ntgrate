@@ -7,7 +7,7 @@ feature "facebook feed" do
     sign_in(user)
   end
 
-  describe "FacebookNewsFeed" do
+  describe "FacebookNewsFeed", :js, :vcr, record: :new_episodes do
     it "shows the 5 most recent posts", :js, :vcr, record: :new_episodes do
       pending("ajax load testing")
       visit dashboard_path(user.dashboard)
