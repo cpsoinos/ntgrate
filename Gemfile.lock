@@ -313,6 +313,8 @@ GEM
       multi_json
     launchy (2.4.3)
       addressable (~> 2.3)
+    lightbox2-rails (2.7.1)
+      railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -592,6 +594,7 @@ DEPENDENCIES
   jquery-rails
   koala (~> 2.2)
   launchy
+  lightbox2-rails
   mandrill-api
   omniauth
   omniauth-facebook

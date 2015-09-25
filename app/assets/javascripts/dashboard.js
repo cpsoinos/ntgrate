@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(".dashboards.show").ready(function() {
 
   $("#show-newsfeed").click(function() {
     $(".facebook-newsfeed").toggle("slow");

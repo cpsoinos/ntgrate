@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(".dashboards.show").ready(function() {
   $("input[name=twitter_options]").on("change", function() {
     // first, set the share type
     var shareType = ".twitter_" + this.className;
@@ -104,7 +104,7 @@ function validateTwFiles(inputFile) {
 }
 
 // character counter
-$(document).ready(function() {
+$(".dashboards.show").ready(function() {
   $("#tweet").attr("disabled", "disabled");
   $("#twitter_share_content").keyup(function(){
     var chars = $(this).val().length;
@@ -121,7 +121,6 @@ $(document).ready(function() {
   });
 
   var accountId = $("#twitter-account-id").attr("data");
-  debugger;
   getTimeline(accountId);
 
 });
@@ -133,20 +132,3 @@ function getTimeline(accountId) {
     data: {account_id: accountId}
   });
 }
-
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));

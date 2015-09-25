@@ -10,12 +10,13 @@
 
   <div class="panel-body feed">
     <% if tweet.media? %>
-      <% tweet.media.each do |object| %>
-          <%= image_tag(object.media_url, class: "#{tweet.retweet_count > 0 || tweet.favorite_count > 0 ? 'media-with-statistics' : ''}") %>
-      <% end %>
-    <% else %>
-      <p><%= tweet.text %></p>
+      <div class="text-center">
+        <% tweet.media.each do |object| %>
+            <%= link_to image_tag(object.media_url, class: "share-media #{tweet.retweet_count > 0 || tweet.favorite_count > 0 ? 'media-with-statistics' : ''}"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{@twitter_account.handle}: #{tweet.text}" %>
+        <% end %>
+      </div>
     <% end %>
+    <p><%= tweet.text %></p>
     <div class="statistics">
       <% if tweet.retweet_count > 0 %>
         <%= tweet.retweet_count %> <span class="twitter-blue"><%= icon("retweet") %></span>

@@ -16,10 +16,10 @@
       <p><%= share[:message] %></p>
     <% else %>
       <% if share[:message].present? || share[:link].present? %>
-          <% if share[:picture].present? %>
-            <p class="text-center"><%= image_tag(share[:picture]) %></p>
+          <% if share[:full_picture].present? %>
+            <p class="text-center"><%= image_tag(share[:full_picture], class: "share-media") %></p>
           <% elsif share[:video].present? %>
-            <p class="text-center"><% video_tag(share[:video]) %></p>
+            <p class="text-center"><% video_tag(share[:video], class: "share-media") %></p>
           <% end %>
           <% if share[:message].present? %>
             <p><%= share[:message] %></p>
@@ -28,10 +28,10 @@
             <p><%= link_to share[:link], share[:link] %></p>
           <% end %>
       <% else %>
-      <% if share[:picture].present? %>
-        <p class="text-center"><%= image_tag(share[:picture]) %></p>
+      <% if share[:full_picture].present? %>
+        <p class="text-center"><%= image_tag(share[:full_picture], class: "share-media") %></p>
       <% elsif share[:video].present? %>
-        <p class="text-center"><% video_tag(share[:video]) %></p>
+        <p class="text-center"><% video_tag(share[:video], class: "share-media") %></p>
       <% end %>
       <% end %>
     <% end %>

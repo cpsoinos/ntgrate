@@ -13,9 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require jquery-readyselector
 //= require bootstrap-sprockets
+//= require lightbox
 //= require_tree .
 
-$(document).ready( function() {
+$(document).ready(function() {
   $('.alert').delay(5000).fadeOut();
 });

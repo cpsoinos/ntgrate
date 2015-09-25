@@ -34,6 +34,7 @@ gem 'sinatra', require: false
 gem 'slim'
 gem 'remotipart'
 gem 'gon'
+gem 'lightbox2-rails'
 
 group :development, :local, :production do
   gem 'rails_12factor'

@@ -1738,4 +1738,106 @@ http_interactions:
         15:57:08 PDT.","type":"OAuthException","code":190,"error_subcode":463}}'
     http_version: 
   recorded_at: Sat, 19 Sep 2015 22:57:08 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&appsecret_proof=cef41c2912e50d898f76dfbaadc8a6a6b7bf76e351c008350d1eb9e9572d5202&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "invalid_token" "Error validating access token:
+        Session has expired on Saturday, 19-Sep-15 11:00:00 PDT. The current time
+        is Thursday, 24-Sep-15 18:34:55 PDT."'
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - BDVyDocAjII
+      X-Fb-Rev:
+      - '1954982'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - e8H3lDbYcWjc5NFQJpiRTpNNJJNnTU2cstyw30xxJG9qvSuMbX0pYus7/IAgzTnQzf92l8H+EMg2AIIRry00zw==
+      Date:
+      - Fri, 25 Sep 2015 01:34:55 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '247'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Error validating access token: Session has expired
+        on Saturday, 19-Sep-15 11:00:00 PDT. The current time is Thursday, 24-Sep-15
+        18:34:55 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"BDVyDocAjII"}}'
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 01:34:55 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/posts?access_token=CAABZCqcXkxuUBAM72FRX35WgQdfLKNS2taunXT2Vm36HvzK8K6vwZAJAbG9vjbfZBIUKGgoAS9eaBiqLfrKi7bhlDRVTZCef4hixvzxOt8hZCCg6ZARYsXUjWYfTtnUrzz23JhhT0U0uEj4VsRliK5QlGylUZCLoMCWRVxTm9r1ACXOTfRGpgP6QOf9cNY35qqhpgARvZCJczgZDZD&appsecret_proof=cef41c2912e50d898f76dfbaadc8a6a6b7bf76e351c008350d1eb9e9572d5202&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "invalid_token" "Error validating access token:
+        Session has expired on Saturday, 19-Sep-15 11:00:00 PDT. The current time
+        is Thursday, 24-Sep-15 18:34:56 PDT."'
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - D8STTlgLN0F
+      X-Fb-Rev:
+      - '1954982'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 9LNwJXagljsRMtPKnT9W3YkM4/dMlya/M/qguFBW7Z5aSJcmlJ1GOevwgQ6oazfEfFeUf/V1gzPhbo8JmEGHBw==
+      Date:
+      - Fri, 25 Sep 2015 01:34:56 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '247'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Error validating access token: Session has expired
+        on Saturday, 19-Sep-15 11:00:00 PDT. The current time is Thursday, 24-Sep-15
+        18:34:56 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"D8STTlgLN0F"}}'
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 01:34:55 GMT
 recorded_with: VCR 2.9.3

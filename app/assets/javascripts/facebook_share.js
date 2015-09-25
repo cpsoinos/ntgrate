@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(".dashboards.show").ready(function() {
   $("input[name=facebook_options]").on("change", function() {
     // first, set the share type
     var shareType = ".facebook_" + this.className;
@@ -108,7 +108,7 @@ function validateFbFiles(inputFile) {
   }
 }
 
-$(document).ready(function() {
+$(".dashboards.show").ready(function() {
   var selectedPageId = $("#facebook_share_facebook_page_id").val();
   getFeed(selectedPageId);
 });
