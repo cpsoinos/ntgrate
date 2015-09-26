@@ -24,6 +24,7 @@ gem 'omniauth-instagram'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-sass'
 gem 'paranoia'
+gem 'fog'
 gem 'carrierwave'
 gem 'twitter'
 gem 'mandrill-api'
@@ -33,6 +34,7 @@ gem 'sinatra', require: false
 gem 'slim'
 gem 'remotipart'
 gem 'gon'
+gem 'lightbox2-rails'
 
 group :development, :local, :production do
   gem 'rails_12factor'
@@ -44,9 +46,12 @@ group :development, :local, :test do
   gem 'spring'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-rails'
+  gem 'pry-coolline'
+  gem 'pry-remote'
   gem 'sextant'
   gem 'better_errors'
   gem 'faker'
+  gem 'parallel_tests'
 end
 
 group :test do

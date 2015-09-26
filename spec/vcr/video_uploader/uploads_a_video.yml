@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/1abc123/picture?access_token=abcdefg&appsecret_proof=fc231de742653d594cda154e9fb847f8bb0a1d90818999dcef9fe3a10b256806
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - EJbvTqQCPZA
+      X-Fb-Rev:
+      - '1957147'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - tyQ7l4eRvAtKzTo+oQ0xvS+hi4RuwF53gR1WyN0FC3g9n94+OhYw6goqcltqgZmW4Yah3kGODjQpWwrR3s61HA==
+      Date:
+      - Sat, 26 Sep 2015 18:51:25 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '113'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"EJbvTqQCPZA"}}'
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 18:51:25 GMT
+- request:
+    method: put
+    uri: https://minion-uploads-development.s3.amazonaws.com/uploads/facebook_share/video/video.mov
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fog/1.34.0 fog-core/1.32.1
+      Content-Type:
+      - video/quicktime
+      X-Amz-Acl:
+      - private
+      X-Amz-Date:
+      - 20150926T205546Z
+      X-Amz-Content-Sha256:
+      - STREAMING-AWS4-HMAC-SHA256-PAYLOAD
+      X-Amz-Decoded-Content-Length:
+      - '24'
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAIIO3HZ276PIROUEA/20150926/us-east-1/s3/aws4_request,
+        SignedHeaders=content-type;host;x-amz-acl;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length,
+        Signature=4bf095e0544d889826841f5234214a13aadb2a6faded5630aa3980b2dd5f86c4
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      X-Amz-Id-2:
+      - IH5o0KTn2C2wL6HlKXK8mjbnwPzHR8dorfLYJtsLRLYNsvhhzdZ7dcC29mCM7tQo
+      X-Amz-Request-Id:
+      - BB8447FE5CEFE638
+      Date:
+      - Sat, 26 Sep 2015 20:55:48 GMT
+      Etag:
+      - '"17ebf1779f779ad8b7dd0b89bdd10100"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 20:55:47 GMT
+- request:
+    method: delete
+    uri: https://minion-uploads-development.s3.amazonaws.com/uploads/facebook_share/video/video.mov
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fog/1.34.0 fog-core/1.32.1
+      X-Amz-Date:
+      - 20150926T205547Z
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAIIO3HZ276PIROUEA/20150926/us-east-1/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=a49397bd75a5e233540f6b9df7765a46273d969ee1d792ca23755e5546ae027f
+  response:
+    status:
+      code: 204
+      message: ''
+    headers:
+      X-Amz-Id-2:
+      - zJzoAOQuEklJbjcxurS65BuFuYbtrKOIltWvNiCl98Jg+nt101rcROpcUqsrefhe
+      X-Amz-Request-Id:
+      - 97D855DEF7C563D2
+      Date:
+      - Sat, 26 Sep 2015 20:55:48 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 20:55:47 GMT
+recorded_with: VCR 2.9.3

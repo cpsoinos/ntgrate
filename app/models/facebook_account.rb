@@ -23,7 +23,8 @@ class FacebookAccount < ActiveRecord::Base
         uid: page["id"],
         token: page["access_token"],
         facebook_account_id: self.id,
-        page_url: "https://www.facebook.com/#{page["id"]}"
+        page_url: "https://www.facebook.com/#{page["id"]}",
+        picture: graph.get_picture(page["id"])
       }
     end
   end

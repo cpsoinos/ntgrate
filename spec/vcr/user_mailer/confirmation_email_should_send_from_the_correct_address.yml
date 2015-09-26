@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"template_name":"welcome","template_content":[],"merge_vars":[{"name":"subject","content":"Email
-        confirmation"},{"name":"to","content":[{"name":null,"email":"person1@example.com","type":"to"}]},{"name":"fname","content":"Nicolette"},{"name":"confirmation_url","content":"http://<SMTP_DOMAIN>:3000/users/confirmation"},{"name":"reset_password_url","content":null}],"key":"<MANDRILL_TEST_API_KEY>"}'
+        confirmation"},{"name":"to","content":[{"name":null,"email":"person6@example.com","type":"to"}]},{"name":"fname","content":"Shanie"},{"name":"confirmation_url","content":"http://<SMTP_DOMAIN>:3000/users/confirmation"},{"name":"reset_password_url","content":null}],"key":"<MANDRILL_TEST_API_KEY>"}'
     headers:
       User-Agent:
       - excon/0.45.4
@@ -20,7 +20,7 @@ http_interactions:
       Server:
       - nginx/1.6.0
       Date:
-      - Sat, 19 Sep 2015 17:06:38 GMT
+      - Sat, 26 Sep 2015 20:55:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -105,8 +105,9 @@ http_interactions:
         !important;\n\t\t\tmin-width:100% !important;\n\t\t}\n\n}\t@media only screen
         and (max-width: 480px){\n\t\ttd[id=bodyCell]{\n\t\t\tpadding:10px !important;\n\t\t}\n\n}\t@media
         only screen and (max-width: 480px){\n\t\ttable[class=mcnTextContentContainer]{\n\t\t\twidth:100%
-        !important;\n\t\t}\n\n}\t@media only screen and (max-width: 480px){\n\t\ttable[class=mcnBoxedTextContentContainer]{\n\t\t\twidth:100%
-        !important;\n\t\t}\n\n}\t@media only screen and (max-width: 480px){\n\t\ttable[class=mcpreview-image-uploader]{\n\t\t\twidth:100%
+        !important;\n\t\t}\n\n}\t@media only screen and (max-width: 480px){\n\t\t.mcnBoxedTextContentContainer{\n\t\t\tmax-width:100%
+        !important;\n\t\t\tmin-width:100% !important;\n\t\t\twidth:100% !important;\n\t\t}\n\n}\t@media
+        only screen and (max-width: 480px){\n\t\ttable[class=mcpreview-image-uploader]{\n\t\t\twidth:100%
         !important;\n\t\t\tdisplay:none !important;\n\t\t}\n\n}\t@media only screen
         and (max-width: 480px){\n\t\timg[class=mcnImage]{\n\t\t\twidth:100% !important;\n\t\t}\n\n}\t@media
         only screen and (max-width: 480px){\n\t\ttable[class=mcnImageGroupContentContainer]{\n\t\t\twidth:100%
@@ -218,7 +219,7 @@ http_interactions:
         class=\"mcnTextContentContainer\">\n                    <tbody><tr>\n                        \n                        <td
         valign=\"top\" class=\"mcnTextContent\" style=\"padding-top:9px; padding-right:
         18px; padding-bottom: 9px; padding-left: 18px;\">\n                        \n                            <h2
-        class=\"mc-toc-title\">Welcome, Nicolette<\/h2>\n\n                        <\/td>\n                    <\/tr>\n                <\/tbody><\/table>\n                \n            <\/td>\n        <\/tr>\n    <\/tbody>\n<\/table><table
+        class=\"mc-toc-title\">Welcome, Shanie<\/h2>\n\n                        <\/td>\n                    <\/tr>\n                <\/tbody><\/table>\n                \n            <\/td>\n        <\/tr>\n    <\/tbody>\n<\/table><table
         border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" class=\"mcnImageBlock\">\n    <tbody
         class=\"mcnImageBlockOuter\">\n            <tr>\n                <td valign=\"top\"
         style=\"padding:9px\" class=\"mcnImageBlockInner\">\n                    <table
@@ -239,7 +240,7 @@ http_interactions:
         align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"600\"
         class=\"mcnTextContentContainer\">\n                    <tbody><tr>\n                        \n                        <td
         valign=\"top\" class=\"mcnTextContent\" style=\"padding-top:9px; padding-right:
-        18px; padding-bottom: 9px; padding-left: 18px;\">\n                        \n                            <h1>GetReal<\/h1>\n\n<h3>The
+        18px; padding-bottom: 9px; padding-left: 18px;\">\n                        \n                            <h1>Minion<\/h1>\n\n<h3>The
         simplest way to keep your clients connected.<\/h3>\nPlease confirm your email
         address by clicking on this link:\n\n<h2 class=\"mc-toc-title\" style=\"line-height:
         20.8px; text-align: center;\"><span style=\"font-family:verdana,geneva,sans-serif\"><span
@@ -264,5 +265,5 @@ http_interactions:
         \/\/ END FOOTER -->\n                                <\/td>\n                            <\/tr>\n                        <\/table>\n                        <!--
         \/\/ END TEMPLATE -->\n                    <\/td>\n                <\/tr>\n            <\/table>\n        <\/center>\n    <\/body>\n<\/html>"}'
     http_version: 
-  recorded_at: Sat, 19 Sep 2015 17:06:37 GMT
+  recorded_at: Sat, 26 Sep 2015 20:55:49 GMT
 recorded_with: VCR 2.9.3

@@ -16,29 +16,26 @@
       <p><%= share[:message] %></p>
     <% else %>
       <% if share[:message].present? || share[:link].present? %>
-        <div class="col-xs-6">
-          <% if share[:picture].present? %>
-            <p class="text-center"><%= image_tag(share[:picture]) %></p>
+          <% if share[:full_picture].present? %>
+            <p class="text-center"><%= image_tag(share[:full_picture], class: "share-media") %></p>
           <% elsif share[:video].present? %>
-            <p class="text-center"><% video_tag(share[:video]) %></p>
+            <p class="text-center"><% video_tag(share[:video], class: "share-media") %></p>
           <% end %>
-        </div>
-        <div class="col-xs-6">
           <% if share[:message].present? %>
             <p><%= share[:message] %></p>
           <% end %>
           <% if share[:type] == "link" %>
             <p><%= link_to share[:link], share[:link] %></p>
           <% end %>
-        </div>
       <% else %>
-      <% if share[:picture].present? %>
-        <p class="text-center"><%= image_tag(share[:picture]) %></p>
+      <% if share[:full_picture].present? %>
+        <p class="text-center"><%= image_tag(share[:full_picture], class: "share-media") %></p>
       <% elsif share[:video].present? %>
-        <p class="text-center"><% video_tag(share[:video]) %></p>
+        <p class="text-center"><% video_tag(share[:video], class: "share-media") %></p>
       <% end %>
       <% end %>
     <% end %>
+
     <div class="statistics">
       <% if share[:likes].present? %>
         <%= share[:likes][:data].count %> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
@@ -47,5 +44,10 @@
         <%= share[:comments][:data].count %> <span class="facebook-blue"><%= icon('comments-o') %></span>
       <% end %>
     </div>
+
+    <div class="actions">
+      <%= button_to "Boost", facebook_share_boost_path, params: {share_id: share[:id], facebook_page_id: @facebook_page.id}, remote: true, class: "btn btn-facebook boost-share" %>
+    </div>
+
   </div>
 </div>

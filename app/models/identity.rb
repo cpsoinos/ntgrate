@@ -34,6 +34,7 @@ class Identity < ActiveRecord::Base
         token: auth.credentials.token,
         secret: auth.credentials.secret,
         handle: "@#{auth.info.nickname}",
+        account_url: "https://twitter.com/#{auth.info.nickname}",
         uid: uid,
         identity: self
       )
