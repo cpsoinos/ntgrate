@@ -9,7 +9,6 @@ feature "facebook feed" do
 
   describe "FacebookNewsFeed", :js, :vcr, record: :new_episodes do
     it "shows the 5 most recent posts", :js, :vcr, record: :new_episodes do
-      pending("ajax load testing")
       visit dashboard_path(user.dashboard)
       find("#show-newsfeed").trigger("click")
 
@@ -17,7 +16,6 @@ feature "facebook feed" do
     end
 
     it "has a 'boost' button", :js, :vcr, record: :new_episodes do
-      pending("ajax load testing")
       visit dashboard_path(user.dashboard)
       find("#show-newsfeed").trigger("click")
 

@@ -8,20 +8,20 @@ feature "Facebook show:" do
     sign_in(user)
   end
 
-  scenario "from dashboard" do
+  context "from dashboard" do
 
-    it "has links to Facebook details" do
+    scenario "it has links to Facebook details" do
       visit dashboard_path(user.dashboard)
 
       expect(page).to have_link("Facebook")
     end
 
-    it "takes you to the Facebook details page" do
+    scenario "it takes you to the Facebook details page" do
       visit dashboard_path(user.dashboard)
-      click_link("Facebook Details")
+      click_link("Facebook")
 
       expect(page).to have_content("Facebook")
-      expect(page).to have_content("Likes")
+      expect(page).to have_content("Recent Shares")
     end
 
   end
