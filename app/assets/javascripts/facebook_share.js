@@ -110,13 +110,5 @@ function validateFbFiles(inputFile) {
 
 $(".dashboards.show").ready(function() {
   var selectedPageId = $("#facebook_share_facebook_page_id").val();
-  getFeed(selectedPageId);
+  getFeed(selectedPageId, 5);
 });
-
-function getFeed(pageId) {
-  $.ajax({
-    url: ("/facebook_pages/feed"),
-    type: "GET",
-    data: {page_id: pageId}
-  });
-}

@@ -46,6 +46,8 @@ group :development, :local, :test do
   gem 'spring'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-rails'
+  gem 'pry-coolline'
+  gem 'pry-remote'
   gem 'sextant'
   gem 'better_errors'
   gem 'faker'

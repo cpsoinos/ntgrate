@@ -35,6 +35,7 @@
       <% end %>
       <% end %>
     <% end %>
+
     <div class="statistics">
       <% if share[:likes].present? %>
         <%= share[:likes][:data].count %> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
@@ -43,5 +44,10 @@
         <%= share[:comments][:data].count %> <span class="facebook-blue"><%= icon('comments-o') %></span>
       <% end %>
     </div>
+
+    <div class="actions">
+      <%= button_to "Boost", facebook_share_boost_path, params: {share_id: share[:id], facebook_page_id: @facebook_page.id}, remote: true, class: "btn btn-facebook boost-share" %>
+    </div>
+
   </div>
 </div>
