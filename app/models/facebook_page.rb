@@ -8,6 +8,8 @@ class FacebookPage < ActiveRecord::Base
   validates :facebook_account, presence: true
   validates :page_url, presence: true
 
+  before_save :get_picture
+
   include FacebookGraphable
 
   acts_as_paranoid
@@ -20,6 +22,10 @@ class FacebookPage < ActiveRecord::Base
 
   def graph
     Koala::Facebook::API.new(token, ENV["FACEBOOK_APP_SECRET"])
+  end
+
+  def get_picture
+    self.picture = graph.get_picture(uid)
   end
 
 end
