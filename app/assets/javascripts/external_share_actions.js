@@ -5,3 +5,7 @@ function getFeed(pageId, limit) {
     data: {page_id: pageId, limit: limit}
   });
 }
+
+// function boost(event, postId) {
+//   event.preventDefault();
+// }
