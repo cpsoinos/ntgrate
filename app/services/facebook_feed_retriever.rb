@@ -1,13 +1,14 @@
 class FacebookFeedRetriever
   include FacebookGraphable
 
-  def initialize(facebook_page)
+  def initialize(facebook_page, limit)
     @facebook_page = facebook_page
+    @limit = limit
   end
 
   def get_feed
     @feed = graph.get_connection("me", "posts", {
-      limit: 5,
+      limit: @limit,
       fields: [
         'message',
         'id',

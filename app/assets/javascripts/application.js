@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require jquery-readyselector
+//= require jquery-ddslick
 //= require bootstrap-sprockets
 //= require lightbox
 //= require_tree .
