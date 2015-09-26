@@ -30,6 +30,12 @@ class FacebookSharesController < ApplicationController
     @facebook_share.delete_share
   end
 
+  def boost
+    @facebook_page = FacebookPage.find(params[:facebook_page_id])
+    @facebook_share = FacebookShare.find_by(share_id: params[:share_id])
+    FacebookShareBooster.new(@facebook_page, params[:share_id]).boost
+  end
+
   protected
 
   def facebook_share_params
