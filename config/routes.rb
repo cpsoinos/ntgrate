@@ -18,10 +18,12 @@ Rails.application.routes.draw do
 
   resources :dashboards, only: :show
   resources :landing_pages, only: :index
-  resources :facebook_pages, only: :create
-  resources :facebook_shares, only: [:new, :create, :update, :destroy]
-  resources :twitter_shares, only: [:new, :create, :update, :destroy]
   resources :facebook_accounts, only: [:show]
+  resources :facebook_pages, only: [:create]
+  resources :facebook_shares, only: [:new, :create, :update, :destroy]
+  resources :facebook_ad_campaigns, only: [:new, :create, :update, :destroy]
+  resources :facebook_ad_sets, only: [:new, :create, :update, :destroy]
+  resources :twitter_shares, only: [:new, :create, :update, :destroy]
 
   get '/facebook_pages/feed', to: 'facebook_pages#feed'
   post '/facebook_shares/boost', as: 'facebook_share_boost', to: 'facebook_shares#boost'

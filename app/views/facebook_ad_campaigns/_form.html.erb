@@ -1,0 +1,80 @@
+Step 1
+
+<%= form_for @facebook_ad_campaign, remote: true do |f| %>
+  <div class="hidden" id="facebook-account-id" data="<%= @facebook_account.id %>"></div>
+
+  <div class="error_messages">
+    <% @facebook_ad_campaign.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :name %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.text_field :name, autofocus: true, class: "share-input form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        Choose an objective
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.radio_button :objective, "PAGE_LIKES" %>
+        <%= f.label :objective, value: "Page likes" %> </br>
+        <%= f.radio_button :objective, "PAGE_POST_ENGAGEMENTS" %>
+        <%= f.label :objective, value: "Page post engagements" %> </br>
+        <%= f.radio_button :objective, "CLICKS_TO_WEBSITE" %>
+        <%= f.label :objective, value: "Clicks to website" %> </br>
+        <%= f.radio_button :objective, "WEBSITE_CONVERSIONS" %>
+        <%= f.label :objective, value: "Website conversions" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :start_time %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.datetime_local_field :start_time, ampm: true, autofocus: true, class: "share-input form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :stop_time %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.datetime_local_field :stop_time, ampm: true, autofocus: true, class: "share-input form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :spend_cap %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.number_field :spend_cap, autofocus: true, step: 0.25, class: "share-input form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions social-submit">
+    <%= button_tag(class: "btn btn-facebook") do %>
+      Continue
+    <% end %>
+  </div>
+
+<% end %>

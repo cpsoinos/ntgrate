@@ -1,0 +1,17 @@
+// reset the form fields
+$("#new_facebook_ad_campaign").each(function(){
+  this.reset();
+});
+
+// add the flash message
+$("#js-flash").html('<%= j render partial: "layouts/flash_messages" %>');
+
+// clear the flash message
+$("#js-flash").delay(10000).fadeOut(function() {
+  $(this).empty().show();
+});
+
+$(".new-fb-ad-campaign-form").toggle("slow");
+$(".new-fb-ad-set-form").toggle("slow");
+
+$("#facebook_ad_set_facebook_ad_campaign_id").val("<%= @facebook_ad_campaign.id %>")

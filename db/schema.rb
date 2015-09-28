@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926003659) do
+ActiveRecord::Schema.define(version: 20150927163200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,50 @@ ActiveRecord::Schema.define(version: 20150926003659) do
 
   add_index "facebook_accounts", ["deleted_at"], name: "index_facebook_accounts_on_deleted_at", using: :btree
   add_index "facebook_accounts", ["identity_id"], name: "index_facebook_accounts_on_identity_id", using: :btree
+
+  create_table "facebook_ad_campaigns", force: :cascade do |t|
+    t.string   "ad_campaign_id"
+    t.string   "name"
+    t.string   "objective"
+    t.string   "ad_account_id"
+    t.datetime "start_time"
+    t.datetime "stop_time"
+    t.money    "spend_cap",      scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "facebook_ad_creatives", force: :cascade do |t|
+    t.string   "name"
+    t.string   "object_story_id"
+    t.string   "share_id"
+    t.string   "creative_id"
+    t.integer  "facebook_share_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "facebook_ad_creatives", ["facebook_share_id"], name: "index_facebook_ad_creatives_on_facebook_share_id", using: :btree
+
+  create_table "facebook_ad_sets", force: :cascade do |t|
+    t.string   "ad_set_id"
+    t.string   "ad_account_id"
+    t.integer  "bid_amount"
+    t.string   "billing_event"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "name"
+    t.string   "optimization_goal"
+    t.money    "lifetime_budget",         scale: 2
+    t.money    "daily_budget",            scale: 2
+    t.string   "promoted_object_id"
+    t.boolean  "is_autobid"
+    t.integer  "facebook_ad_campaign_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "facebook_ad_sets", ["facebook_ad_campaign_id"], name: "index_facebook_ad_sets_on_facebook_ad_campaign_id", using: :btree
 
   create_table "facebook_pages", force: :cascade do |t|
     t.string   "name",                null: false
@@ -181,6 +225,8 @@ ActiveRecord::Schema.define(version: 20150926003659) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "facebook_accounts", "identities"
+  add_foreign_key "facebook_ad_creatives", "facebook_shares"
+  add_foreign_key "facebook_ad_sets", "facebook_ad_campaigns"
   add_foreign_key "facebook_pages", "facebook_accounts"
   add_foreign_key "facebook_shares", "facebook_pages"
   add_foreign_key "identities", "users"

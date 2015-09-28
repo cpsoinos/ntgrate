@@ -5,6 +5,8 @@ class FacebookAccountsController < ApplicationController
     @facebook_account = FacebookAccount.find(params[:id])
     @facebook_pages = @facebook_account.try(:facebook_pages)
     gon.facebook_pages = build_json_for_pages
+    @facebook_ad_campaign = FacebookAdCampaign.new
+    @facebook_ad_set = @facebook_ad_campaign.facebook_ad_sets.new
   end
 
   private

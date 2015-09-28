@@ -20,4 +20,9 @@ $(".facebook_accounts.show").ready(function() {
 
   getFeed(selectedPageId, 25);
 
+  $("#new-fb-ad-campaign").click(function() {
+    $("#new-fb-ad-campaign").hide();
+    $(".new-fb-ad-campaign-form").toggle("slow");
+  });
+
 });

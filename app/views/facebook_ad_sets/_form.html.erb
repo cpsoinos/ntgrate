@@ -1,0 +1,41 @@
+Step 2
+
+<%= form_for @facebook_ad_set, remote: true do |f| %>
+
+  <%= f.hidden_field :facebook_ad_campaign_id %>
+
+  <div class="error_messages">
+    <% @facebook_ad_set.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :lifetime_budget %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.number_field :lifetime_budget, autofocus: true, step: 0.25, class: "share-input form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field social-form">
+      <div class="col-xs-12 col-md-4">
+        <%= f.label :daily_budget %>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <%= f.number_field :daily_budget, autofocus: true, step: 0.25, class: "share-input form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions social-submit">
+    <%= button_tag(class: "btn btn-facebook") do %>
+      Continue
+    <% end %>
+  </div>
+
+<% end %>
