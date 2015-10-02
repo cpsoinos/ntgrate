@@ -5,6 +5,7 @@ require 'helpers/user_helper_spec.rb'
 require 'coveralls'
 require 'email_spec'
 require 'capybara/poltergeist'
+require 'money-rails/test_helpers'
 
 Coveralls.wear!('rails')
 

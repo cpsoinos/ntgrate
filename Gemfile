@@ -35,6 +35,7 @@ gem 'slim'
 gem 'remotipart'
 gem 'gon'
 gem 'lightbox2-rails'
+gem 'money-rails'
 
 group :development, :local, :production do
   gem 'rails_12factor'

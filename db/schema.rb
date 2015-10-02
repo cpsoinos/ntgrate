@@ -45,7 +45,8 @@ ActiveRecord::Schema.define(version: 20150927163200) do
     t.string   "ad_account_id"
     t.datetime "start_time"
     t.datetime "stop_time"
-    t.money    "spend_cap",      scale: 2
+    t.integer  "spend_cap_cents",    default: 0,     null: false
+    t.string   "spend_cap_currency", default: "USD", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,14 +66,17 @@ ActiveRecord::Schema.define(version: 20150927163200) do
   create_table "facebook_ad_sets", force: :cascade do |t|
     t.string   "ad_set_id"
     t.string   "ad_account_id"
-    t.integer  "bid_amount"
+    t.integer  "bid_amount_cents",         default: 0,     null: false
+    t.string   "bid_amount_currency",      default: "USD", null: false
     t.string   "billing_event"
     t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "stop_time"
     t.string   "name"
     t.string   "optimization_goal"
-    t.money    "lifetime_budget",         scale: 2
-    t.money    "daily_budget",            scale: 2
+    t.integer  "lifetime_budget_cents",    default: 0,     null: false
+    t.string   "lifetime_budget_currency", default: "USD", null: false
+    t.integer  "daily_budget_cents",       default: 0,     null: false
+    t.string   "daily_budget_currency",    default: "USD", null: false
     t.string   "promoted_object_id"
     t.boolean  "is_autobid"
     t.integer  "facebook_ad_campaign_id"

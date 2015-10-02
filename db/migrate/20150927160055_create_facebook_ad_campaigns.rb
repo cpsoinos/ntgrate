@@ -7,7 +7,7 @@ class CreateFacebookAdCampaigns < ActiveRecord::Migration
       t.string :ad_account_id
       t.datetime :start_time
       t.datetime :stop_time
-      t.money :spend_cap
+      t.monetize :spend_cap
       t.timestamps
     end
   end
