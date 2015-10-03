@@ -12,17 +12,12 @@ class DashboardsController < ApplicationController
     @facebook_pages = @facebook_account.try(:facebook_pages)
 
     @twitter_account = current_user.twitter_account
+
     @instagram_account = current_user.instagram_account
     @linkedin_account = current_user.twitter_account
 
     @facebook_share = FacebookShare.new
     @twitter_share = TwitterShare.new
-  end
-
-  private
-
-  def get_fb_app_id
-    gon.facebook_app_id = ENV["FACEBOOK_APP_ID"]
   end
 
 end

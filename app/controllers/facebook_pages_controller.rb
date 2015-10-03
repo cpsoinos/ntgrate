@@ -10,19 +10,19 @@ class FacebookPagesController < ApplicationController
     @facebook_page = current_user.facebook_account.facebook_pages.new(facebook_page_params)
   end
 
-  def update
-
-  end
-
-  def destroy
-
-  end
+  # def update
+  #
+  # end
+  #
+  # def destroy
+  #
+  # end
 
   def feed
     respond_to do |format|
       format.js do
         @facebook_page = FacebookPage.find(params[:page_id].to_i)
-        @feed = FacebookFeedRetriever.new(@facebook_page).get_feed
+        @feed = FacebookFeedRetriever.new(@facebook_page, params[:limit]).get_feed
       end
     end
   end

@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <span class="page-name">
+      <%= link_to @twitter_account.handle, @twitter_account.account_url %>
+    </span>
+    <span class="shared-at pull-right">
+      <%= time_ago_in_words(tweet.created_at) %> ago
+    </span>
+  </div>
+
+  <div class="panel-body feed">
+    <% if tweet.media? %>
+      <div class="text-center">
+        <% tweet.media.each do |object| %>
+            <%= link_to image_tag(object.media_url, class: "share-media #{tweet.retweet_count > 0 || tweet.favorite_count > 0 ? 'media-with-statistics' : ''}"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{@twitter_account.handle}: #{tweet.text}" %>
+        <% end %>
+      </div>
+    <% end %>
+    <p><%= tweet.text %></p>
+    <div class="statistics">
+      <% if tweet.retweet_count > 0 %>
+        <%= tweet.retweet_count %> <span class="twitter-blue"><%= icon("retweet") %></span>
+      <% end %>
+      <% if tweet.favorite_count > 0 %>
+        <%= tweet.favorite_count %> <span class="twitter-favorite"><%= icon("star") %></span>
+      <% end %>
+    </div>
+  </div>
+</div>

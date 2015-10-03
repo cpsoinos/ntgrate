@@ -6,4 +6,4 @@ require 'capybara/poltergeist'
 # end
 
 # Capybara.javascript_driver = :poltergeist_debug
-Capybara.default_wait_time = 5
+Capybara.default_max_wait_time = 90

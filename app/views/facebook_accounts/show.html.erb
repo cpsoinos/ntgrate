@@ -1,0 +1,39 @@
+<section id="intro-<%= controller_name %>" data-speed="6" data-type="background">
+  <div class="container">
+    <div class="col-xs-12 col-md-9" id="js-flash"></div>
+    <%= render "layouts/flash_messages" %>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="well">
+          <h1>Facebook</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="well well-dashboard">
+          <% if @facebook_pages.length > 1 %>
+            <div class="panel-heading">
+              <div id="facebook-pages-dropdown"></div>
+            </div>
+          <% else %>
+            <h3 class="panel-title">
+              <%= @facebook_pages.first.name %>
+            </h3>
+          <% end %>
+          <h3>Recent Shares</h3>
+          <div class="panel panel-default social-panel">
+            
+                  <%#= render "facebook_shares/form" %>
+            <div class="facebook-newsfeed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>

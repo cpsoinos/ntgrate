@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def get_social_accounts
+    if current_user.present?
+      @facebook_account = current_user.facebook_account if current_user.facebook_account
+      @twitter_account = current_user.twitter_account if current_user.twitter_account
+      @instagram_account = current_user.instagram_account if current_user.instagram_account
+    end
+  end
+
   protected
 
   def configure_permitted_parameters

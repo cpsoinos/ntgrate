@@ -59,13 +59,17 @@ div.panel {
   margin: 1em;
 }
 
+.dashboard-form {
+  margin-bottom: 3em;
+}
+
 .share-input {
   width: 100%;
 }
 
-#facebook-errors, #twitter-errors {
-  display: none;
-}
+// #facebook-errors, #twitter-errors {
+//   display: none;
+// }
 
 .minus {
   color: red;
@@ -84,13 +88,34 @@ div.panel {
   color: $facebook-blue;
 }
 
+.twitter-blue {
+  color: $twitter-blue;
+}
+
+.twitter-favorite {
+  color: #ffac33;
+}
+
 .feed {
   position: relative;
 }
 
+.media-with-statistics {
+  margin-bottom: 2em;
+}
+
 .statistics {
+  margin-top: 1em;
   position: absolute;
   bottom: 1em;
   right: 1em;
   font-size: 12px;
+}
+
+.FollowButton {
+  display: none;
+}
+
+.share-media {
+  max-width: 448px;
 }
