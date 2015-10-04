@@ -16,26 +16,6 @@
         <div class="well well-dashboard">
           <h3>Welcome</h3>
 
-          <!-- listings -->
-          <div class="listings hide">
-            <% if @listings.empty? %>
-              <h4>You don't have any listings yet.</h4>
-              <%= link_to "Get started #{icon('arrow-circle-right')}".html_safe, "#", class: "btn" %>
-            <% else %>
-              <% if @listings.active.present? %>
-                <p>You have <%= @listings.active.count %> active <%= @listings.active.count == 1 ? "listing" : "listings" %>.</p>
-              <% else %>
-                <p>You have no active listings. Here are some things you can do to attract more clients: %></p>
-              <% end %>
-              <% if @listings.inactive.present? %>
-                <p>You have <%= @listings.inactive.count %> inactive <%= @listings.inactive.count == 1 ? "listing" : "listings" %>.</p>
-              <% end %>
-              <% if @listings.sold.present? %>
-                <p>You've sold <%= @listings.sold.count %> <%= @listings.sold.count == 1 ? "property" : "properties" %>.</p>
-              <% end %>
-            <% end %>
-          </div>
-
           <!-- social media accounts -->
           <h4>Here are a few things for you to do.</h4>
 
