@@ -120,14 +120,14 @@ $(".dashboards.show").ready(function() {
     }
   });
 
-  var accountId = $("#twitter-account-id").attr("data");
-  getTimeline(accountId);
+  var twAccountId = $("#twitter-account-id").attr("data");
+  getTwFeed(twAccountId);
 
 });
 
-function getTimeline(accountId) {
+function getTwFeed(accountId) {
   $.ajax({
-    url: ("/twitter_accounts/timeline"),
+    url: ("/twitter_accounts/feed"),
     type: "GET",
     data: {account_id: accountId}
   });

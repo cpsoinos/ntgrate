@@ -1,4 +1,4 @@
-function getFeed(objectId, limit) {
+function getFbFeed(objectId, limit) {
   var feedUrl;
   if ($("body").hasClass("dashboards")) {
     feedUrl = "/facebook_pages/feed";
