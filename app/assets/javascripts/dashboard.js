@@ -17,7 +17,7 @@ $(".dashboards.show").ready(function() {
     $("#show-newsfeed").show();
     $("#hide-newsfeed").hide();
     newPageId = $(this).val();
-    getFeed(newPageId);
+    getFeed(newPageId, 5);
   });
 
   $("#show-timeline").click(function() {

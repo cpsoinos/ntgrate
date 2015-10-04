@@ -1,11 +1,15 @@
-function getFeed(pageId, limit) {
+function getFeed(objectId, limit) {
+  var feedUrl;
+  if ($("body").hasClass("dashboards")) {
+    feedUrl = "/facebook_pages/feed";
+  }
+  else {
+    feedUrl = "/facebook_accounts/" + objectId + "/feed";
+  }
+
   $.ajax({
-    url: ("/facebook_pages/feed"),
+    url: feedUrl,
     type: "GET",
-    data: {page_id: pageId, limit: limit}
+    data: {object_id: objectId, limit: limit}
   });
 }
-
-// function boost(event, postId) {
-//   event.preventDefault();
-// }

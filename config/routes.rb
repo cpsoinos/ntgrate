@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :dashboards, only: :show
+  resources :mixfeeds, only: :show
   resources :landing_pages, only: :index
   resources :facebook_pages, only: :create
   resources :facebook_shares, only: [:new, :create, :update, :destroy]
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   resources :facebook_accounts, only: [:show]
 
   get '/facebook_pages/feed', to: 'facebook_pages#feed'
+  get '/facebook_accounts/:id/feed', to: 'facebook_accounts#feed'
   post '/facebook_shares/boost', as: 'facebook_share_boost', to: 'facebook_shares#boost'
 
   get '/twitter_accounts/timeline', to: 'twitter_accounts#timeline'

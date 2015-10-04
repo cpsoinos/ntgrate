@@ -1,0 +1,4 @@
+<% @feed.each do |share| %>
+  debugger;
+  $("<%= escape_javascript(render 'facebook_shares/share', share: share.deep_symbolize_keys) %>").appendTo(".mixfeed");
+<% end %>
