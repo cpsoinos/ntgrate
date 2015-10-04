@@ -1,3 +1,5 @@
+@import "variables";
+
 .btn-twitter {
   background: #00acee;
   border-radius: 0;
@@ -8,6 +10,11 @@
 }
 .btn-twitter:active, .btn-twitter:hover {
   background: #0087bd;
+  color: #fff
+}
+.btn-instagram {
+  background: $instagram-blue;
+  border-radius: 0;
   color: #fff
 }
 .btn-facebook {
