@@ -35,6 +35,7 @@ gem 'slim'
 gem 'remotipart'
 gem 'gon'
 gem 'lightbox2-rails'
+gem 'instagram'
 
 group :development, :local, :production do
   gem 'rails_12factor'

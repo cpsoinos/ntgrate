@@ -1,13 +1,13 @@
 class FacebookFeedRetriever
   include FacebookGraphable
 
-  def initialize(facebook_page, limit)
-    @facebook_page = facebook_page
+  def initialize(object, limit)
+    @object = object
     @limit = limit
   end
 
   def get_feed
-    @feed = graph.get_connection("me", "posts", {
+    @feed = graph.get_connection("me", "feed", {
       limit: @limit,
       fields: [
         'message',
@@ -19,7 +19,8 @@ class FacebookFeedRetriever
         'created_time',
         'updated_time',
         'likes',
-        'comments'
+        'comments',
+        'attachments{media, title, type, url}'
       ]
     })
   end

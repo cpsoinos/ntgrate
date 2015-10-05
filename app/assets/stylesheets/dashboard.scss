@@ -82,6 +82,7 @@ div.panel {
 .shared-at {
   color: #9197a3;
   font-size: 12px;
+  margin-top: -1.5em;
 }
 
 .facebook-blue {
@@ -94,6 +95,10 @@ div.panel {
 
 .twitter-favorite {
   color: #ffac33;
+}
+
+.instagram-blue {
+  color: $instagram-blue;
 }
 
 .feed {

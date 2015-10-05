@@ -1,0 +1,27 @@
+<div class="panel panel-default feed-item" data="<%= instagram.created_at %>">
+  <div class="panel-heading">
+    <span class="page-name">
+      <%= image_tag("#{instagram.user.profile_picture}", class: "img-circle avatar-thumb") %>
+      <%= link_to instagram.user.username, "http://instagram.com/#{instagram.user.username}" %>
+    </span>
+    <span class="pull-right">
+      <%= icon('instagram', class: "instagram-blue") %>
+    </span>
+    </br>
+    <span class="shared-at pull-right">
+      <%= time_ago_in_words(Time.at(instagram.created_time.to_i).to_datetime) %> ago
+    </span>
+  </div>
+
+  <div class="panel-body feed">
+    <div class="text-center">
+      <%= link_to image_tag(instagram.images.standard_resolution.url, class: "share-media media-with-statistics"), "#{instagram.images.standard_resolution.url}", 'data-lightbox': "instagram", 'data-title': "#{@instagram_account.username}: #{instagram.caption.try(:text)}" %>
+    </div>
+    <p><%= instagram.caption.try(:text) %></p>
+    <div class="statistics">
+      <% if instagram.likes.count > 0 %>
+        <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("star") %></span>
+      <% end %>
+    </div>
+  </div>
+</div>

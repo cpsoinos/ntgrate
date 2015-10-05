@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926003659) do
+ActiveRecord::Schema.define(version: 20151004220544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,61 @@ ActiveRecord::Schema.define(version: 20150926003659) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "picture"
+    t.string   "name"
+    t.string   "account_url"
   end
 
   add_index "facebook_accounts", ["deleted_at"], name: "index_facebook_accounts_on_deleted_at", using: :btree
   add_index "facebook_accounts", ["identity_id"], name: "index_facebook_accounts_on_identity_id", using: :btree
+
+  create_table "facebook_ad_campaigns", force: :cascade do |t|
+    t.string   "ad_campaign_id"
+    t.string   "name"
+    t.string   "objective"
+    t.string   "ad_account_id"
+    t.datetime "start_time"
+    t.datetime "stop_time"
+    t.integer  "spend_cap_cents",    default: 0,     null: false
+    t.string   "spend_cap_currency", default: "USD", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "facebook_ad_creatives", force: :cascade do |t|
+    t.string   "name"
+    t.string   "object_story_id"
+    t.string   "share_id"
+    t.string   "creative_id"
+    t.integer  "facebook_share_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "facebook_ad_creatives", ["facebook_share_id"], name: "index_facebook_ad_creatives_on_facebook_share_id", using: :btree
+
+  create_table "facebook_ad_sets", force: :cascade do |t|
+    t.string   "ad_set_id"
+    t.string   "ad_account_id"
+    t.integer  "bid_amount_cents",         default: 0,     null: false
+    t.string   "bid_amount_currency",      default: "USD", null: false
+    t.string   "billing_event"
+    t.datetime "start_time"
+    t.datetime "stop_time"
+    t.string   "name"
+    t.string   "optimization_goal"
+    t.integer  "lifetime_budget_cents",    default: 0,     null: false
+    t.string   "lifetime_budget_currency", default: "USD", null: false
+    t.integer  "daily_budget_cents",       default: 0,     null: false
+    t.string   "daily_budget_currency",    default: "USD", null: false
+    t.string   "promoted_object_id"
+    t.boolean  "is_autobid"
+    t.integer  "facebook_ad_campaign_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "facebook_ad_sets", ["facebook_ad_campaign_id"], name: "index_facebook_ad_sets_on_facebook_ad_campaign_id", using: :btree
 
   create_table "facebook_pages", force: :cascade do |t|
     t.string   "name",                null: false
@@ -88,37 +139,23 @@ ActiveRecord::Schema.define(version: 20150926003659) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "username"
+    t.string   "account_url"
+    t.string   "picture"
   end
 
   add_index "instagram_accounts", ["deleted_at"], name: "index_instagram_accounts_on_deleted_at", using: :btree
   add_index "instagram_accounts", ["identity_id"], name: "index_instagram_accounts_on_identity_id", using: :btree
 
-  create_table "listings", force: :cascade do |t|
-    t.string   "address"
-    t.string   "address_2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.money    "asking_price",           scale: 2
-    t.money    "sold_for",               scale: 2
-    t.integer  "mls_number",   limit: 8
-    t.date     "listed_at"
-    t.date     "sold_at"
-    t.string   "status",                           null: false
-    t.text     "description"
-    t.float    "bedrooms"
-    t.float    "bathrooms"
-    t.integer  "built"
-    t.string   "listing_type"
-    t.boolean  "pets_allowed"
-    t.integer  "square_feet"
-    t.integer  "user_id",                          null: false
+  create_table "mixfeeds", force: :cascade do |t|
+    t.integer  "user_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
   end
 
-  add_index "listings", ["deleted_at"], name: "index_listings_on_deleted_at", using: :btree
+  add_index "mixfeeds", ["deleted_at"], name: "index_mixfeeds_on_deleted_at", using: :btree
+  add_index "mixfeeds", ["user_id"], name: "index_mixfeeds_on_user_id", using: :btree
 
   create_table "twitter_accounts", force: :cascade do |t|
     t.integer  "identity_id", null: false
@@ -130,6 +167,7 @@ ActiveRecord::Schema.define(version: 20150926003659) do
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.string   "account_url"
+    t.string   "picture"
   end
 
   add_index "twitter_accounts", ["deleted_at"], name: "index_twitter_accounts_on_deleted_at", using: :btree
@@ -181,10 +219,13 @@ ActiveRecord::Schema.define(version: 20150926003659) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "facebook_accounts", "identities"
+  add_foreign_key "facebook_ad_creatives", "facebook_shares"
+  add_foreign_key "facebook_ad_sets", "facebook_ad_campaigns"
   add_foreign_key "facebook_pages", "facebook_accounts"
   add_foreign_key "facebook_shares", "facebook_pages"
   add_foreign_key "identities", "users"
   add_foreign_key "instagram_accounts", "identities"
+  add_foreign_key "mixfeeds", "users"
   add_foreign_key "twitter_accounts", "identities"
   add_foreign_key "twitter_shares", "twitter_accounts"
 end
