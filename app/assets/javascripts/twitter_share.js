@@ -121,14 +121,6 @@ $(".dashboards.show").ready(function() {
   });
 
   var twAccountId = $("#twitter-account-id").attr("data");
-  getTwFeed(twAccountId);
+  getTwFeed(twAccountId, 5);
 
 });
-
-function getTwFeed(accountId) {
-  $.ajax({
-    url: ("/twitter_accounts/feed"),
-    type: "GET",
-    data: {account_id: accountId}
-  });
-}
