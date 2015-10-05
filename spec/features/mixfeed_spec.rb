@@ -29,8 +29,7 @@ feature "mixfeed:" do
       scenario "visit mixfeed" do
         visit mixfeed_path(user.mixfeed)
 
-        expect(page).not_to have_link("Share on Facebook")
-        expect(page).to have_content("Connect your Facebook account")
+        expect(page).to have_content("Authorize Facebook")
       end
     end
 
@@ -41,15 +40,14 @@ feature "mixfeed:" do
         create(:facebook_account, identity: identity)
         visit mixfeed_path(user.mixfeed)
 
-        expect(page).to have_content("Facebook Feed")
+        expect(page).not_to have_content("Authorize Facebook")
       end
 
       context "does not have a Twitter account connected" do
         scenario "visit mixfeed" do
           visit mixfeed_path(user.mixfeed)
 
-          expect(page).not_to have_button("Tweet")
-          expect(page).to have_content("Connect your Twitter account")
+          expect(page).to have_content("Authorize Twitter")
         end
       end
 
@@ -59,8 +57,7 @@ feature "mixfeed:" do
           create(:twitter_account, identity: identity)
           visit mixfeed_path(user.mixfeed)
 
-          expect(page).not_to have_content("Connect your Twitter account")
-          expect(page).to have_content("Twitter Feed")
+          expect(page).not_to have_content("Authorize Twitter")
         end
       end
 
@@ -68,8 +65,7 @@ feature "mixfeed:" do
         scenario "visits mixfeed" do
           visit mixfeed_path(user.mixfeed)
 
-          expect(page).not_to have_link("Post to Instagram")
-          expect(page).to have_content("Connect your Instagram account")
+          expect(page).to have_content("Authorize Instagram")
         end
       end
 
@@ -80,8 +76,7 @@ feature "mixfeed:" do
 
           visit mixfeed_path(user.mixfeed)
 
-          expect(page).not_to have_content("Connect your Instagram account")
-          expect(page).to have_content("Instagram Feed")
+          expect(page).not_to have_content("Authorize Instagram")
         end
       end
 
