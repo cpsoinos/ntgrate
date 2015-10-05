@@ -19,7 +19,8 @@ class FacebookFeedRetriever
         'created_time',
         'updated_time',
         'likes',
-        'comments'
+        'comments',
+        'attachments{media, title, type, url}'
       ]
     })
   end

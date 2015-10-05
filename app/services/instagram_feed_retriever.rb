@@ -7,6 +7,10 @@ class InstagramFeedRetriever
   end
 
   def get_feed
-    @feed = client.user_media_feed(777)
+    @feed = client.user_recent_media
+  end
+
+  def get_home_feed
+    @feed = client.user_media_feed
   end
 end

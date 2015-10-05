@@ -11,11 +11,19 @@ class MixfeedsController < ApplicationController
     gon.facebook_account_id = @facebook_account.id
     @facebook_pages = @facebook_account.try(:facebook_pages)
 
-    @twitter_account = current_user.twitter_account
+    if current_user.twitter_account
+      @twitter_account = current_user.twitter_account
+      gon.twitter_account_id = @twitter_account.id
+    end
 
-    @instagram_account = current_user.instagram_account
+    if current_user.instagram_account
+      @instagram_account = current_user.instagram_account
+      gon.instagram_account_id = @instagram_account.id
+    end
 
-    @linkedin_account = current_user.twitter_account
+    if current_user.linkedin_account
+      @linkedin_account = current_user.linkedin_account
+    end
 
     @facebook_share = FacebookShare.new
     @twitter_share = TwitterShare.new
