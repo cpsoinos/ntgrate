@@ -7,9 +7,11 @@ class MixfeedsController < ApplicationController
       redirect_to new_user_session_path
     end
 
-    @facebook_account = current_user.facebook_account
-    gon.facebook_account_id = @facebook_account.id
-    @facebook_pages = @facebook_account.try(:facebook_pages)
+    if current_user.facebook_account
+      @facebook_account = current_user.facebook_account
+      gon.facebook_account_id = @facebook_account.id
+      @facebook_pages = @facebook_account.try(:facebook_pages)
+    end
 
     if current_user.twitter_account
       @twitter_account = current_user.twitter_account
