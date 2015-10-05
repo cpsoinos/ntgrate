@@ -35,6 +35,7 @@ gem 'remotipart'
 gem 'gon'
 gem 'rails_12factor'
 gem 'lightbox2-rails'
+gem 'instagram'
 
 group :development, :local, :test do
   gem 'byebug'

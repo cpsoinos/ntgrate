@@ -4,6 +4,7 @@ class FacebookSharer
   def initialize(share)
     @share = share
     @facebook_page = share.facebook_page
+    @object = @facebook_page
   end
 
   def post

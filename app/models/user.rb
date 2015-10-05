@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook, :twitter, :instagram]
 
   has_one :dashboard
-  has_many :listings
+  has_one :mixfeed
   has_many :identities
   has_one :facebook_page
 
@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
-  after_create :create_dashboard
+  after_create :create_dashboard, :create_mixfeed
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity and user if they exist

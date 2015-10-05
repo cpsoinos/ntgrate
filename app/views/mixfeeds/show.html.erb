@@ -1,0 +1,69 @@
+<!-- Section 1 -->
+<section id="intro-<%= controller_name %>" data-speed="6" data-type="background">
+  <div class="container">
+    <div class="col-xs-12 col-md-9" id="js-flash"></div>
+    <%= render "layouts/flash_messages" %>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="well">
+          <h1>Mixfeed</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well well-dashboard">
+          <h3>All your feeds. ntgrated.</h3>
+
+          <div class="text-center" id="channel-filters">
+            <% unless @facebook_account.present? %>
+              <%= link_to "#{icon('facebook')} Authorize Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-social btn-facebook" %>
+            <% end %>
+            <% unless @twitter_account.present? %>
+              <%= link_to "#{icon('twitter')} Authorize Twitter".html_safe, user_omniauth_authorize_path(:twitter), class: "btn btn-social btn-twitter" %>
+            <% end %>
+            <% unless @instagram_account.present? %>
+              <%= link_to "#{icon('instagram')} Authorize Instagram".html_safe, user_omniauth_authorize_path(:instagram), class: "btn btn-social btn-instagram" %>
+            <% end %>
+            <% unless @linkedin_account.present? %>
+              <%= link_to "#{icon('linkedin')} Authorize LinkedIn".html_safe, "#", class: "btn btn-social btn-linkedin" %>
+            <% end %>
+            </br> </br>
+
+            Show feeds:
+            <div class="btn-group" data-toggle="buttons">
+              <% if @facebook_account.present? %>
+                <label class="btn btn-facebook">
+                  <input type="radio" name="facebook" class="" autocomplete="off" id="fb-filter">Facebook
+                </label>
+              <% end %>
+              <% if @twitter_account.present? %>
+                <label class="btn btn-twitter">
+                  <input type="radio" name="twitter" class="" autocomplete="off" id="tw-filter">Twitter
+                </label>
+              <% end %>
+              <% if @instagram_account.present? %>
+                <label class="btn btn-instagram">
+                  <input type="radio" name="instagram" class="" autocomplete="off" id="fb-photo-option">Instagram
+                </label>
+              <% end %>
+              <% if @linkedin_account.present? %>
+                <label class="btn btn-linkedin">
+                  <input type="radio" name="linkedin" class="" autocomplete="off" id="li-filter">LinkedIn
+                </label>
+              <% end %>
+            </div>
+          </div>
+
+          <!-- feeds -->
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div class="mixfeed feed-container"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
