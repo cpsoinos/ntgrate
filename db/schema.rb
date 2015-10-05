@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004172212) do
+ActiveRecord::Schema.define(version: 20151004220544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 20151004172212) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "picture"
+    t.string   "name"
+    t.string   "account_url"
   end
 
   add_index "facebook_accounts", ["deleted_at"], name: "index_facebook_accounts_on_deleted_at", using: :btree
@@ -136,6 +139,9 @@ ActiveRecord::Schema.define(version: 20151004172212) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "username"
+    t.string   "account_url"
+    t.string   "picture"
   end
 
   add_index "instagram_accounts", ["deleted_at"], name: "index_instagram_accounts_on_deleted_at", using: :btree
@@ -161,6 +167,7 @@ ActiveRecord::Schema.define(version: 20151004172212) do
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.string   "account_url"
+    t.string   "picture"
   end
 
   add_index "twitter_accounts", ["deleted_at"], name: "index_twitter_accounts_on_deleted_at", using: :btree
