@@ -1,7 +1,10 @@
 <div class="panel panel-default feed-item" data="<%= share[:created_time] %>">
   <div class="panel-heading">
     <% if @facebook_page.present? %>
-      <span class="page-name"><%= link_to @facebook_page.name, @facebook_page.page_url %></span>
+      <span class="page-name">
+        <%= image_tag(@facebook_page.picture, class: "img-circle avatar-thumb") %>
+        <%= link_to @facebook_page.name, @facebook_page.page_url %>
+      </span>
     <% else %>
       <span class="page-name">
         <%= image_tag(@facebook_account.picture, class: "img-circle avatar-thumb") %>
@@ -27,7 +30,6 @@
       <p><%= share[:message] %></p>
     <% else %>
       <% if share[:message].present? || share[:link].present? %>
-        <%# binding.pry %>
           <% if share[:type].in?(["link", "photo"]) && share[:full_picture].present? %>
             <div class="text-center">
               <%= link_to image_tag(share[:full_picture], class: "share-media media-with-statistics"), "#{share[:full_picture]}", 'data-lightbox': "share", 'data-title': "#{@facebook_page.present? ? @facebook_page.name : @facebook_account.name}#{share[:message].present? ? ':' : nil} #{share[:message]}" %>
