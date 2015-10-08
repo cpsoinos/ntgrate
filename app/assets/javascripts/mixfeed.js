@@ -11,6 +11,10 @@ $(".mixfeeds.show").ready(function() {
     page += 1
   }
 
-  getFeeds(page)
+  var $grid = $('.grid');
+
+  $grid.imagesLoaded( function() {
+    $grid.masonry();
+  });
 
 });
