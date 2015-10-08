@@ -14,14 +14,13 @@ class MixfeedsController < ApplicationController
     gon.userId = current_user.id
     @facebook_share = FacebookShare.new
     @twitter_share = TwitterShare.new
+    @feeds = retrieve_feeds
   end
 
+  protected
+
   def retrieve_feeds
-    respond_to do |format|
-      format.js do
-        @feeds = MixfeedRetriever.new(current_user, 10).order_feeds
-      end
-    end
+    @feeds = MixfeedRetriever.new(current_user, 10).order_feeds
   end
 
   protected
