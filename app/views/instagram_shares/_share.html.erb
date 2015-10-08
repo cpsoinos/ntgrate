@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item" data="<%= instagram.created_at %>">
+<div class="panel panel-default feed-item grid-item" data="<%= instagram.created_at %>">
   <div class="panel-heading">
     <span class="page-name">
       <%= image_tag("#{instagram.user.profile_picture}", class: "img-circle avatar-thumb") %>
@@ -17,7 +17,9 @@
     <div class="text-center">
       <%= link_to image_tag(instagram.images.standard_resolution.url, class: "share-media media-with-statistics"), "#{instagram.images.standard_resolution.url}", 'data-lightbox': "instagram", 'data-title': "#{@instagram_account.username}: #{instagram.caption.try(:text)}" %>
     </div>
-    <p><%= instagram.caption.try(:text) %></p>
+    <div class="message">
+      <p><%= instagram.caption.try(:text) %></p>
+    </div>
     <div class="statistics">
       <% if instagram.likes.count > 0 %>
         <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("star") %></span>

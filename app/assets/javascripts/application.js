@@ -17,6 +17,8 @@
 //= require jquery-ddslick
 //= require bootstrap-sprockets
 //= require lightbox
+//= require masonry.pkgd.min
+//= require imagesloaded.pkgd.min
 //= require_tree .
 
 $(document).ready(function() {
