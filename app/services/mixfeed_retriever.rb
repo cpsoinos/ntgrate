@@ -7,9 +7,9 @@ class MixfeedRetriever
 
   def retrieve_feeds
     @feeds = []
-    @feeds << fb_feed
-    @feeds << tw_feed
-    @feeds << ig_feed
+    retrieve_fb_feed
+    retrieve_tw_feed
+    retrieve_ig_feed
     @feeds.flatten!
   end
 
@@ -23,21 +23,21 @@ class MixfeedRetriever
 
   private
 
-  def fb_feed
+  def retrieve_fb_feed
     if @user.facebook_account
-      @fb_feed = FacebookFeedRetriever.new(@user.facebook_account, @limit).get_feed
+      @feeds << FacebookFeedRetriever.new(@user.facebook_account, @limit).get_feed
     end
   end
 
-  def tw_feed
+  def retrieve_tw_feed
     if @user.twitter_account
-      @tw_feed = TwitterFeedRetriever.new(@user.twitter_account, @limit).get_home_feed
+      @feeds << TwitterFeedRetriever.new(@user.twitter_account, @limit).get_home_feed
     end
   end
 
-  def ig_feed
+  def retrieve_ig_feed
     if @user.instagram_account
-      @ig_feed = InstagramFeedRetriever.new(@user.instagram_account, @limit).get_home_feed
+      @feeds << InstagramFeedRetriever.new(@user.instagram_account, @limit).get_home_feed
     end
   end
 
