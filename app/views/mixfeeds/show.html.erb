@@ -57,8 +57,18 @@
           </div>
 
           <!-- feeds -->
-          <div class="col-xs-12 col-md-8 col-md-offset-2">
-            <div class="mixfeed feed-container"></div>
+          <div class="col-xs-12">
+            <div class="mixfeed feed-container grid">
+              <% @feeds.each do |share| %>
+                <% if share.is_a?(Hashie::Mash) %>
+                  <%= render 'instagram_shares/share', instagram: share %>
+                <% elsif share.is_a?(Twitter::Tweet) %>
+                  <%= render 'twitter_shares/tweet', tweet: share %>
+                <% else %>
+                  <%= render 'facebook_shares/share', share: share.deep_symbolize_keys %>
+                <% end %>
+              <% end %>
+            </div>
           </div>
 
         </div>
