@@ -1,18 +1,20 @@
 $(".mixfeeds.show").ready(function() {
 
-  var fbAccountId = gon.facebook_account_id;
-  var twAccountId = gon.twitter_account_id;
-  var igAccountId = gon.instagram_account_id;
-  var feedItems;
+  var page = 1;
 
-  if(fbAccountId) {
-    getFbFeed(fbAccountId, 10);
+  function getFeeds(page) {
+    $.ajax({
+      url: '/mixfeeds/' + gon.userId + '/retrieve_feeds',
+      type: "GET",
+      data: {page: page}
+    });
+    page += 1
   }
-  if(twAccountId) {
-    getTwHomeFeed(twAccountId, 10);
-  }
-  if(igAccountId) {
-    getIgHomeFeed(igAccountId, 10);
-  }
+
+  var $grid = $('.grid');
+
+  $grid.imagesLoaded( function() {
+    $grid.masonry();
+  });
 
 });
