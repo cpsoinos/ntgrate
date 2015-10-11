@@ -22,7 +22,7 @@
     </div>
     <div class="statistics">
       <% if instagram.likes.count > 0 %>
-        <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("star") %></span>
+        <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("heart", class: "instagram-favorite") %></span>
       <% end %>
     </div>
   </div>
