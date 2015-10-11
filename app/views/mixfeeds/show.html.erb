@@ -15,6 +15,14 @@
       <div class="col-xs-12">
         <div class="well well-dashboard">
           <h3>All your feeds. ntgrated.</h3>
+          <div class="text-center">
+            <span>
+              Showing these feeds:
+              <% current_user.identities.each do |identity| %>
+                <%= icon(identity.provider, class: "#{identity.provider}-blue") %>
+              <% end %>
+            </span>
+          </div>
 
           <div class="text-center" id="authorize-channel-buttons">
             <% unless @facebook_account.present? %>
@@ -29,31 +37,6 @@
             <% unless @linkedin_account.present? %>
               <%= link_to "#{icon('linkedin')} Authorize LinkedIn".html_safe, "#", class: "btn btn-social btn-linkedin" %>
             <% end %>
-            </br> </br>
-
-            <p>Show feeds:</p>
-            <div class="btn-group" data-toggle="buttons" id="channel-filters">
-              <% if @facebook_account.present? %>
-                <label class="btn btn-facebook active">
-                  <input type="checkbox" value="facebook-share" class="channel-filter active" autocomplete="on" id="fb-filter" checked>Facebook
-                </label>
-              <% end %>
-              <% if @twitter_account.present? %>
-                <label class="btn btn-twitter active">
-                  <input type="checkbox" value="twitter-share" class="channel-filter active" autocomplete="on" id="tw-filter" checked>Twitter
-                </label>
-              <% end %>
-              <% if @instagram_account.present? %>
-                <label class="btn btn-instagram active">
-                  <input type="checkbox" value="instagram-share" class="channel-filter active" autocomplete="on" id="ig-filter" checked>Instagram
-                </label>
-              <% end %>
-              <% if @linkedin_account.present? %>
-                <label class="btn btn-linkedin active">
-                  <input type="checkbox" value="linkedin-share" class="channel-filter active" autocomplete="on" id="li-filter" checked>LinkedIn
-                </label>
-              <% end %>
-            </div>
           </div>
 
           <!-- feeds -->
