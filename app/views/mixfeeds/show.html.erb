@@ -16,7 +16,7 @@
         <div class="well well-dashboard">
           <h3>All your feeds. ntgrated.</h3>
 
-          <div class="text-center" id="channel-filters">
+          <div class="text-center" id="authorize-channel-buttons">
             <% unless @facebook_account.present? %>
               <%= link_to "#{icon('facebook')} Authorize Facebook".html_safe, user_omniauth_authorize_path(:facebook), class: "btn btn-social btn-facebook" %>
             <% end %>
@@ -31,26 +31,26 @@
             <% end %>
             </br> </br>
 
-            Show feeds:
-            <div class="btn-group" data-toggle="buttons">
+            <p>Show feeds:</p>
+            <div class="btn-group" data-toggle="buttons" id="channel-filters">
               <% if @facebook_account.present? %>
-                <label class="btn btn-facebook">
-                  <input type="radio" name="facebook" class="" autocomplete="off" id="fb-filter">Facebook
+                <label class="btn btn-facebook active">
+                  <input type="checkbox" value="facebook-share" class="channel-filter active" autocomplete="on" id="fb-filter" checked>Facebook
                 </label>
               <% end %>
               <% if @twitter_account.present? %>
-                <label class="btn btn-twitter">
-                  <input type="radio" name="twitter" class="" autocomplete="off" id="tw-filter">Twitter
+                <label class="btn btn-twitter active">
+                  <input type="checkbox" value="twitter-share" class="channel-filter active" autocomplete="on" id="tw-filter" checked>Twitter
                 </label>
               <% end %>
               <% if @instagram_account.present? %>
-                <label class="btn btn-instagram">
-                  <input type="radio" name="instagram" class="" autocomplete="off" id="fb-photo-option">Instagram
+                <label class="btn btn-instagram active">
+                  <input type="checkbox" value="instagram-share" class="channel-filter active" autocomplete="on" id="ig-filter" checked>Instagram
                 </label>
               <% end %>
               <% if @linkedin_account.present? %>
-                <label class="btn btn-linkedin">
-                  <input type="radio" name="linkedin" class="" autocomplete="off" id="li-filter">LinkedIn
+                <label class="btn btn-linkedin active">
+                  <input type="checkbox" value="linkedin-share" class="channel-filter active" autocomplete="on" id="li-filter" checked>LinkedIn
                 </label>
               <% end %>
             </div>

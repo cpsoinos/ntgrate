@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get '/instagram_accounts/home_feed', to: 'instagram_accounts#home_feed'
 
   get '/mixfeeds/:user_id/retrieve_feeds', to: 'mixfeeds#retrieve_feeds'
+  get '/mixfeeds/:user_id/insert_feeds', to: 'mixfeeds#insert_feeds'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
