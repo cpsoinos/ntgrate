@@ -17,13 +17,19 @@ class MixfeedsController < ApplicationController
     @feeds = retrieve_feeds
   end
 
+  def insert_feeds
+    respond_to do |format|
+      format.js do
+        @feeds = retrieve_feeds
+      end
+    end
+  end
+
   protected
 
   def retrieve_feeds
     @feeds = MixfeedRetriever.new(current_user, 10).order_feeds
   end
-
-  protected
 
   def get_facebook_account
     if current_user.facebook_account

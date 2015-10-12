@@ -37,6 +37,7 @@ gem 'rails_12factor'
 gem 'lightbox2-rails'
 gem 'instagram'
 gem 'twitter-text', '~> 1.13.0'
+gem 'masonry-rails'
 
 group :development, :local, :test do
   gem 'byebug'

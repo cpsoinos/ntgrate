@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item grid-item" data="<%= instagram.created_at %>">
+<div class="panel panel-default feed-item grid-item instagram-share" data="<%= instagram.created_at %>">
   <div class="panel-heading">
     <span class="page-name">
       <%= image_tag("#{instagram.user.profile_picture}", class: "img-circle avatar-thumb") %>
@@ -22,7 +22,7 @@
     </div>
     <div class="statistics">
       <% if instagram.likes.count > 0 %>
-        <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("star") %></span>
+        <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("heart", class: "instagram-favorite") %></span>
       <% end %>
     </div>
   </div>

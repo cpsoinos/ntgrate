@@ -26,8 +26,4 @@ class TwitterSharer
   #   open(@share.video.file.url)
   # end
 
-  def retweet
-    client.retweet(share_id)
-  end
-
 end

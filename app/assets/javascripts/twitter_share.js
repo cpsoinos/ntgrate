@@ -124,3 +124,8 @@ $(".dashboards.show").ready(function() {
   getTwFeed(twAccountId, 5);
 
 });
+
+$(".tweet-reply").click(function(ev) {
+  ev.preventDefault();
+  $(this).closest($("tweet-reply-form")).toggle("slow");
+})
