@@ -59,7 +59,7 @@ group :test do
   gem 'fuubar'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
-  gem 'poltergeist'
+  gem 'poltergeist', '~> 1.7'
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'email_spec'
