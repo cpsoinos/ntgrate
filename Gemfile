@@ -31,17 +31,13 @@ gem 'mandrill-api'
 gem 'sidekiq'
 gem 'devise-async'
 gem 'sinatra', require: false
-gem 'slim'
 gem 'remotipart'
 gem 'gon'
+gem 'rails_12factor'
 gem 'lightbox2-rails'
 gem 'instagram'
 gem 'twitter-text', '~> 1.13.0'
 gem 'masonry-rails'
-
-group :development, :local, :production do
-  gem 'rails_12factor'
-end
 
 group :development, :local, :test do
   gem 'byebug'
