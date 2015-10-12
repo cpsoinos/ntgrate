@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item grid-item facebook-share" data="<%= share[:created_time] %>">
+<div class="panel panel-default feed-item <%= params[:controller] == 'mixfeeds' ? 'grid-item' : '' %>">
   <div class="panel-heading">
     <% if @facebook_page.present? %>
       <span class="page-name">

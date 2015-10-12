@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item grid-item instagram-share" data="<%= instagram.created_at %>">
+<div class="panel panel-default feed-item <%= params[:controller] == 'mixfeeds' ? 'grid-item' : '' %>">
   <div class="panel-heading">
     <span class="page-name">
       <%= image_tag("#{instagram.user.profile_picture}", class: "img-circle avatar-thumb") %>
