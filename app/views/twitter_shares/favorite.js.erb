@@ -1,0 +1,5 @@
+$("#<%= @tweet_uid %>-favorite").html('<icon class="fa fa-star fa-2x"></i>').removeClass("pre-action").addClass("twitter-favorite").attr("href", '<%= twitter_shares_unfavorite_path(@tweet_uid) %>');
+
+var favoriteCount = parseInt($("#<%= @tweet_uid %>-favorite_count").html());
+
+$("#<%= @tweet_uid %>-favorite_count").html(favoriteCount += 1);

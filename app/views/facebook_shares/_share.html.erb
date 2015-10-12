@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item grid-item" data="<%= share[:created_time] %>">
+<div class="panel panel-default feed-item <%= params[:controller] == 'mixfeeds' ? 'grid-item' : '' %>">
   <div class="panel-heading">
     <% if @facebook_page.present? %>
       <span class="page-name">
@@ -50,13 +50,55 @@
       <% end %>
     <% end %>
 
+    <div class="actions">
+      <% if share[:likes] && (@facebook_account.id.in? (share[:likes][:data].map(&:values).flatten)) %>
+        <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_unlike_path(share[:id]), id: "#{share[:id]}-like", method: "POST", remote: true  %>
+      <% else %>
+        <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_like_path(share[:id]), class: "pre-action", id: "#{share[:id]}-like", method: "POST", remote: true %>
+      <% end %>
+
+      <%= link_to "#{icon('comments-o', class: 'fa-2x')}".html_safe, "#", class: "pre-action share-comment", id: "", data: "#{share[:id]}" %>
+      <div class="collapse" id='<%= "#{share[:id]}-comment-form" %>'>
+        <%= form_tag(facebook_shares_comment_path(share[:id]), remote: true) do %>
+          <%= text_area_tag 'text', nil, class: "facebook-comment-field", id: "#{share[:id]}-comment-field" %>
+          <%= button_tag(class: "btn btn-facebook", id: "#{share[:id]}-comment-button") do %>
+            <%= icon('facebook') %> Comment
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="comments">
+        <% if share[:comments] %>
+          <% share[:comments][:data].each do |comment|  %>
+            <div class="well comment-well">
+              <div class="panel">
+                <div class="panel-heading">
+                  <%= link_to comment[:from][:name], "http://facebook.com/#{comment[:from][:id]}" %> commented
+                  <span class="shared-at pull-right comment">
+                    <%= time_ago_in_words(comment[:created_time]) %> ago
+                  </span>
+                </div>
+              </div>
+              <div class="panel-heading comment-stats">
+                <p><%= comment[:message] %></p>
+                <% if comment[:likes] && (@facebook_account.id.in? (comment[:likes][:data].map(&:values).flatten)) %>
+                  <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_unlike_path(comment[:id]), id: "#{comment[:id]}-like", method: "POST", remote: true %>
+                <% else %>
+                  <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_like_path(comment[:id]), class: "pre-action", id: "#{comment[:id]}-like", method: "POST", remote: true %>
+                <% end %>
+                <div class="statistics">
+                  <span id="<%= comment[:id] %>-like_count"><%= comment[:likes] ? comment[:likes][:data].count : "0" %></span> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
     <div class="statistics">
-      <% if share[:likes].present? %>
-        <%= share[:likes][:data].count %> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
-      <% end %>
-      <% if share[:comments].present? %>
-        <%= share[:comments][:data].count %> <span class="facebook-blue"><%= icon('comments-o') %></span>
-      <% end %>
+      <span id="<%= share[:id] %>-like_count"><%= share[:likes] ? share[:likes][:data].count : "0" %></span> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
+      <span id="<%= share[:id] %>-comment_count"></span><%= share[:comments] ? share[:comments][:data].count : 0 %> <span class="facebook-blue"><%= icon('comments-o') %></span>
     </div>
 
     <% if @facebook_page.present? %>

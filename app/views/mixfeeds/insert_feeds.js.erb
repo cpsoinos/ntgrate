@@ -1,0 +1,10 @@
+$(".feed-container").empty();
+var $grid = $(".grid");
+
+var $newFeed = $("<%= escape_javascript(render 'mixed_feed', feeds: @feeds) %>").appendTo($(".feed-container"));
+
+$grid.imagesLoaded( function() {
+  $grid
+    .masonry('appended', $newFeed)
+    .masonry('layout');
+});

@@ -19,7 +19,7 @@ class FacebookFeedRetriever
         'created_time',
         'updated_time',
         'likes',
-        'comments',
+        'comments{from, created_time, message, likes}',
         'attachments{media, title, type, url}'
       ]
     })
