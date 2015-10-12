@@ -6,6 +6,7 @@ $(".mixfeeds.show").ready(function() {
     $grid.masonry();
   });
 
+  // Twitter
   $(".tweet-reply").click(function(ev) {
     ev.preventDefault();
     var tweetId = ("#" + $(this).attr("data"));
@@ -13,9 +14,10 @@ $(".mixfeeds.show").ready(function() {
     var replyField = tweetId + "-reply-field"
     var replyButton = tweetId + "-reply-button"
     var charsMessage = tweetId + "-message"
-    debugger;
-    $(replyForm).show();
-    $(".grid").masonry();
+    $(replyForm).toggle("fast");
+    setTimeout(function() {
+      $(".grid").masonry()
+    }, 250);
 
     $("#tweet").attr("disabled", "disabled");
     $(replyField).keyup(function(){
@@ -31,6 +33,20 @@ $(".mixfeeds.show").ready(function() {
         $(charsMessage).removeClass("minus");
       }
     });
+  })
+
+  // Facebook
+  $(".share-comment").click(function(ev) {
+    ev.preventDefault();
+    var shareId = ("#" + $(this).attr("data"));
+    var commentForm = shareId + "-comment-form"
+    var commentField = shareId + "-comment-field"
+    var commentButton = shareId + "-comment-button"
+    var charsMessage = shareId + "-message"
+    $(commentForm).toggle("fast");
+    setTimeout(function() {
+      $(".grid").masonry()
+    }, 250);
   })
 
 });

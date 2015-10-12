@@ -42,6 +42,7 @@ Rails.application.routes.draw do
 
   post "/facebook_shares/like/:share_uid", as: "facebook_shares_like", to: "facebook_shares#like"
   post "/facebook_shares/unlike/:share_uid", as: "facebook_shares_unlike", to: "facebook_shares#unlike"
+  post "/facebook_shares/comment/:share_uid", as: "facebook_shares_comment", to: "facebook_shares#comment"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

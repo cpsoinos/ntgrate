@@ -14,8 +14,8 @@ class FacebookActionTaker
     graph.delete_like(@share_uid)
   end
 
-  def comment
-
+  def comment(text)
+    graph.put_comment(@share_uid, text)
   end
 
 end
