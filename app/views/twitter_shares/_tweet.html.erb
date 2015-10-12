@@ -1,8 +1,13 @@
-<div class="panel panel-default">
+<div class="panel panel-default feed-item grid-item" data="<%= tweet.created_at %>">
   <div class="panel-heading">
     <span class="page-name">
-      <%= link_to @twitter_account.handle, @twitter_account.account_url %>
+      <%= image_tag(tweet.user.profile_image_url.to_s, class: "img-circle avatar-thumb") %>
+      <%= link_to tweet.user.screen_name, tweet.user.url.to_s %>
     </span>
+    <span class="pull-right">
+      <%= icon('twitter', class: "twitter-blue") %>
+    </span>
+    </br>
     <span class="shared-at pull-right">
       <%= time_ago_in_words(tweet.created_at) %> ago
     </span>
@@ -12,11 +17,13 @@
     <% if tweet.media? %>
       <div class="text-center">
         <% tweet.media.each do |object| %>
-            <%= link_to image_tag(object.media_url, class: "share-media #{tweet.retweet_count > 0 || tweet.favorite_count > 0 ? 'media-with-statistics' : ''}"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{@twitter_account.handle}: #{tweet.text}" %>
+            <%= link_to image_tag(object.media_url, class: "share-media media-with-statistics"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{@twitter_account.handle}: #{tweet.text}" %>
         <% end %>
       </div>
     <% end %>
-    <p><%= tweet.text %></p>
+    <div class="message">
+      <p><%= auto_link(tweet.text).html_safe %></p>
+    </div>
     <div class="statistics">
       <% if tweet.retweet_count > 0 %>
         <%= tweet.retweet_count %> <span class="twitter-blue"><%= icon("retweet") %></span>

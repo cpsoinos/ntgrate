@@ -21,7 +21,7 @@ class FacebookPagesController < ApplicationController
   def feed
     respond_to do |format|
       format.js do
-        @facebook_page = FacebookPage.find(params[:page_id].to_i)
+        @facebook_page = FacebookPage.find(params[:object_id].to_i)
         @feed = FacebookFeedRetriever.new(@facebook_page, params[:limit]).get_feed
       end
     end

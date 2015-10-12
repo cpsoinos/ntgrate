@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :dashboards, only: :show
+  resources :mixfeeds, only: :show
   resources :landing_pages, only: :index
   resources :facebook_pages, only: :create
   resources :facebook_shares, only: [:new, :create, :update, :destroy]
@@ -24,9 +25,14 @@ Rails.application.routes.draw do
   resources :facebook_accounts, only: [:show]
 
   get '/facebook_pages/feed', to: 'facebook_pages#feed'
+  get '/facebook_accounts/:id/feed', to: 'facebook_accounts#feed'
   post '/facebook_shares/boost', as: 'facebook_share_boost', to: 'facebook_shares#boost'
 
-  get '/twitter_accounts/timeline', to: 'twitter_accounts#timeline'
+  get '/twitter_accounts/feed', to: 'twitter_accounts#feed'
+  get '/twitter_accounts/home_feed', to: 'twitter_accounts#home_feed'
+  get '/instagram_accounts/home_feed', to: 'instagram_accounts#home_feed'
+
+  get '/mixfeeds/:user_id/retrieve_feeds', to: 'mixfeeds#retrieve_feeds'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

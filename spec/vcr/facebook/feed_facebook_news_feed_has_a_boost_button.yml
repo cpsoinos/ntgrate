@@ -1051,4 +1051,106 @@ http_interactions:
         Realty","id":"436126599913853"},"type":"status","created_time":"2015-09-20T01:30:01+0000","updated_time":"2015-09-20T01:30:01+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments&limit=5&since=1443300955&access_token=CAABZCqcXkxuUBADbQNjIBf8SnmhstMgUUtt3wIsbXOXEX8WXSWNq3lENM3Ln0H5iTjI4nlJyivp6Tp4emOS4X3j4D3wh5ZBJsbpzLK3QfZARRTX8IRBZCPwn4uPajSN4K23feZAOqwsh3Q1DZBKuDE5UKSswUAUPIPDr6Rq6A7Lcu03fHhRIhFtaFHihaEqCUZD&__paging_token=enc_AdCjz73g8VpiQFoV24p9eKZBJZCAcsBrpVtY22XuNGHWNIqJzfswtfVNcqXtEkPKAMyzmLijaZA0dNpyTsAVXZAoGetP2bMXHmgb3zTaFOAJQdNM2QZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/436126599913853\/posts?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments&limit=5&access_token=CAABZCqcXkxuUBADbQNjIBf8SnmhstMgUUtt3wIsbXOXEX8WXSWNq3lENM3Ln0H5iTjI4nlJyivp6Tp4emOS4X3j4D3wh5ZBJsbpzLK3QfZARRTX8IRBZCPwn4uPajSN4K23feZAOqwsh3Q1DZBKuDE5UKSswUAUPIPDr6Rq6A7Lcu03fHhRIhFtaFHihaEqCUZD&until=1442712601&__paging_token=enc_AdAHP4XwZAUSZC0boNuqhsYnk0HyDF6AEs3hr5qk1s2ygKMHGHZABa3B8AKIuwPGuscvfIGgfgRat5t4zlvwZBP5e1SufKapW4F7mnDlmFrMh8yECQZDZD"}}'
     http_version: 
   recorded_at: Sat, 26 Sep 2015 20:56:04 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBADbQNjIBf8SnmhstMgUUtt3wIsbXOXEX8WXSWNq3lENM3Ln0H5iTjI4nlJyivp6Tp4emOS4X3j4D3wh5ZBJsbpzLK3QfZARRTX8IRBZCPwn4uPajSN4K23feZAOqwsh3Q1DZBKuDE5UKSswUAUPIPDr6Rq6A7Lcu03fHhRIhFtaFHihaEqCUZD&appsecret_proof=a61260da0ce2acbe6e29a17c5b276d56d933eb9a23a939c4101f2f89ef1f2cff&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "invalid_token" "Error validating access token:
+        Session has expired on Saturday, 26-Sep-15 15:00:00 PDT. The current time
+        is Sunday, 04-Oct-15 17:31:47 PDT."'
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - HGNQG2bXxPv
+      X-Fb-Rev:
+      - '1969680'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - U4L+jKEnj2B02EQqOFKoM1RshtKK81NlU+39YpN5B652EwQq/H5Fv4oNZa6dxuO7sjW0xmpTxvyzqOl5/2cb1Q==
+      Date:
+      - Mon, 05 Oct 2015 00:31:47 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '245'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Error validating access token: Session has expired
+        on Saturday, 26-Sep-15 15:00:00 PDT. The current time is Sunday, 04-Oct-15
+        17:31:47 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"HGNQG2bXxPv"}}'
+    http_version: 
+  recorded_at: Mon, 05 Oct 2015 00:31:47 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBADbQNjIBf8SnmhstMgUUtt3wIsbXOXEX8WXSWNq3lENM3Ln0H5iTjI4nlJyivp6Tp4emOS4X3j4D3wh5ZBJsbpzLK3QfZARRTX8IRBZCPwn4uPajSN4K23feZAOqwsh3Q1DZBKuDE5UKSswUAUPIPDr6Rq6A7Lcu03fHhRIhFtaFHihaEqCUZD&appsecret_proof=a61260da0ce2acbe6e29a17c5b276d56d933eb9a23a939c4101f2f89ef1f2cff&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "invalid_token" "Error validating access token:
+        Session has expired on Saturday, 26-Sep-15 15:00:00 PDT. The current time
+        is Sunday, 04-Oct-15 17:31:47 PDT."'
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - Ei/t6mEKceD
+      X-Fb-Rev:
+      - '1969680'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - bESHN4C4cnzhcrHL7asYl5jLoADRXLH0AO0G3/IZ4PqHipqMbb1EhDsWsMuFyNL0lADbaNqBkGI1oXMTGgHSQA==
+      Date:
+      - Mon, 05 Oct 2015 00:31:47 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '246'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Error validating access token: Session has expired
+        on Saturday, 26-Sep-15 15:00:00 PDT. The current time is Sunday, 04-Oct-15
+        17:31:47 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"Ei\/t6mEKceD"}}'
+    http_version: 
+  recorded_at: Mon, 05 Oct 2015 00:31:47 GMT
 recorded_with: VCR 2.9.3

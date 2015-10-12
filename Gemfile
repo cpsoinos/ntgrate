@@ -35,6 +35,8 @@ gem 'remotipart'
 gem 'gon'
 gem 'rails_12factor'
 gem 'lightbox2-rails'
+gem 'instagram'
+gem 'twitter-text', '~> 1.13.0'
 
 group :development, :local, :test do
   gem 'byebug'

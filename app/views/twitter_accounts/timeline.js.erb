@@ -1,3 +1,0 @@
-<% @timeline.each do |tweet| %>
-  $("<%= escape_javascript(render 'twitter_shares/tweet', tweet: tweet) %>").appendTo(".twitter-timeline");
-<% end %>

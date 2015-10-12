@@ -24,21 +24,21 @@ default: &default
 
 development:
   <<: *default
-  database: real_estate_development
-  username: real_estate
+  database: ntgrate_development
+  username: ntgrate
   password: password1
 
 local:
   <<: *default
-  database: real_estate_local
-  username: real_estate
+  database: ntgrate_local
+  username: ntgrate
   password: password1
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: real_estate
+  #username: ntgrate
 
   # The password associated with the postgres role (username).
   #password:
@@ -66,8 +66,8 @@ local:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: real_estate_test<%= ENV['TEST_ENV_NUMBER'] %>
-  username: real_estate
+  database: ntgrate_test<%= ENV['TEST_ENV_NUMBER'] %>
+  username: ntgrate
   password: password1
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -91,6 +91,6 @@ test:
 #
 production:
   <<: *default
-  database: real_estate_production
-  username: real_estate
+  database: ntgrate_production
+  username: ntgrate
   password: <%= ENV['REAL_ESTATE_DATABASE_PASSWORD'] %>

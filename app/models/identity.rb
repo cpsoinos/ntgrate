@@ -26,7 +26,10 @@ class Identity < ActiveRecord::Base
       account = FacebookAccount.find_or_create_by(
         token: auth.credentials.token,
         uid: uid,
-        identity: self
+        identity: self,
+        picture: auth.info.image,
+        name: auth.info.name,
+        account_url: "https://www.facebook.com/#{auth.uid}"
       )
       account.create_facebook_pages
     when "twitter"
@@ -36,13 +39,17 @@ class Identity < ActiveRecord::Base
         handle: "@#{auth.info.nickname}",
         account_url: "https://twitter.com/#{auth.info.nickname}",
         uid: uid,
-        identity: self
+        identity: self,
+        picture: auth.info.image
       )
       when "instagram"
         account = InstagramAccount.find_or_create_by(
           token: auth.credentials.token,
           uid: uid,
-          identity: self
+          identity: self,
+          username: auth.info.nickname,
+          account_url: "https://instagram.com/#{auth.info.nickname}",
+          picture: auth.info.image
         )
     end
   end

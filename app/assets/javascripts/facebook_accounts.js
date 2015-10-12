@@ -11,13 +11,13 @@ $(".facebook_accounts.show").ready(function() {
         $(".facebook-newsfeed").empty();
         // debugger;
         selectedPageId = selectedData.selectedData.value;
-        getFeed(selectedPageId, 25);
+        getFbFeed(selectedPageId, 25);
         //callback function: do something with selectedData;
     }
   });
 
   var selectedPageId = $(".dd-selected-value").val();
 
-  getFeed(selectedPageId, 25);
+  getFbFeed(selectedPageId, 25);
 
 });
