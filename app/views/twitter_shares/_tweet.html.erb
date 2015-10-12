@@ -21,15 +21,47 @@
         <% end %>
       </div>
     <% end %>
+
     <div class="message">
       <p><%= auto_link(tweet.text).html_safe %></p>
     </div>
-    <div class="statistics">
-      <% if tweet.retweet_count > 0 %>
-        <%= tweet.retweet_count %> <span class="twitter-blue"><%= icon("retweet") %></span>
+
+    <div class="actions">
+      <% if tweet.retweeted? %>
+        <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, tweet.url.to_s, class: "twitter-blue" %>
+      <% else %>
+        <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, twitter_shares_retweet_path(tweet.id), class: "pre-action", id: "#{tweet.id}-retweet", method: "POST", remote: true %>
       <% end %>
-      <% if tweet.favorite_count > 0 %>
-        <%= tweet.favorite_count %> <span class="twitter-favorite"><%= icon("star") %></span>
+
+      <% if tweet.favorited? %>
+        <%= link_to "#{icon('star', class: 'fa-2x')}".html_safe, twitter_shares_unfavorite_path(tweet.id), class: "twitter-favorite", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
+      <% else %>
+        <%= link_to "#{icon('star-o', class: 'fa-2x')}".html_safe, twitter_shares_favorite_path(tweet.id), class: "pre-action", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
+      <% end %>
+
+      <% unless tweet.reply? %>
+        <%= link_to "#{icon('reply', class: 'fa-2x')}".html_safe, "#", class: "pre-action tweet-reply", id: "", data: "#{tweet.id}" %>
+        <div class="collapse" id='<%= "#{tweet.id}-reply-form" %>'>
+          <%= form_tag(twitter_shares_reply_path(tweet.id), remote: true) do %>
+            <%= text_area_tag 'content', "@#{tweet.user.screen_name} ", class: "twitter-reply-field", id: "#{tweet.id}-reply-field" %>
+            <div class="pull-right">
+              <span id="<%= tweet.id %>-message"> 140 </span> Characters Remaining
+            </div>
+            <%= button_tag(class: "btn btn-twitter", id: "#{tweet.id}-reply-button") do %>
+              <%= icon('twitter') %> Reply
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+
+    </div>
+
+    <div class="statistics">
+      <span id="<%= tweet.id %>-retweet_count"><%= tweet.retweet_count %></span> <span class="twitter-blue"><%= icon("retweet") %></span>
+      <% if tweet.retweeted_status? %>
+        <span id="<%= tweet.id %>-favorite_count"><%= tweet.retweeted_status.favorite_count %></span> <span class="twitter-favorite"><%= icon("star") %></span>
+      <% else %>
+        <span id="<%= tweet.id %>-favorite_count"><%= tweet.favorite_count %></span> <span class="twitter-favorite"><%= icon("star") %></span>
       <% end %>
     </div>
   </div>

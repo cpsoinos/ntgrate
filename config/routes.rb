@@ -35,6 +35,11 @@ Rails.application.routes.draw do
   get '/mixfeeds/:user_id/retrieve_feeds', to: 'mixfeeds#retrieve_feeds'
   get '/mixfeeds/:user_id/insert_feeds', to: 'mixfeeds#insert_feeds'
 
+  post '/twitter_shares/retweet/:tweet_uid', as: "twitter_shares_retweet", to: 'twitter_shares#retweet'
+  post '/twitter_shares/favorite/:tweet_uid', as: "twitter_shares_favorite", to: 'twitter_shares#favorite'
+  post '/twitter_shares/unfavorite/:tweet_uid', as: "twitter_shares_unfavorite", to: 'twitter_shares#unfavorite'
+  post '/twitter_shares/reply/:tweet_uid', as: "twitter_shares_reply", to: 'twitter_shares#reply'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
