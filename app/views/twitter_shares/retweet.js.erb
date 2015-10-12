@@ -1,0 +1,5 @@
+$("#<%= @tweet_uid %>-retweet").removeClass("pre-action").addClass("twitter-blue").unbind("click");
+
+var retweetCount = parseInt($("#<%= @tweet_uid %>-retweet_count").html());
+
+$("#<%= @tweet_uid %>-retweet_count").html(retweetCount += 1);
