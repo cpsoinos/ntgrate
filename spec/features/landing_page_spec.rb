@@ -13,7 +13,7 @@ feature "landing_page" do
       expect(page).to have_content("See more content.")
       expect(page).to have_content("Get more likes.")
       expect(page).to have_content("Find more followers.")
-      expect(page).to have_content("Build more connections.")
+      expect(page).to have_content("Build new connections.")
       expect(page).to have_content("Why split your time between different networks?")
       expect(page).to have_link("ntgrate them")
       expect(page).to have_content("Create and share content on these channels.")
