@@ -1,0 +1,11 @@
+$("#<%= @share_uid %>-comment-form").hide();
+
+$(".grid").masonry();
+
+// add the flash message
+$("#js-flash").html('<%= j render partial: "layouts/flash_messages" %>');
+
+// clear the flash message
+$("#js-flash").delay(10000).fadeOut(function() {
+  $(this).empty().show();
+});
