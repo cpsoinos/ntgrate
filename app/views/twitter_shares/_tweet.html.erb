@@ -27,18 +27,6 @@
     </div>
 
     <div class="actions">
-      <% if tweet.retweeted? %>
-        <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, tweet.url.to_s, class: "twitter-blue" %>
-      <% else %>
-        <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, twitter_shares_retweet_path(tweet.id), class: "pre-action", id: "#{tweet.id}-retweet", method: "POST", remote: true %>
-      <% end %>
-
-      <% if tweet.favorited? %>
-        <%= link_to "#{icon('star', class: 'fa-2x')}".html_safe, twitter_shares_unfavorite_path(tweet.id), class: "twitter-favorite", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
-      <% else %>
-        <%= link_to "#{icon('star-o', class: 'fa-2x')}".html_safe, twitter_shares_favorite_path(tweet.id), class: "pre-action", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
-      <% end %>
-
       <% unless tweet.reply? %>
         <%= link_to "#{icon('reply', class: 'fa-2x')}".html_safe, "#", class: "pre-action tweet-reply", id: "", data: "#{tweet.id}" %>
         <div class="collapse" id='<%= "#{tweet.id}-reply-form" %>'>
@@ -52,6 +40,18 @@
             <% end %>
           <% end %>
         </div>
+      <% end %>
+
+      <% if tweet.retweeted? %>
+        <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, tweet.url.to_s, class: "twitter-blue" %>
+      <% else %>
+        <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, twitter_shares_retweet_path(tweet.id), class: "pre-action", id: "#{tweet.id}-retweet", method: "POST", remote: true %>
+      <% end %>
+
+      <% if tweet.favorited? %>
+        <%= link_to "#{icon('star', class: 'fa-2x')}".html_safe, twitter_shares_unfavorite_path(tweet.id), class: "twitter-favorite", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
+      <% else %>
+        <%= link_to "#{icon('star-o', class: 'fa-2x')}".html_safe, twitter_shares_favorite_path(tweet.id), class: "pre-action", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
       <% end %>
 
     </div>
