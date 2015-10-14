@@ -71,4 +71,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'capybara-mechanize'
+  gem 'codeclimate-test-reporter', require: nil
 end
