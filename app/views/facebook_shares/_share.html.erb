@@ -67,6 +67,8 @@
         <% end %>
       </div>
 
+      <%= link_to "#{icon('share', class: 'fa-2x')}".html_safe, facebook_shares_reshare_path(share[:id]), class: "pre-action reshare", id: "#{share[:id]}-reshare", method: "POST", remote: true %>
+
       <div class="comments">
         <% if share[:comments] %>
           <% share[:comments][:data].each do |comment|  %>
