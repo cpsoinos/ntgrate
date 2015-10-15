@@ -14,17 +14,8 @@
   </div>
 
   <div class="panel-body feed">
-    <% if tweet.media? %>
-      <div class="text-center">
-        <% tweet.media.each do |object| %>
-            <%= link_to image_tag(object.media_url, class: "share-media media-with-statistics"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{@twitter_account.handle}: #{tweet.text}" %>
-        <% end %>
-      </div>
-    <% end %>
 
-    <div class="message">
-      <p><%= auto_link(tweet.text).html_safe %></p>
-    </div>
+    <%= render 'twitter_shares/content', tweet: tweet %>
 
     <div class="actions">
       <% unless tweet.reply? %>
