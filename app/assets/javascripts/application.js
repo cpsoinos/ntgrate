@@ -24,6 +24,7 @@
 //= require masonry/modernizr-transitions
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
+//= require sweet-alert
 //= require_tree .
 
 $(document).ready(function() {

@@ -1,0 +1,32 @@
+<div class="actions">
+
+  <% if @facebook_page.present? %>
+    <%= button_to "Boost", facebook_share_boost_path, params: {share_id: share[:id], facebook_page_id: @facebook_page.id}, remote: true, class: "btn btn-facebook boost-share" %>
+  <% end %>
+
+  <% if share[:likes] && (@facebook_account.id.in? (share[:likes][:data].map(&:values).flatten)) %>
+    <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_unlike_path(share[:id]), id: "#{share[:id]}-like", method: "POST", remote: true  %>
+  <% else %>
+    <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_like_path(share[:id]), class: "pre-action", id: "#{share[:id]}-like", method: "POST", remote: true %>
+  <% end %>
+
+  <%= link_to "#{icon('comments-o', class: 'fa-2x')}".html_safe, "#", class: "pre-action share-comment", id: "", data: "#{share[:id]}" %>
+  <div class="collapse" id='<%= "#{share[:id]}-comment-form" %>'>
+    <%= form_tag(facebook_shares_comment_path(share[:id]), remote: true) do %>
+      <%= text_area_tag 'text', nil, class: "facebook-comment-field", id: "#{share[:id]}-comment-field" %>
+      <%= button_tag(class: "btn btn-facebook", id: "#{share[:id]}-comment-button") do %>
+        <%= icon('facebook') %> Comment
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to "#{icon('share', class: 'fa-2x')}".html_safe, "#", class: "pre-action reshare dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false }, role: "button" %>
+
+  <ul class="dropdown-menu">
+    <li><%= link_to "Reshare now to my timeline", facebook_shares_reshare_path(share[:id]), method: "POST", remote: true %></li>
+    <li>
+      <%= link_to "Reshare in new share to my timeline", "#",  data: { toggle: "modal", target: "##{share[:id]}-reshare-with-text-modal" } %>
+    </li>
+  </ul>
+
+</div>

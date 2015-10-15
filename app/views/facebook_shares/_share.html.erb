@@ -26,86 +26,12 @@
   </div>
 
   <div class="panel-body feed">
-    <% if share[:type] == "status" %>
-      <p><%= share[:message] %></p>
-    <% else %>
-      <% if share[:message].present? || share[:link].present? %>
-        <% if share[:type].in?(["link", "photo"]) && share[:full_picture].present? %>
-          <div class="text-center">
-            <%= link_to image_tag(share[:full_picture], class: "share-media media-with-statistics"), "#{share[:full_picture]}", 'data-lightbox': "share", 'data-title': "#{@facebook_page.present? ? @facebook_page.name : @facebook_account.name}#{share[:message].present? ? ':' : nil} #{share[:message]}" %>
-          </div>
-        <% elsif share[:type] == "video" %>
-          <div class="text-center">
-            <div class="fb-video media-with-statistics" data-href="<%= share[:attachments][:data].first[:url] %>" data-allowfullscreen="true" data-width="500"></div>
-          </div>
-        <% end %>
-        <div class="message">
-          <% if share[:message].present? %>
-            <p><%= share[:message] %></p>
-          <% end %>
-          <% if share[:type] == "link" %>
-            <p><%= link_to share[:link], share[:link] %></p>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
 
-    <div class="actions">
-      <% if share[:likes] && (@facebook_account.id.in? (share[:likes][:data].map(&:values).flatten)) %>
-        <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_unlike_path(share[:id]), id: "#{share[:id]}-like", method: "POST", remote: true  %>
-      <% else %>
-        <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_like_path(share[:id]), class: "pre-action", id: "#{share[:id]}-like", method: "POST", remote: true %>
-      <% end %>
-
-      <%= link_to "#{icon('comments-o', class: 'fa-2x')}".html_safe, "#", class: "pre-action share-comment", id: "", data: "#{share[:id]}" %>
-      <div class="collapse" id='<%= "#{share[:id]}-comment-form" %>'>
-        <%= form_tag(facebook_shares_comment_path(share[:id]), remote: true) do %>
-          <%= text_area_tag 'text', nil, class: "facebook-comment-field", id: "#{share[:id]}-comment-field" %>
-          <%= button_tag(class: "btn btn-facebook", id: "#{share[:id]}-comment-button") do %>
-            <%= icon('facebook') %> Comment
-          <% end %>
-        <% end %>
-      </div>
-
-      <div class="comments">
-        <% if share[:comments] %>
-          <% share[:comments][:data].each do |comment|  %>
-            <div class="well comment-well">
-              <div class="panel">
-                <div class="panel-heading">
-                  <%= link_to comment[:from][:name], "http://facebook.com/#{comment[:from][:id]}" %> commented
-                  <span class="shared-at pull-right comment">
-                    <%= time_ago_in_words(comment[:created_time]) %> ago
-                  </span>
-                </div>
-              </div>
-              <div class="panel-heading comment-stats">
-                <p><%= comment[:message] %></p>
-                <% if comment[:likes] && (@facebook_account.id.in? (comment[:likes][:data].map(&:values).flatten)) %>
-                  <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_unlike_path(comment[:id]), id: "#{comment[:id]}-like", method: "POST", remote: true %>
-                <% else %>
-                  <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_like_path(comment[:id]), class: "pre-action", id: "#{comment[:id]}-like", method: "POST", remote: true %>
-                <% end %>
-                <div class="statistics">
-                  <span id="<%= comment[:id] %>-like_count"><%= comment[:likes] ? comment[:likes][:data].count : "0" %></span> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="statistics">
-      <span id="<%= share[:id] %>-like_count"><%= share[:likes] ? share[:likes][:data].count : "0" %></span> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
-      <span id="<%= share[:id] %>-comment_count"></span><%= share[:comments] ? share[:comments][:data].count : 0 %> <span class="facebook-blue"><%= icon('comments-o') %></span>
-    </div>
-
-    <% if @facebook_page.present? %>
-      <div class="actions">
-        <%= button_to "Boost", facebook_share_boost_path, params: {share_id: share[:id], facebook_page_id: @facebook_page.id}, remote: true, class: "btn btn-facebook boost-share" %>
-      </div>
-    <% end %>
+    <%= render 'facebook_shares/content', share: share %>
+    <%= render 'facebook_shares/comments', share: share %>
+    <%= render 'facebook_shares/actions', share: share %>
+    <%= render 'facebook_shares/reshare_comment_modal', share: share %>
+    <%= render 'facebook_shares/statistics', share: share %>
 
   </div>
 </div>

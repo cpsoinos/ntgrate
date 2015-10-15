@@ -1,0 +1,27 @@
+<div class="comments">
+  <% if share[:comments] %>
+    <% share[:comments][:data].each do |comment|  %>
+      <div class="well comment-well">
+        <div class="panel">
+          <div class="panel-heading">
+            <%= link_to comment[:from][:name], "http://facebook.com/#{comment[:from][:id]}" %> commented
+            <span class="shared-at pull-right comment">
+              <%= time_ago_in_words(comment[:created_time]) %> ago
+            </span>
+          </div>
+        </div>
+        <div class="panel-heading comment-stats">
+          <p><%= comment[:message] %></p>
+          <% if comment[:likes] && (@facebook_account.id.in? (comment[:likes][:data].map(&:values).flatten)) %>
+            <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_unlike_path(comment[:id]), id: "#{comment[:id]}-like", method: "POST", remote: true %>
+          <% else %>
+            <%= link_to "#{icon('thumbs-o-up', class: 'fa-2x')}".html_safe, facebook_shares_like_path(comment[:id]), class: "pre-action", id: "#{comment[:id]}-like", method: "POST", remote: true %>
+          <% end %>
+          <div class="statistics">
+            <span id="<%= comment[:id] %>-like_count"><%= comment[:likes] ? comment[:likes][:data].count : "0" %></span> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
