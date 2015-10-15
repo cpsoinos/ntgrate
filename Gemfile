@@ -38,6 +38,7 @@ gem 'instagram'
 gem 'twitter-text', '~> 1.13.0'
 gem 'masonry-rails'
 gem 'rollbar', '~> 2.4.0'
+gem 'sweetalert-rails'
 
 group :staging, :development, :local, :production do
   gem 'rails_12factor'
@@ -71,4 +72,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'capybara-mechanize'
+  gem 'codeclimate-test-reporter', require: nil
 end

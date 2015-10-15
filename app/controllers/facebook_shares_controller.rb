@@ -71,6 +71,21 @@ class FacebookSharesController < ApplicationController
     end
   end
 
+  def reshare
+    @facebook_account = current_user.facebook_account
+    @share_uid = params[:share_uid]
+    @text = params[:text]
+    respond_to do |format|
+      format.js do
+        if FacebookActionTaker.new(@facebook_account, @share_uid).reshare(@text)
+          flash.now[:notice] = "Successfully posted on Facebook!"
+        else
+          flash.now[:alert] = "Error posting to Facebook"
+        end
+      end
+    end
+  end
+
   def boost
     @facebook_page = FacebookPage.find(params[:facebook_page_id])
     @facebook_share = FacebookShare.find_by(share_id: params[:share_id])
