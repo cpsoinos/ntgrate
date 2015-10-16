@@ -14,20 +14,11 @@
   </div>
 
   <div class="panel-body feed">
-    <div class="text-center">
-      <%= link_to image_tag(instagram.images.standard_resolution.url, class: "share-media media-with-statistics"), "#{instagram.images.standard_resolution.url}", 'data-lightbox': "instagram", 'data-title': "#{@instagram_account.username}: #{instagram.caption.try(:text)}" %>
-    </div>
-    <div class="message">
-      <p>
-        <% instagram.caption.try(:text).gsub!(/\B#\w+/) { |tag| link_to("#{tag}", "http://instagram.com/explore/tags/#{tag.gsub(/#/, '')}") } %>
-        <% instagram.caption.try(:text).gsub!(/\B@\w+/) { |tag| link_to("#{tag}", "http://instagram.com/#{tag.gsub(/@/, '')}") } %>
-        <%= instagram.caption.try(:text).html_safe %>
-      </p>
-    </div>
-    <div class="statistics">
-      <% if instagram.likes.count > 0 %>
-        <%= instagram.likes.count %> <span class="instagram-blue"><%= icon("heart", class: "instagram-favorite") %></span>
-      <% end %>
-    </div>
+
+    <%= render 'instagram_shares/content', instagram: instagram %>
+    <%= render 'instagram_shares/actions', instagram: instagram %>
+    <%= render 'instagram_shares/reshare_to_fb_comment_modal', instagram: instagram %>
+    <%= render 'instagram_shares/statistics', instagram: instagram %>
+
   </div>
 </div>

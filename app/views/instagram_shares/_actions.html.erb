@@ -1,0 +1,28 @@
+<div class="actions">
+  <%= link_to "#{icon('share', class: 'fa-2x')}".html_safe, "#", class: "pre-action reshare dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false }, role: "button" %>
+
+  <ul class="dropdown-menu">
+  <!-- Facebook -->
+    <% if @facebook_account %>
+      <li>
+        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Reshare now to my timeline".html_safe, facebook_shares_reshare_path(instagram.id, link: instagram.link), method: "POST", remote: true %>
+      </li>
+      <li>
+        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Reshare in new share to my timeline".html_safe, "#",  data: { toggle: "modal", target: "##{instagram.id}-reshare-with-text-modal" } %>
+      </li>
+    <% end %>
+
+    <!-- Twitter -->
+    <% if @twitter_account %>
+      <li>
+        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet this now".html_safe, twitter_shares_share_tweet_path(instagram.id, twitter_share: {text: instagram.link, photo: instagram.images.standard_resolution.url}), method: "POST", remote: true %>
+      </li>
+
+
+    <% end %>
+
+  </ul>
+
+
+
+</div>
