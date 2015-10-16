@@ -15,7 +15,7 @@ class TwitterSharer
     # when "video"
     #   response = client.update_with_media(@share.content, video_file)
     end
-    @share.update_attribute("share_id", response)
+    @share.update_attribute("share_id", response.id)
   end
 
   def photo_file

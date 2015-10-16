@@ -4,7 +4,7 @@
   <% if share[:message].present? || share[:link].present? %>
     <% if share[:type].in?(["link", "photo"]) && share[:full_picture].present? %>
       <div class="text-center">
-        <%= link_to image_tag(share[:full_picture], class: "share-media media-with-statistics"), "#{share[:full_picture]}", 'data-lightbox': "share", 'data-title': "#{@facebook_page.present? ? @facebook_page.name : @facebook_account.name}#{share[:message].present? ? ':' : nil} #{share[:message]}" %>
+        <%= link_to image_tag(share[:full_picture], class: "share-media media-with-statistics"), "#{share[:full_picture]}", 'data-lightbox': "share", 'data-title': "#{link_to (share[:from][:name]), ('http://facebook.com/' + share[:from][:id])}#{share[:message].present? ? ':' : nil} #{share[:message]}" %>
       </div>
     <% elsif share[:type] == "video" %>
       <div class="text-center">

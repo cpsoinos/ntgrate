@@ -1,0 +1,27 @@
+<div class="modal fade" id="<%= tweet.id %>-reshare-with-text-modal" tabindex="-1" role="dialog" aria-labelledby="reshare">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <%= form_tag(facebook_shares_reshare_path(tweet.id), remote: true) do %>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Reshare to my timeline</h4>
+        </div>
+        <div class="modal-body">
+          <%= render 'twitter_shares/content', tweet: tweet %>
+
+          <%= hidden_field_tag "link", tweet.url.to_s %>
+          <%= text_area_tag "text", "@#{tweet.user.screen_name} on Twitter: #{tweet.text}\n", class: "share-input form-control", rows: "5" %>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="actions social-submit">
+            <%= button_tag(class: "btn btn-facebook", id: "share") do %>
+              <%= icon('facebook') %> Share on Facebook
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -75,9 +75,10 @@ class FacebookSharesController < ApplicationController
     @facebook_account = current_user.facebook_account
     @share_uid = params[:share_uid]
     @text = params[:text]
+    @link = params[:link]
     respond_to do |format|
       format.js do
-        if FacebookActionTaker.new(@facebook_account, @share_uid).reshare(@text)
+        if FacebookActionTaker.new(@facebook_account, @share_uid).reshare(@text, @link)
           flash.now[:notice] = "Successfully posted on Facebook!"
         else
           flash.now[:alert] = "Error posting to Facebook"
