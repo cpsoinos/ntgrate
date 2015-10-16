@@ -1,15 +1,15 @@
 class TwitterSharesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :get_twitter_account
   respond_to :html, :js
 
   def create
-    @twitter_account = current_user.twitter_account
     @twitter_share = @twitter_account.twitter_shares.new(twitter_share_params)
     if @twitter_share.save
       @twitter_share.share
-      flash[:notice] = "Shared successfully to Twitter!"
       respond_to do |format|
         format.html do
+          flash[:notice] = "Shared successfully to Twitter!"
           redirect_to dashboard_path(current_user.dashboard)
         end
         format.js do
@@ -22,7 +22,6 @@ class TwitterSharesController < ApplicationController
   end
 
   def retweet
-    @twitter_account = current_user.twitter_account
     @tweet_uid = params[:tweet_uid]
     respond_to do |format|
       format.js do
@@ -35,7 +34,6 @@ class TwitterSharesController < ApplicationController
   end
 
   def favorite
-    @twitter_account = current_user.twitter_account
     @tweet_uid = params[:tweet_uid]
     respond_to do |format|
       format.js do
@@ -48,7 +46,6 @@ class TwitterSharesController < ApplicationController
   end
 
   def unfavorite
-    @twitter_account = current_user.twitter_account
     @tweet_uid = params[:tweet_uid]
     respond_to do |format|
       format.js do
@@ -61,7 +58,6 @@ class TwitterSharesController < ApplicationController
   end
 
   def reply
-    @twitter_account = current_user.twitter_account
     @tweet_uid = params[:tweet_uid]
     respond_to do |format|
       format.js do
@@ -74,10 +70,29 @@ class TwitterSharesController < ApplicationController
     end
   end
 
+  def share_tweet
+    binding.pry
+    respond_to do |format|
+      format.js do
+        @twitter_share = @twitter_account.twitter_shares.new(twitter_share_params)
+        if @twitter_share.save
+          @twitter_share.share
+          flash.now[:notice] = "Shared successfully to Twitter!"
+        else
+          render :error_alert
+        end
+      end
+    end
+  end
+
   protected
 
   def twitter_share_params
     params.require(:twitter_share).permit([:content, :link, :photo, :remote_photo_url, :video])
+  end
+
+  def get_twitter_account
+    @twitter_account = current_user.twitter_account
   end
 
 end
