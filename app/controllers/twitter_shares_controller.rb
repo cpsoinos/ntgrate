@@ -74,7 +74,7 @@ class TwitterSharesController < ApplicationController
     binding.pry
     respond_to do |format|
       format.js do
-        @twitter_share = @twitter_account.twitter_shares.new(twitter_share_params)
+        @twitter_share = @twitter_account.twitter_shares.new(reshare_params)
         if @twitter_share.save
           @twitter_share.share
           flash.now[:notice] = "Shared successfully to Twitter!"
@@ -86,6 +86,10 @@ class TwitterSharesController < ApplicationController
   end
 
   protected
+
+  def reshare_params
+    params.permit([:content, :link, :remote_photo_url])
+  end
 
   def twitter_share_params
     params.require(:twitter_share).permit([:content, :link, :photo, :remote_photo_url, :video])

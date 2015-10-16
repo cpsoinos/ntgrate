@@ -1,0 +1,30 @@
+<div class="modal fade" id="<%= instagram.id %>-tweet-with-text-modal" tabindex="-1" role="dialog" aria-labelledby="reshare">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <%= form_tag(twitter_shares_share_tweet_path(instagram.id), remote: true) do %>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Tweet to my timeline</h4>
+        </div>
+        <div class="modal-body">
+          <%= render 'instagram_shares/content', instagram: instagram %>
+
+          <%= text_area_tag "content", "#{instagram.user.username}'s photo on Instagram: #{instagram.link}", class: "share-input form-control", rows: "5" %>
+          <%= hidden_field_tag "remote_photo_url", instagram.images.standard_resolution.url %>
+          <div class="pull-right">
+            <span id="message"> 140 </span> Characters Remaining
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="actions social-submit">
+            <%= button_tag(class: "btn btn-twitter", id: "tweet") do %>
+              <%= icon('twitter') %> Tweet
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

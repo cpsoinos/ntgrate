@@ -7,7 +7,6 @@ class TwitterSharer
   end
 
   def post
-    binding.pry
     case @share.share_type
     when "text"
       response = client.update(@share.content)
@@ -17,6 +16,7 @@ class TwitterSharer
     #   response = client.update_with_media(@share.content, video_file)
     end
     @share.update_attribute("share_id", response.id)
+    binding.pry
   end
 
   def photo_file
