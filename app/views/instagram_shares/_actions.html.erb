@@ -15,10 +15,10 @@
     <!-- Twitter -->
     <% if @twitter_account %>
       <li>
-        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet this now".html_safe, twitter_shares_share_tweet_path(instagram.id, content: "#{instagram.user.username}'s photo on Instagram: #{instagram.link}", remote_photo_url: instagram.images.standard_resolution.url), method: "POST", remote: true %>
+        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet Now".html_safe, twitter_shares_share_tweet_path(instagram.id, content: "#{instagram.user.username}'s photo on Instagram: #{instagram.link}", remote_photo_url: instagram.images.standard_resolution.url), method: "POST", remote: true %>
       </li>
       <li>
-        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet with comment".html_safe, "#", data: { toggle: "modal", target: "##{instagram.id}-tweet-with-text-modal"} %>
+        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet...".html_safe, "#", data: { toggle: "modal", target: "##{instagram.id}-tweet-with-text-modal"} %>
       </li>
 
     <% end %>
