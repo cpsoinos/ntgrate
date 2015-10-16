@@ -5,10 +5,10 @@
   <!-- Facebook -->
     <% if @facebook_account %>
       <li>
-        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Reshare now to my timeline".html_safe, facebook_shares_reshare_path(instagram.id, link: instagram.link), method: "POST", remote: true %>
+        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Share Now".html_safe, facebook_shares_reshare_path(instagram.id, link: instagram.link), method: "POST", remote: true %>
       </li>
       <li>
-        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Reshare in new share to my timeline".html_safe, "#",  data: { toggle: "modal", target: "##{instagram.id}-reshare-with-text-modal" } %>
+        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Share...".html_safe, "#",  data: { toggle: "modal", target: "##{instagram.id}-reshare-with-text-modal" } %>
       </li>
     <% end %>
 

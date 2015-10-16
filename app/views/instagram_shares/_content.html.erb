@@ -1,5 +1,5 @@
 <div class="text-center">
-  <%= link_to image_tag(instagram.images.standard_resolution.url, class: "share-media media-with-statistics"), "#{instagram.images.standard_resolution.url}", 'data-lightbox': "instagram", 'data-title': "#{@instagram_account.username}: #{instagram.caption.try(:text)}" %>
+  <%= link_to image_tag(instagram.images.standard_resolution.url, class: "share-media media-with-statistics"), "#{instagram.images.standard_resolution.url}", 'data-lightbox': "instagram", 'data-title': "#{link_to ('@' + instagram.user.username), 'http://instagram.com/#{instagram.user.username'}: #{instagram.caption.try(:text)}" %>
 </div>
 <div class="message">
   <p>

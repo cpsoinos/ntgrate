@@ -10,7 +10,7 @@
           <%= render 'twitter_shares/content', tweet: tweet %>
 
           <%= hidden_field_tag "link", tweet.url.to_s %>
-          <%= text_area_tag "text", nil, class: "share-input form-control", rows: "5" %>
+          <%= text_area_tag "text", "@#{tweet.user.screen_name} on Twitter: #{tweet.text}\n", class: "share-input form-control", rows: "5" %>
 
         </div>
         <div class="modal-footer">

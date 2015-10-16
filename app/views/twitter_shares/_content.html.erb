@@ -1,7 +1,7 @@
 <% if tweet.media? %>
   <div class="text-center">
     <% tweet.media.each do |object| %>
-      <%= link_to image_tag(object.media_url, class: "share-media media-with-statistics"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "@#{tweet.user.screen_name}: #{tweet.text}" %>
+      <%= link_to image_tag(object.media_url, class: "share-media media-with-statistics"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{link_to ('@' + tweet.user.screen_name), tweet.user.url.to_s}: #{tweet.text}" %>
     <% end %>
   </div>
 <% end %>

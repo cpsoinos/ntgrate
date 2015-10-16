@@ -32,9 +32,9 @@
   <!-- Facebook -->
   <% if @facebook_account %>
     <ul class="dropdown-menu">
-      <li><%= link_to "#{icon('facebook', class: 'facebook-blue')} Reshare now to my timeline".html_safe, facebook_shares_reshare_path(tweet.id, link: tweet.url.to_s), method: "POST", remote: true %></li>
+      <li><%= link_to "#{icon('facebook', class: 'facebook-blue')} Share Now".html_safe, facebook_shares_reshare_path(tweet.id, link: tweet.url.to_s, text: "@#{tweet.user.screen_name} on Twitter: #{tweet.text}"), method: "POST", remote: true %></li>
       <li>
-        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Reshare in new share to my timeline".html_safe, "#",  data: { toggle: "modal", target: "##{tweet.id}-reshare-with-text-modal" } %>
+        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Share...".html_safe, "#",  data: { toggle: "modal", target: "##{tweet.id}-reshare-with-text-modal" } %>
       </li>
     </ul>
   <% end %>

@@ -10,7 +10,7 @@
           <%= render 'instagram_shares/content', instagram: instagram %>
 
           <%= hidden_field_tag "link", instagram.link %>
-          <%= text_area_tag "text", nil, class: "share-input form-control", rows: "5" %>
+          <%= text_area_tag "text", "#{instagram.user.username} on Instagram: #{instagram.caption.try(:text)}\n", class: "share-input form-control", rows: "5" %>
 
         </div>
         <div class="modal-footer">
