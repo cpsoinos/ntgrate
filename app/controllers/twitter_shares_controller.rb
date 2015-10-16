@@ -71,7 +71,6 @@ class TwitterSharesController < ApplicationController
   end
 
   def share_tweet
-    binding.pry
     respond_to do |format|
       format.js do
         @twitter_share = @twitter_account.twitter_shares.new(reshare_params)
