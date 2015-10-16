@@ -15,7 +15,7 @@
     <!-- Twitter -->
     <% if @twitter_account %>
       <li>
-        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet this now".html_safe, twitter_shares_share_tweet_path(instagram.id, twitter_share: {text: instagram.link, photo: instagram.images.standard_resolution.url}), method: "POST", remote: true %>
+        <%= link_to "#{icon('twitter', class: 'twitter-blue')} Tweet this now".html_safe, twitter_shares_share_tweet_path(instagram.id, twitter_share: {content: "#{instagram.user.username}'s photo on Instagram: #{instagram.link}", remote_photo_url: instagram.images.standard_resolution.url}), method: "POST", remote: true %>
       </li>
 
 
