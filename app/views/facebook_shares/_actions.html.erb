@@ -23,9 +23,9 @@
   <%= link_to "#{icon('share', class: 'fa-2x')}".html_safe, "#", class: "pre-action reshare dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false }, role: "button" %>
 
   <ul class="dropdown-menu">
-    <li><%= link_to "Reshare now to my timeline", facebook_shares_reshare_path(share[:id]), method: "POST", remote: true %></li>
+    <li><%= link_to "Share Now", facebook_shares_reshare_path(share[:id]), method: "POST", remote: true %></li>
     <li>
-      <%= link_to "Reshare in new share to my timeline", "#",  data: { toggle: "modal", target: "##{share[:id]}-reshare-with-text-modal" } %>
+      <%= link_to "Share...", "#",  data: { toggle: "modal", target: "##{share[:id]}-reshare-with-text-modal" } %>
     </li>
   </ul>
 

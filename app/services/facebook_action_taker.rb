@@ -18,19 +18,19 @@ class FacebookActionTaker
     graph.put_comment(@share_uid, text)
   end
 
-  def reshare(text=nil)
-    get_link
+  def reshare(text=nil, link=nil)
+    link ||= get_link
     if text
-      graph.put_connections(@object.uid, "feed", message: text, link: @link)
+      graph.put_connections(@object.uid, "feed", message: text, link: link)
     else
-      graph.put_connections(@object.uid, "feed", link: @link)
+      graph.put_connections(@object.uid, "feed", link: link)
     end
   end
 
   private
 
   def get_link
-    @link ||= graph.get_object(@share_uid, fields: "link")["link"]
+    graph.get_object(@share_uid, fields: "link")["link"]
   end
 
 end

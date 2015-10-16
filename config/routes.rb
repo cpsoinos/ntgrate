@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   post "/twitter_shares/favorite/:tweet_uid", as: "twitter_shares_favorite", to: "twitter_shares#favorite"
   post "/twitter_shares/unfavorite/:tweet_uid", as: "twitter_shares_unfavorite", to: "twitter_shares#unfavorite"
   post "/twitter_shares/reply/:tweet_uid", as: "twitter_shares_reply", to: "twitter_shares#reply"
+  post "/twitter_shares/share_tweet/:tweet_uid", as: "twitter_shares_share_tweet", to: "twitter_shares#share_tweet"
 
   post "/facebook_shares/like/:share_uid", as: "facebook_shares_like", to: "facebook_shares#like"
   post "/facebook_shares/unlike/:share_uid", as: "facebook_shares_unlike", to: "facebook_shares#unlike"

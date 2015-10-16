@@ -1,0 +1,8 @@
+<div class="statistics">
+  <span id="<%= tweet.id %>-retweet_count"><%= tweet.retweet_count %></span> <span class="twitter-blue"><%= icon("retweet") %></span>
+  <% if tweet.retweeted_status? %>
+    <span id="<%= tweet.id %>-favorite_count"><%= tweet.retweeted_status.favorite_count %></span> <span class="twitter-favorite"><%= icon("star") %></span>
+  <% else %>
+    <span id="<%= tweet.id %>-favorite_count"><%= tweet.favorite_count %></span> <span class="twitter-favorite"><%= icon("star") %></span>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+$("#<%= @share_uid %>-reshare").removeClass("pre-action");
+$("#<%= @share_uid %>-reshare-with-text-modal").modal('hide');
+
+sweetAlert("Nice!", "You just Tweeted this.")
+
+// add the flash message
+$("#js-flash").html('<%= j render partial: "layouts/flash_messages" %>');
+
+// clear the flash message
+$("#js-flash").delay(10000).fadeOut(function() {
+  $(this).empty().show();
+});
