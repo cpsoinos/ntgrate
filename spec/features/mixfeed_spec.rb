@@ -18,6 +18,13 @@ feature "mixfeed:" do
       sign_in(user)
     end
 
+    scenario "visits root path" do
+      visit root_path
+
+      expect(page).to have_content("Mixfeed")
+      expect(page).to have_content("Sign out")
+    end
+
     scenario "visits mixfeed" do
       visit mixfeed_path(user.mixfeed)
 

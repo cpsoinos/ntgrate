@@ -18,13 +18,6 @@ feature "user dashboard:" do
       sign_in(user)
     end
 
-    scenario "visits root path" do
-      visit root_path
-
-      expect(page).to have_content("Welcome")
-      expect(page).to have_content("Sign out")
-    end
-
     #################
     ## ADVERTISING ##
     #################
