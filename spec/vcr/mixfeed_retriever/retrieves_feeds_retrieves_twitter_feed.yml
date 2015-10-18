@@ -1,0 +1,441 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/home_timeline.json?count=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="6731f1cd509e56d288a9ba8055c6519e",
+        oauth_signature="XuEgtpgo4RTPulBZkMEYorAuGz4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445129024", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '2124'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 00:43:45 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 00:43:45 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A144512902518033080; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 00:43:45 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - d814ad4002c9aa8285b818fe17c91737
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1445129925'
+      X-Response-Time:
+      - '32'
+      X-Transaction:
+      - 8634cf219819000f
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"created_at":"Fri Oct 16 22:50:33 +0000 2015","id":655153885267496960,"id_str":"655153885267496960","text":"thomasfalcone''s
+        photo on Instagram: https:\/\/t.co\/3fyirOM3ay http:\/\/t.co\/51RI6CGwUF","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/3fyirOM3ay","expanded_url":"https:\/\/instagram.com\/p\/86k6yzSo1F\/","display_url":"instagram.com\/p\/86k6yzSo1F\/","indices":[36,59]}],"media":[{"id":655153885070409728,"id_str":"655153885070409728","indices":[60,82],"media_url":"http:\/\/pbs.twimg.com\/media\/CReS_MDWwAAEkON.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReS_MDWwAAEkON.jpg","url":"http:\/\/t.co\/51RI6CGwUF","display_url":"pic.twitter.com\/51RI6CGwUF","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655153885267496960\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":425,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":750,"resize":"fit"},"large":{"w":640,"h":800,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655153885070409728,"id_str":"655153885070409728","indices":[60,82],"media_url":"http:\/\/pbs.twimg.com\/media\/CReS_MDWwAAEkON.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReS_MDWwAAEkON.jpg","url":"http:\/\/t.co\/51RI6CGwUF","display_url":"pic.twitter.com\/51RI6CGwUF","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655153885267496960\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":425,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":750,"resize":"fit"},"large":{"w":640,"h":800,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"en"},{"created_at":"Fri
+        Oct 16 22:13:01 +0000 2015","id":655144440537993216,"id_str":"655144440537993216","text":"thewcommittee''s
+        photo on Instagram: https:\/\/t.co\/sMyjDrWQ5b http:\/\/t.co\/aggtNpeWMP","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/sMyjDrWQ5b","expanded_url":"https:\/\/instagram.com\/p\/86iJOkjU_F\/","display_url":"instagram.com\/p\/86iJOkjU_F\/","indices":[36,59]}],"media":[{"id":655144440382758913,"id_str":"655144440382758913","indices":[60,82],"media_url":"http:\/\/pbs.twimg.com\/media\/CReKZb2WIAE0sE3.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReKZb2WIAE0sE3.jpg","url":"http:\/\/t.co\/aggtNpeWMP","display_url":"pic.twitter.com\/aggtNpeWMP","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655144440537993216\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":340,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":640,"h":640,"resize":"fit"},"medium":{"w":600,"h":600,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655144440382758913,"id_str":"655144440382758913","indices":[60,82],"media_url":"http:\/\/pbs.twimg.com\/media\/CReKZb2WIAE0sE3.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReKZb2WIAE0sE3.jpg","url":"http:\/\/t.co\/aggtNpeWMP","display_url":"pic.twitter.com\/aggtNpeWMP","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655144440537993216\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":340,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":640,"h":640,"resize":"fit"},"medium":{"w":600,"h":600,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"en"},{"created_at":"Fri
+        Oct 16 22:11:45 +0000 2015","id":655144121095602176,"id_str":"655144121095602176","text":"thewcommittee''s
+        photo on Instagram: https:\/\/t.co\/sMyjDrWQ5b\ntwc hi http:\/\/t.co\/J43nLSe9iF","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/sMyjDrWQ5b","expanded_url":"https:\/\/instagram.com\/p\/86iJOkjU_F\/","display_url":"instagram.com\/p\/86iJOkjU_F\/","indices":[36,59]}],"media":[{"id":655144120948817920,"id_str":"655144120948817920","indices":[67,89],"media_url":"http:\/\/pbs.twimg.com\/media\/CReKG13XAAAmSWH.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReKG13XAAAmSWH.jpg","url":"http:\/\/t.co\/J43nLSe9iF","display_url":"pic.twitter.com\/J43nLSe9iF","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655144121095602176\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":340,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":640,"h":640,"resize":"fit"},"medium":{"w":600,"h":600,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655144120948817920,"id_str":"655144120948817920","indices":[67,89],"media_url":"http:\/\/pbs.twimg.com\/media\/CReKG13XAAAmSWH.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReKG13XAAAmSWH.jpg","url":"http:\/\/t.co\/J43nLSe9iF","display_url":"pic.twitter.com\/J43nLSe9iF","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655144121095602176\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":340,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":640,"h":640,"resize":"fit"},"medium":{"w":600,"h":600,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"en"},{"created_at":"Fri
+        Oct 16 22:09:47 +0000 2015","id":655143629082787840,"id_str":"655143629082787840","text":"thewcommittee''s
+        photo on Instagram: https:\/\/t.co\/sMyjDrWQ5b http:\/\/t.co\/nK26pit6jG","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/sMyjDrWQ5b","expanded_url":"https:\/\/instagram.com\/p\/86iJOkjU_F\/","display_url":"instagram.com\/p\/86iJOkjU_F\/","indices":[36,59]}],"media":[{"id":655143628608794625,"id_str":"655143628608794625","indices":[60,82],"media_url":"http:\/\/pbs.twimg.com\/media\/CReJqLwWcAEJ5gk.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReJqLwWcAEJ5gk.jpg","url":"http:\/\/t.co\/nK26pit6jG","display_url":"pic.twitter.com\/nK26pit6jG","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655143629082787840\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":340,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":640,"h":640,"resize":"fit"},"medium":{"w":600,"h":600,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655143628608794625,"id_str":"655143628608794625","indices":[60,82],"media_url":"http:\/\/pbs.twimg.com\/media\/CReJqLwWcAEJ5gk.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReJqLwWcAEJ5gk.jpg","url":"http:\/\/t.co\/nK26pit6jG","display_url":"pic.twitter.com\/nK26pit6jG","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655143629082787840\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":340,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":640,"h":640,"resize":"fit"},"medium":{"w":600,"h":600,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"en"},{"created_at":"Fri
+        Oct 16 21:28:45 +0000 2015","id":655133302827937792,"id_str":"655133302827937792","text":"awesomeinventions''s
+        photo on Instagram: https:\/\/t.co\/813Vf1l5X9 http:\/\/t.co\/4ltTJc8vIZ","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/813Vf1l5X9","expanded_url":"https:\/\/instagram.com\/p\/86a4fihrnk\/","display_url":"instagram.com\/p\/86a4fihrnk\/","indices":[40,63]}],"media":[{"id":655133302718865408,"id_str":"655133302718865408","indices":[64,86],"media_url":"http:\/\/pbs.twimg.com\/media\/CReARI0WIAANrJL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReARI0WIAANrJL.jpg","url":"http:\/\/t.co\/4ltTJc8vIZ","display_url":"pic.twitter.com\/4ltTJc8vIZ","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655133302827937792\/photo\/1","type":"photo","sizes":{"small":{"w":320,"h":320,"resize":"fit"},"medium":{"w":320,"h":320,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":320,"h":320,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655133302718865408,"id_str":"655133302718865408","indices":[64,86],"media_url":"http:\/\/pbs.twimg.com\/media\/CReARI0WIAANrJL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CReARI0WIAANrJL.jpg","url":"http:\/\/t.co\/4ltTJc8vIZ","display_url":"pic.twitter.com\/4ltTJc8vIZ","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655133302827937792\/photo\/1","type":"photo","sizes":{"small":{"w":320,"h":320,"resize":"fit"},"medium":{"w":320,"h":320,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":320,"h":320,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"en"},{"created_at":"Fri
+        Oct 16 21:15:31 +0000 2015","id":655129971267084288,"id_str":"655129971267084288","text":"https:\/\/t.co\/813Vf1l5X9","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/813Vf1l5X9","expanded_url":"https:\/\/instagram.com\/p\/86a4fihrnk\/","display_url":"instagram.com\/p\/86a4fihrnk\/","indices":[0,23]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"und"},{"created_at":"Fri
+        Oct 16 21:12:41 +0000 2015","id":655129256700334080,"id_str":"655129256700334080","text":"https:\/\/t.co\/813Vf1l5X9
+        http:\/\/t.co\/BQiukxFBCx","source":"\u003ca href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/813Vf1l5X9","expanded_url":"https:\/\/instagram.com\/p\/86a4fihrnk\/","display_url":"instagram.com\/p\/86a4fihrnk\/","indices":[0,23]}],"media":[{"id":655129256603860992,"id_str":"655129256603860992","indices":[24,46],"media_url":"http:\/\/pbs.twimg.com\/media\/CRd8ln3WwAAKpCM.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRd8ln3WwAAKpCM.jpg","url":"http:\/\/t.co\/BQiukxFBCx","display_url":"pic.twitter.com\/BQiukxFBCx","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655129256700334080\/photo\/1","type":"photo","sizes":{"small":{"w":320,"h":320,"resize":"fit"},"medium":{"w":320,"h":320,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":320,"h":320,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655129256603860992,"id_str":"655129256603860992","indices":[24,46],"media_url":"http:\/\/pbs.twimg.com\/media\/CRd8ln3WwAAKpCM.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRd8ln3WwAAKpCM.jpg","url":"http:\/\/t.co\/BQiukxFBCx","display_url":"pic.twitter.com\/BQiukxFBCx","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655129256700334080\/photo\/1","type":"photo","sizes":{"small":{"w":320,"h":320,"resize":"fit"},"medium":{"w":320,"h":320,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":320,"h":320,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"und"},{"created_at":"Fri
+        Oct 16 21:10:47 +0000 2015","id":655128778306383872,"id_str":"655128778306383872","text":"http:\/\/t.co\/L0jzcXUL9I","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":655128777937301504,"id_str":"655128777937301504","indices":[0,22],"media_url":"http:\/\/pbs.twimg.com\/media\/CRd8JwsWsAAofIl.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRd8JwsWsAAofIl.jpg","url":"http:\/\/t.co\/L0jzcXUL9I","display_url":"pic.twitter.com\/L0jzcXUL9I","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655128778306383872\/photo\/1","type":"photo","sizes":{"small":{"w":320,"h":320,"resize":"fit"},"medium":{"w":320,"h":320,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":320,"h":320,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":655128777937301504,"id_str":"655128777937301504","indices":[0,22],"media_url":"http:\/\/pbs.twimg.com\/media\/CRd8JwsWsAAofIl.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRd8JwsWsAAofIl.jpg","url":"http:\/\/t.co\/L0jzcXUL9I","display_url":"pic.twitter.com\/L0jzcXUL9I","expanded_url":"http:\/\/twitter.com\/corey_test\/status\/655128778306383872\/photo\/1","type":"photo","sizes":{"small":{"w":320,"h":320,"resize":"fit"},"medium":{"w":320,"h":320,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":320,"h":320,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"possibly_sensitive_appealable":false,"lang":"und"},{"created_at":"Fri
+        Oct 16 12:14:31 +0000 2015","id":654993825400619008,"id_str":"654993825400619008","text":"test
+        3","source":"\u003ca href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Fri
+        Oct 16 12:13:51 +0000 2015","id":654993657964142592,"id_str":"654993657964142592","text":"test
+        2","source":"\u003ca href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":3578893755,"id_str":"3578893755","name":"Corey
+        Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":1,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"}]'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:43:45 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=<FACEBOOK_APP_ID>&client_secret=<FACEBOOK_APP_SECRET>&grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/plain; charset=UTF-8
+      X-Fb-Trace-Id:
+      - BhYCUp8tzIf
+      X-Fb-Rev:
+      - '1994858'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - A1T+w882TPF9nHroAd6mAuB0K+PuTIfstm7aYPXQBSdDPTScAMeE6RWUsl9uQ4a8Y5uoqW7XPZb0SD55vuqvSg==
+      Date:
+      - Sun, 18 Oct 2015 00:46:05 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56'
+    body:
+      encoding: UTF-8
+      string: access_token=<FACEBOOK_APP_ID>|iDHv8n3aycEcaFwwbRdP3yuB9-A
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:46:05 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/<FACEBOOK_APP_ID>/accounts/test-users?access_token=<FACEBOOK_APP_ID>%7CiDHv8n3aycEcaFwwbRdP3yuB9-A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - EUR3qXPChde
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"30008ed9a2016eccac591ad8375a550359803b4c"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - jmHv0J6nmMLv2sjOjJR9xVLSnvP55xAin4SZBj+BU4uXSr8VNQswz76gzblsFyYmPzKOA641mgSYKet0rmU83g==
+      Date:
+      - Sun, 18 Oct 2015 00:46:06 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '862'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"106805809675841","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/106805809675841\/","access_token":"CAABZCqcXkxuUBAHekzzp6nSggonQByx1IZADM251GdUkZBUU65vkKbL8sVqXgPM3sJZClZC9ZBrwHgKCMRkMHhmALady7gSAC0tjXnYFwmtIZAVpKx16vws4UA6kMHpz24jZC3ZCSiPbRV50jldqyN2ZCVZAEDuDPZBHp3LBE4WxKbyjmwIMDuk25Wu4gqOCTAeZA9QIZD"},{"id":"150992381911621","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/150992381911621\/","access_token":"CAABZCqcXkxuUBAOcqRbXZA0g8tNXBo0GkhVH0J9kAusGXPiEbEVONjiW2ZBMUy7GEZB6lpoZAzwzJTeXXdsHFx6AHbLZAKb70c8WnCH1aYseaf5NA0iTOKntwbOFhEJEPz1bfFUqVgFJTLp5uChidfcffTwCA8FZBZCLdO6ejZBYosPlegvyjZBwFXEbtUxAWaEFEZD"},{"id":"140052546339795","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/140052546339795\/","access_token":"CAABZCqcXkxuUBALb9p7SvL6uZAk1dJfh1nBAnMQ5EimnpgUE4VMILZCNpnBXGfgx4xGvnKp0JUVU5ugS6Rl3oN7AXr6ZB4Vqar71QbXz979anZBWqLcqO1afALILwvJEUZBEYx4ZCEo7py6aFUZCnPHUOQnZCPoBFt5IoMd4rFuh8IB8LWkbbaOwLEZCyNhvOJ1V4ZD"},{"id":"124481027903659","login_url":"https:\/\/developers.facebook.com\/checkpoint\/test-user-login\/124481027903659\/","access_token":"CAABZCqcXkxuUBAAR6yePa6ZC0RPjOZBPuv0tfxR7A3OlzSZAu5yl11F7GfFB3EQ8RAgUV1RY8PbZCZBaIFdAwMeHwq7UcrP9gQo8NSvx97qcIXPZAZBq4EyibPsTUhdxdOjHglpbrvFuDuuytsF3NXQM5BhZAtpv5JI6xyje2wmXds6y4KMESmQkh75PsoTPGC8cZD"}],"paging":{"cursors":{"before":"MTA2ODA1ODA5Njc1ODQx","after":"MTI0NDgxMDI3OTAzNjU5"}}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:46:06 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=CAABZCqcXkxuUBAAR6yePa6ZC0RPjOZBPuv0tfxR7A3OlzSZAu5yl11F7GfFB3EQ8RAgUV1RY8PbZCZBaIFdAwMeHwq7UcrP9gQo8NSvx97qcIXPZAZBq4EyibPsTUhdxdOjHglpbrvFuDuuytsF3NXQM5BhZAtpv5JI6xyje2wmXds6y4KMESmQkh75PsoTPGC8cZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - EK1em3mVFJp
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"ae0eb21a6915e18b3bbd58d28622f2d20807de4e"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - HXmL2Cw/ZCPqT7bl+wssTcbbbNY+W0Vwi6MDjCEvCXwGVHdrNVCe4b44Q6yaWDLV2OEIh1y49VItVtFwfWiycw==
+      Date:
+      - Sun, 18 Oct 2015 00:46:06 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '68'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nancy Alajbebhgjhdi Martinazziescu","id":"124481027903659"}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:46:06 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBAAR6yePa6ZC0RPjOZBPuv0tfxR7A3OlzSZAu5yl11F7GfFB3EQ8RAgUV1RY8PbZCZBaIFdAwMeHwq7UcrP9gQo8NSvx97qcIXPZAZBq4EyibPsTUhdxdOjHglpbrvFuDuuytsF3NXQM5BhZAtpv5JI6xyje2wmXds6y4KMESmQkh75PsoTPGC8cZD&appsecret_proof=f74609e53c13de682e3865638a4a522749fbd71b0a94e9c21034e793936a2fc5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - D43ic3Pj5E5
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"7cb20d562c7eaea85f2759c937dc6e43372d04c3"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - seHrR6mcL08WckadBcwUI51SbRj7/1vHgWldNV4PwyEcs54wPu/jlY1/Y1fnS0dZDo3+jIvYMqT2WzxdHBVSRg==
+      Date:
+      - Sun, 18 Oct 2015 00:46:06 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '538'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAEYIPZAMF498kyeOAU5FKsJnVbQD0YIVptcZAte8U08NBP13t7wfkCEl9w3V3uZA1AM2Y871soU2NcZClBlSgIR4OlYGWclOsL0CYHJOyNsKwd5mQXR8sSKLye8tgBEMYbhxuH8ZCpkdIck5fqnzlgDKUY6JzIkoRpUDkso5BVZCklpb0y2TYZD","category":"Real
+        Estate","category_list":[{"id":"2520","name":"Real Estate"}],"name":"Tester
+        Realty","id":"436126599913853","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"NDM2MTI2NTk5OTEzODUz","after":"NDM2MTI2NTk5OTEzODUz"}}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:46:06 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/436126599913853/picture?access_token=CAABZCqcXkxuUBAAR6yePa6ZC0RPjOZBPuv0tfxR7A3OlzSZAu5yl11F7GfFB3EQ8RAgUV1RY8PbZCZBaIFdAwMeHwq7UcrP9gQo8NSvx97qcIXPZAZBq4EyibPsTUhdxdOjHglpbrvFuDuuytsF3NXQM5BhZAtpv5JI6xyje2wmXds6y4KMESmQkh75PsoTPGC8cZD&appsecret_proof=f74609e53c13de682e3865638a4a522749fbd71b0a94e9c21034e793936a2fc5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - image/jpeg
+      X-Fb-Trace-Id:
+      - E5iVBEtRdBi
+      X-Fb-Rev:
+      - '1994858'
+      Pragma:
+      - no-cache
+      Location:
+      - https://fbcdn-profile-a.akamaihd.net/static-ak/rsrc.php/v2/yE/r/XuYbbmk2a4X.png
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - Zgd/O2Mr9Uxs512kYOY8B9Ba2yduHZdjkOPUP2wYD4SfBjdYTu8JClZXNrfMEV6OUUKYGtceFjgdPr/YWF215Q==
+      Date:
+      - Sun, 18 Oct 2015 00:46:07 GMT
+      X-Cache-Ts:
+      - '1445129167'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:46:07 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBAAR6yePa6ZC0RPjOZBPuv0tfxR7A3OlzSZAu5yl11F7GfFB3EQ8RAgUV1RY8PbZCZBaIFdAwMeHwq7UcrP9gQo8NSvx97qcIXPZAZBq4EyibPsTUhdxdOjHglpbrvFuDuuytsF3NXQM5BhZAtpv5JI6xyje2wmXds6y4KMESmQkh75PsoTPGC8cZD&appsecret_proof=f74609e53c13de682e3865638a4a522749fbd71b0a94e9c21034e793936a2fc5&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments%7Bfrom,%20created_time,%20message,%20likes%7D,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - ELp0V7YqHn1
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"1050253aec7b29caff644806927dabfa81406eee"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - yftOc3Z/YZS2kWzOyUKE2CIPkPGUgtRfMz/OlVIHJ9PJjsFn7J7bE1ZJ8UDLW+K5h/VevaX1Wd1CONDwugkkUA==
+      Date:
+      - Sun, 18 Oct 2015 00:46:07 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '11'
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 00:46:07 GMT
+recorded_with: VCR 2.9.3
