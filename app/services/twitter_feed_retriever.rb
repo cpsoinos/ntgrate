@@ -18,4 +18,36 @@ class TwitterFeedRetriever
     )
   end
 
+  def follow(handle)
+    client.follow(handle)
+  end
+
+  def unfollow(handle)
+    client.unfollow(handle)
+  end
+
+  def fetch_user(user)
+    client.user(user)
+  end
+
+  def followers
+    client.followers
+  end
+
+  def find_followers(user)
+    client.followers(user)
+  end
+
+  def find_timeline(user)
+    client.user_timeline(user)
+  end
+
+  def mentions
+    client.mentions_timeline
+  end
+
+  def fetch_tweet(share_id)
+    client.status(share_id)
+  end
+
 end

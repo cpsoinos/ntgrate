@@ -12,7 +12,7 @@ class FacebookSharer
     when "text"
       response = graph.put_wall_post(@share.content)
     when "link"
-      response = graph.put_connections(@facebook_page.uid, 'feed', :message => @share.content, :link => @share.link)
+      response = graph.put_connections(@facebook_page.uid, "feed", message: @share.content, link: @share.link)
     when "photo"
       response = graph.put_picture(@share.photo.url, {message: @share.content})
     when "video"

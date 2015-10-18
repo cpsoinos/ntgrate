@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item grid-item" data="<%= share[:created_time] %>">
+<div class="panel panel-default feed-item <%= params[:controller] == 'mixfeeds' ? 'grid-item' : '' %>">
   <div class="panel-heading">
     <% if @facebook_page.present? %>
       <span class="page-name">
@@ -26,44 +26,12 @@
   </div>
 
   <div class="panel-body feed">
-    <% if share[:type] == "status" %>
-      <p><%= share[:message] %></p>
-    <% else %>
-      <% if share[:message].present? || share[:link].present? %>
-        <% if share[:type].in?(["link", "photo"]) && share[:full_picture].present? %>
-          <div class="text-center">
-            <%= link_to image_tag(share[:full_picture], class: "share-media media-with-statistics"), "#{share[:full_picture]}", 'data-lightbox': "share", 'data-title': "#{@facebook_page.present? ? @facebook_page.name : @facebook_account.name}#{share[:message].present? ? ':' : nil} #{share[:message]}" %>
-          </div>
-        <% elsif share[:type] == "video" %>
-          <div class="text-center">
-            <div class="fb-video media-with-statistics" data-href="<%= share[:attachments][:data].first[:url] %>" data-allowfullscreen="true" data-width="500"></div>
-          </div>
-        <% end %>
-        <div class="message">
-          <% if share[:message].present? %>
-            <p><%= share[:message] %></p>
-          <% end %>
-          <% if share[:type] == "link" %>
-            <p><%= link_to share[:link], share[:link] %></p>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
 
-    <div class="statistics">
-      <% if share[:likes].present? %>
-        <%= share[:likes][:data].count %> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
-      <% end %>
-      <% if share[:comments].present? %>
-        <%= share[:comments][:data].count %> <span class="facebook-blue"><%= icon('comments-o') %></span>
-      <% end %>
-    </div>
-
-    <% if @facebook_page.present? %>
-      <div class="actions">
-        <%= button_to "Boost", facebook_share_boost_path, params: {share_id: share[:id], facebook_page_id: @facebook_page.id}, remote: true, class: "btn btn-facebook boost-share" %>
-      </div>
-    <% end %>
+    <%= render 'facebook_shares/content', share: share %>
+    <%= render 'facebook_shares/comments', share: share %>
+    <%= render 'facebook_shares/actions', share: share %>
+    <%= render 'facebook_shares/reshare_comment_modal', share: share %>
+    <%= render 'facebook_shares/statistics', share: share %>
 
   </div>
 </div>

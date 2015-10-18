@@ -1,0 +1,12 @@
+<div class="text-center">
+  <%= link_to image_tag(instagram.images.standard_resolution.url, class: "share-media media-with-statistics"), "#{instagram.images.standard_resolution.url}", 'data-lightbox': "instagram", 'data-title': "#{link_to instagram.user.username, 'http://instagram.com/#{instagram.user.username'}: #{instagram.caption.try(:text)}" %>
+</div>
+<div class="message">
+  <p>
+    <% if instagram.caption %>
+      <% instagram.caption.try(:text).gsub!(/\B#\w+/) { |tag| link_to("#{tag}", "http://instagram.com/explore/tags/#{tag.gsub(/#/, '')}") } %>
+      <% instagram.caption.try(:text).gsub!(/\B@\w+/) { |tag| link_to("#{tag}", "http://instagram.com/#{tag.gsub(/@/, '')}") } %>
+      <%= instagram.caption.try(:text).html_safe %>
+    <% end %>
+  </p>
+</div>

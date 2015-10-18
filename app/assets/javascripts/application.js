@@ -17,8 +17,14 @@
 //= require jquery-ddslick
 //= require bootstrap-sprockets
 //= require lightbox
-//= require masonry.pkgd.min
-//= require imagesloaded.pkgd.min
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+//= require sweet-alert
 //= require_tree .
 
 $(document).ready(function() {

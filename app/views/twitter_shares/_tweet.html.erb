@@ -1,4 +1,4 @@
-<div class="panel panel-default feed-item grid-item" data="<%= tweet.created_at %>">
+<div class="panel panel-default feed-item <%= params[:controller] == 'mixfeeds' ? 'grid-item' : '' %>">
   <div class="panel-heading">
     <span class="page-name">
       <%= image_tag(tweet.user.profile_image_url.to_s, class: "img-circle avatar-thumb") %>
@@ -14,23 +14,11 @@
   </div>
 
   <div class="panel-body feed">
-    <% if tweet.media? %>
-      <div class="text-center">
-        <% tweet.media.each do |object| %>
-            <%= link_to image_tag(object.media_url, class: "share-media media-with-statistics"), "#{object.media_url}", 'data-lightbox': "tweet", 'data-title': "#{@twitter_account.handle}: #{tweet.text}" %>
-        <% end %>
-      </div>
-    <% end %>
-    <div class="message">
-      <p><%= auto_link(tweet.text).html_safe %></p>
-    </div>
-    <div class="statistics">
-      <% if tweet.retweet_count > 0 %>
-        <%= tweet.retweet_count %> <span class="twitter-blue"><%= icon("retweet") %></span>
-      <% end %>
-      <% if tweet.favorite_count > 0 %>
-        <%= tweet.favorite_count %> <span class="twitter-favorite"><%= icon("star") %></span>
-      <% end %>
-    </div>
+
+    <%= render 'twitter_shares/content', tweet: tweet %>
+    <%= render 'twitter_shares/actions', tweet: tweet %>
+    <%= render 'twitter_shares/reshare_to_fb_comment_modal', tweet: tweet %>
+    <%= render 'twitter_shares/statistics', tweet: tweet %>
+
   </div>
 </div>

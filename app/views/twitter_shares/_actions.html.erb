@@ -1,0 +1,42 @@
+<div class="actions">
+  <!-- Twitter -->
+  <% unless tweet.reply? %>
+    <%= link_to "#{icon('reply', class: 'fa-2x')}".html_safe, "#", class: "pre-action tweet-reply", id: "", data: "#{tweet.id}" %>
+    <div class="collapse" id='<%= "#{tweet.id}-reply-form" %>'>
+      <%= form_tag(twitter_shares_reply_path(tweet.id), remote: true) do %>
+        <%= text_area_tag 'content', "@#{tweet.user.screen_name} ", class: "twitter-reply-field", id: "#{tweet.id}-reply-field" %>
+        <div class="pull-right">
+          <span id="<%= tweet.id %>-message"> 140 </span> Characters Remaining
+        </div>
+        <%= button_tag(class: "btn btn-twitter", id: "#{tweet.id}-reply-button") do %>
+          <%= icon('twitter') %> Reply
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if tweet.retweeted? %>
+    <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, tweet.url.to_s, class: "twitter-blue" %>
+  <% else %>
+    <%= link_to "#{icon('retweet', class: 'fa-2x')}".html_safe, twitter_shares_retweet_path(tweet.id), class: "pre-action", id: "#{tweet.id}-retweet", method: "POST", remote: true %>
+  <% end %>
+
+  <% if tweet.favorited? %>
+    <%= link_to "#{icon('star', class: 'fa-2x')}".html_safe, twitter_shares_unfavorite_path(tweet.id), class: "twitter-favorite", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
+  <% else %>
+    <%= link_to "#{icon('star-o', class: 'fa-2x')}".html_safe, twitter_shares_favorite_path(tweet.id), class: "pre-action", id: "#{tweet.id}-favorite", method: "POST", remote: true %>
+  <% end %>
+
+  <%= link_to "#{icon('share', class: 'fa-2x')}".html_safe, "#", class: "pre-action reshare dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false }, role: "button" %>
+
+  <!-- Facebook -->
+  <% if @facebook_account %>
+    <ul class="dropdown-menu">
+      <li><%= link_to "#{icon('facebook', class: 'facebook-blue')} Share Now".html_safe, facebook_shares_reshare_path(tweet.id, link: tweet.url.to_s, text: "@#{tweet.user.screen_name} on Twitter: #{tweet.text}"), method: "POST", remote: true %></li>
+      <li>
+        <%= link_to "#{icon('facebook', class: 'facebook-blue')} Share...".html_safe, "#",  data: { toggle: "modal", target: "##{tweet.id}-reshare-with-text-modal" } %>
+      </li>
+    </ul>
+  <% end %>
+
+</div>

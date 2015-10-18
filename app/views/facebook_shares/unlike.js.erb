@@ -1,0 +1,5 @@
+$("#<%= @share_uid %>-like").addClass("pre-action").attr("href", '<%= facebook_shares_like_path(@share_uid) %>');
+
+var likeCount = parseInt($("#<%= @share_uid %>-like_count").html());
+
+$("#<%= @share_uid %>-like_count").html(likeCount -= 1);

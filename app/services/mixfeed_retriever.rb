@@ -6,6 +6,7 @@ class MixfeedRetriever
   end
 
   def retrieve_feeds
+    # binding.pry
     @feeds = []
     retrieve_fb_feed
     retrieve_tw_feed
@@ -18,6 +19,16 @@ class MixfeedRetriever
 
     @feeds.sort do |a, b|
       parse_date(b) <=> parse_date(a)
+    end
+  end
+
+  def parse_date(share)
+    if share.is_a?(Hashie::Mash)
+      Time.at(share.created_time.to_i).to_datetime
+    elsif share.is_a?(Twitter::Tweet)
+      share.created_at.to_datetime
+    else
+      share["created_time"].to_datetime
     end
   end
 
@@ -38,16 +49,6 @@ class MixfeedRetriever
   def retrieve_ig_feed
     if @user.instagram_account
       @feeds << InstagramFeedRetriever.new(@user.instagram_account, @limit).get_home_feed
-    end
-  end
-
-  def parse_date(share)
-    if share.is_a?(Hashie::Mash)
-      Time.at(share.created_time.to_i).to_datetime
-    elsif share.is_a?(Twitter::Tweet)
-      share.created_at.to_datetime
-    else
-      share["created_time"].to_datetime
     end
   end
 

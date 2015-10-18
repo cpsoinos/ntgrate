@@ -1,0 +1,180 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="88cea18033f31fb854cd279909d6f4c4",
+        oauth_signature="CdnZyrQqqP%2BZv%2FHafSy0N1%2BuIS4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138426", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '524'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:20:26 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:20:26 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513842661958886; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:20:26 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 6435a794b2584990a3b90b7057a6f8ee
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '13'
+      X-Rate-Limit-Reset:
+      - '1445139325'
+      X-Response-Time:
+      - '23'
+      X-Transaction:
+      - c57adfd92d8c690c
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3578893755,"id_str":"3578893755","name":"Corey Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2,"friends_count":13,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:20:26 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/followers/list.json?cursor=-1&user_id=3578893755
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="f173c2e1c69a47efc3345676629afc8e",
+        oauth_signature="8vEjkmvh8ncqJD%2F3rz8eawrFTAM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138426", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1990'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:20:26 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:20:26 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513842689369732; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:20:26 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 271f53b6dc627fc213546a44af51af25
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1445139326'
+      X-Response-Time:
+      - '35'
+      X-Transaction:
+      - 37979f2064542e7d
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"users":[{"id":2833610736,"id_str":"2833610736","name":"Tips, Tricks
+        & Facts","screen_name":"Worldly_Advice","location":"Earth","description":"Tips,
+        Tricks & Facts to get you through the day.  You''ll wonder why you didn''t
+        think of them earlier.","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2786,"friends_count":3021,"listed_count":5,"created_at":"Sat
+        Sep 27 05:54:33 +0000 2014","favourites_count":0,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":22,"lang":"en","status":{"created_at":"Sat
+        Oct 17 03:23:16 +0000 2015","id":655222519532679168,"id_str":"655222519532679168","text":"Teach
+        your dog to shake hands to increase your efficiency in business meetings.
+        http:\/\/t.co\/QWto7w7tG2","source":"\u003ca href=\"http:\/\/twitter.com\/download\/android\"
+        rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":4,"favorite_count":7,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":655222517527777280,"id_str":"655222517527777280","indices":[80,102],"media_url":"http:\/\/pbs.twimg.com\/media\/CRfRaH4UkAAZSNl.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRfRaH4UkAAZSNl.jpg","url":"http:\/\/t.co\/QWto7w7tG2","display_url":"pic.twitter.com\/QWto7w7tG2","expanded_url":"http:\/\/twitter.com\/Worldly_Advice\/status\/655222519532679168\/photo\/1","type":"photo","sizes":{"large":{"w":331,"h":444,"resize":"fit"},"medium":{"w":331,"h":444,"resize":"fit"},"small":{"w":331,"h":444,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/644075802481463296\/gXTUPyud_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/644075802481463296\/gXTUPyud_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/2833610736\/1442394611","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false,"muting":false,"blocking":false,"blocked_by":false},{"id":203680448,"id_str":"203680448","name":"Corey
+        Psoinos","screen_name":"CoreyPsoinos","location":"Cambridge, MA","description":"Ruby
+        on Rails developer, LGBTQ advocate, techie, craft beer and wine lover.\n\nJunior
+        Web Developer @Promoboxx","url":"https:\/\/t.co\/n12fkOU7zy","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/n12fkOU7zy","expanded_url":"https:\/\/www.linkedin.com\/in\/cpsoinos","display_url":"linkedin.com\/in\/cpsoinos","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":358,"friends_count":989,"listed_count":16,"created_at":"Sat
+        Oct 16 21:17:04 +0000 2010","favourites_count":55,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":false,"statuses_count":1607,"lang":"en","status":{"created_at":"Fri
+        Oct 16 12:02:36 +0000 2015","id":654990824112062464,"id_str":"654990824112062464","text":"RT
+        @nextgreencar: Rough calculations show that real-world range of new Leaf 30kWh
+        is well over 130 miles - few EVs can match that http:\/\/t.\u2026","source":"\u003ca
+        href=\"http:\/\/127.0.0.1\" rel=\"nofollow\"\u003entgrate\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Fri
+        Oct 16 12:01:29 +0000 2015","id":654990545245347840,"id_str":"654990545245347840","text":"Rough
+        calculations show that real-world range of new Leaf 30kWh is well over 130
+        miles - few EVs can match that http:\/\/t.co\/etp6Wy4nCj","source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":2,"favorite_count":5,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":654990515545448448,"id_str":"654990515545448448","indices":[112,134],"media_url":"http:\/\/pbs.twimg.com\/media\/CRb-Z1JWIAAsXYF.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRb-Z1JWIAAsXYF.jpg","url":"http:\/\/t.co\/etp6Wy4nCj","display_url":"pic.twitter.com\/etp6Wy4nCj","expanded_url":"http:\/\/twitter.com\/nextgreencar\/status\/654990545245347840\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":255,"resize":"fit"},"medium":{"w":600,"h":450,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":768,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"retweet_count":2,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"nextgreencar","name":"Next
+        Green Car","id":34234489,"id_str":"34234489","indices":[3,16]}],"urls":[],"media":[{"id":654990515545448448,"id_str":"654990515545448448","indices":[139,140],"media_url":"http:\/\/pbs.twimg.com\/media\/CRb-Z1JWIAAsXYF.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CRb-Z1JWIAAsXYF.jpg","url":"http:\/\/t.co\/etp6Wy4nCj","display_url":"pic.twitter.com\/etp6Wy4nCj","expanded_url":"http:\/\/twitter.com\/nextgreencar\/status\/654990545245347840\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":255,"resize":"fit"},"medium":{"w":600,"h":450,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":768,"resize":"fit"}},"source_status_id":654990545245347840,"source_status_id_str":"654990545245347840","source_user_id":34234489,"source_user_id_str":"34234489"}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"000000","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme2\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme2\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/655551350319788032\/7J2GZqfP_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/655551350319788032\/7J2GZqfP_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/203680448\/1421935829","profile_link_color":"9266CC","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"000000","profile_text_color":"000000","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false,"muting":false,"blocking":false,"blocked_by":false}],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:20:26 GMT
+recorded_with: VCR 2.9.3

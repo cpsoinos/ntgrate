@@ -33,10 +33,16 @@ gem 'devise-async'
 gem 'sinatra', require: false
 gem 'remotipart'
 gem 'gon'
-gem 'rails_12factor'
 gem 'lightbox2-rails'
 gem 'instagram'
 gem 'twitter-text', '~> 1.13.0'
+gem 'masonry-rails'
+gem 'rollbar', '~> 2.4.0'
+gem 'sweetalert-rails'
+
+group :staging, :development, :local, :production do
+  gem 'rails_12factor'
+end
 
 group :development, :local, :test do
   gem 'byebug'
@@ -56,7 +62,7 @@ group :test do
   gem 'fuubar'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
-  gem 'poltergeist'
+  gem 'poltergeist', '~> 1.7'
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'email_spec'
@@ -66,4 +72,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'capybara-mechanize'
+  gem 'codeclimate-test-reporter', require: nil
 end

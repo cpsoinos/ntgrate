@@ -1,0 +1,4 @@
+<div class="statistics">
+  <span id="<%= share[:id] %>-like_count"><%= share[:likes] ? share[:likes][:data].count : "0" %></span> <span class="facebook-blue"><%= icon('thumbs-o-up') %></span>
+  <span id="<%= share[:id] %>-comment_count"></span><%= share[:comments] ? share[:comments][:data].count : 0 %> <span class="facebook-blue"><%= icon('comments-o') %></span>
+</div>
