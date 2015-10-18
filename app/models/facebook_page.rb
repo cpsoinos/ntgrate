@@ -13,13 +13,7 @@ class FacebookPage < ActiveRecord::Base
   acts_as_paranoid
 
   def feed
-    @_feed ||= FacebookFeedRetriever.new(self).get_feed
-  end
-
-  private
-
-  def graph
-    Koala::Facebook::API.new(token, ENV["FACEBOOK_APP_SECRET"])
+    @_feed ||= FacebookFeedRetriever.new(self, 5).get_feed
   end
 
 end
