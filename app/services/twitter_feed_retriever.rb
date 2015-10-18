@@ -50,8 +50,4 @@ class TwitterFeedRetriever
     client.status(share_id)
   end
 
-  def tweets
-    client.statuses(twitter_shares.pluck(:share_id))
-  end
-
 end
