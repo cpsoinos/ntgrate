@@ -1,0 +1,1017 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/friendships/destroy.json
+    body:
+      encoding: UTF-8
+      string: screen_name=Apple
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="0c693949b6939189be21b2cf66c95ae6",
+        oauth_signature="2Th4lwon6v78WaYLNWFX9DCok0g%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445136586", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '529'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 02:49:46 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 02:49:46 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513658630863337; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 02:49:46 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - c0bd576e2704e1d45054d3bec1994a1f
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '60'
+      X-Transaction:
+      - d75456e45b813de6
+      X-Tsa-Request-Body-Time:
+      - '8'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":380749300,"id_str":"380749300","name":"@apple","screen_name":"Apple","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":35601,"friends_count":0,"listed_count":215,"created_at":"Tue
+        Sep 27 05:02:03 +0000 2011","favourites_count":0,"utc_offset":-36000,"time_zone":"Hawaii","geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":true,"follow_request_sent":false,"notifications":false,"muting":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 02:49:46 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/users/lookup.json
+    body:
+      encoding: UTF-8
+      string: screen_name=Apple
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="f715c3f1ef7414b4a6aa6b058128753e",
+        oauth_signature="Z0CyV4aPuoc6V8ztbJuJvBB2n5o%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445137058", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '526'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 02:57:38 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 02:57:38 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513705882409586; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 02:57:38 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - e319552182ccf662e4a96dd1213d4e0f
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '171'
+      X-Rate-Limit-Reset:
+      - '1445137209'
+      X-Response-Time:
+      - '20'
+      X-Transaction:
+      - 6a89cef02681a062
+      X-Tsa-Request-Body-Time:
+      - '1'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":380749300,"id_str":"380749300","name":"@apple","screen_name":"Apple","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":35600,"friends_count":0,"listed_count":215,"created_at":"Tue
+        Sep 27 05:02:03 +0000 2011","favourites_count":0,"utc_offset":-36000,"time_zone":"Hawaii","geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}]'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 02:57:38 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="794adfac134e12484d33ac36d67286e4",
+        oauth_signature="iB2TtLJx%2BCNrjK3nRurkVn8Sajc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445137058", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '524'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 02:57:38 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 02:57:38 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513705882447806; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 02:57:38 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 359bfe8c84dc3c7a3b2e0f9ada5ec81e
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '6'
+      X-Rate-Limit-Reset:
+      - '1445137209'
+      X-Response-Time:
+      - '18'
+      X-Transaction:
+      - 31536243d449600f
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3578893755,"id_str":"3578893755","name":"Corey Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2,"friends_count":13,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 02:57:38 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="2cfe054e22bb7f9adb5ab4873f67c0a7",
+        oauth_signature="ZwQY3%2ByZOv%2FeOTYL%2BDpMNpW4V0g%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445137074", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '524'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 02:57:54 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 02:57:54 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513707463637577; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 02:57:54 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 7d294b6919da6b87b254e9fbd04ed97a
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '5'
+      X-Rate-Limit-Reset:
+      - '1445137209'
+      X-Response-Time:
+      - '17'
+      X-Transaction:
+      - 1b29e15ada1c14ac
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3578893755,"id_str":"3578893755","name":"Corey Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2,"friends_count":13,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 02:57:54 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/users/lookup.json
+    body:
+      encoding: UTF-8
+      string: screen_name=Apple
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="adc145b19cad776a71624692953bffc2",
+        oauth_signature="KKPXmD5Xr3CaAGr1GPCMz5SPxRY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445137074", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '526'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 02:57:54 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 02:57:54 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513707463662387; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 02:57:54 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 14a8e31c898057065eb433c6c0b70cb5
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '170'
+      X-Rate-Limit-Reset:
+      - '1445137209'
+      X-Response-Time:
+      - '26'
+      X-Transaction:
+      - 6c29ee4b49863de9
+      X-Tsa-Request-Body-Time:
+      - '1'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":380749300,"id_str":"380749300","name":"@apple","screen_name":"Apple","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":35600,"friends_count":0,"listed_count":215,"created_at":"Tue
+        Sep 27 05:02:03 +0000 2011","favourites_count":0,"utc_offset":-36000,"time_zone":"Hawaii","geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}]'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 02:57:54 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/friends/ids.json?cursor=-1&user_id=3578893755
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="038cf4f104667b5c056b34d4fadabec8",
+        oauth_signature="SyNsSi8ZcBaQJ%2BJ023lK%2B49rLc4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445137074", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '154'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 02:57:54 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 02:57:54 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513707489333356; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 02:57:54 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - eddd3661a7338f8d5ae7381db9154daa
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '6'
+      X-Rate-Limit-Reset:
+      - '1445137210'
+      X-Response-Time:
+      - '13'
+      X-Transaction:
+      - a52e647529061760
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ids":[5402612,2467791,3108351,807095,85452649,352145373,77888423,95023423,20536157,31311757,428333,759251,203680448],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 02:57:54 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="db6052ea4078ce744deae2ee27e63aad",
+        oauth_signature="VzXQNj%2Bla7Ng3VucEAYnqX2IPxo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138372", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '524'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:19:32 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:19:32 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A144513837256070166; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:19:32 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - ebd06394099b8874d7108d270442e191
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1445139272'
+      X-Response-Time:
+      - '20'
+      X-Transaction:
+      - 625b7d5b253030d5
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3578893755,"id_str":"3578893755","name":"Corey Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2,"friends_count":12,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:19:32 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/users/lookup.json
+    body:
+      encoding: UTF-8
+      string: screen_name=Apple
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="4913fde9e7a1f2fadecd10ffa73cec9c",
+        oauth_signature="KHk%2BVbx22rtkZT9Q1NhKt3wiVhA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138372", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '526'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:19:32 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:19:32 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A144513837256891725; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:19:32 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 04a1469ce144828ab6c5f7fb23c8fc0b
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '179'
+      X-Rate-Limit-Reset:
+      - '1445139272'
+      X-Response-Time:
+      - '26'
+      X-Transaction:
+      - 9f0f89819609288d
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":380749300,"id_str":"380749300","name":"@apple","screen_name":"Apple","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":35600,"friends_count":0,"listed_count":215,"created_at":"Tue
+        Sep 27 05:02:03 +0000 2011","favourites_count":0,"utc_offset":-36000,"time_zone":"Hawaii","geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}]'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:19:32 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/friends/ids.json?cursor=-1&user_id=3578893755
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="b556a9835acb3bfdd0237a8b82157d2e",
+        oauth_signature="5qU3Q%2FY%2FhXoJ7yOzjXhQr2FtxRQ%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138372", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '154'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:19:32 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:19:32 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A144513837294101628; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:19:32 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - fa72e11eac4ca8db21d93c12cd83abf7
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1445139272'
+      X-Response-Time:
+      - '18'
+      X-Transaction:
+      - b256df0a99aa49db
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ids":[5402612,2467791,3108351,807095,85452649,352145373,77888423,95023423,20536157,31311757,428333,759251,203680448],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:19:32 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="b1dc79deb753528afd03e5350ff26f19",
+        oauth_signature="brrK5HxRtsbWtqR2JnP6x93PNBc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138424", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '524'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513842501605328; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:20:25 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 3a1cf986982665fd07149d2738ca01d8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1445139325'
+      X-Response-Time:
+      - '18'
+      X-Transaction:
+      - b15478c6c07e6d44
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3578893755,"id_str":"3578893755","name":"Corey Psoinos","screen_name":"corey_test","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2,"friends_count":13,"listed_count":2,"created_at":"Mon
+        Sep 07 17:10:57 +0000 2015","favourites_count":6,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":63,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:20:25 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/users/lookup.json
+    body:
+      encoding: UTF-8
+      string: screen_name=Apple
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="45b5fa7e8548c97b18939c67efae1fca",
+        oauth_signature="K2VPi294yxo9xLiZm1v7SEKEctk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138424", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '527'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513842502005226; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:20:25 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 0a1de08038cbceb1f201af0c30ce4c5a
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '179'
+      X-Rate-Limit-Reset:
+      - '1445139325'
+      X-Response-Time:
+      - '25'
+      X-Transaction:
+      - cd1eadf8960b40d1
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":380749300,"id_str":"380749300","name":"@apple","screen_name":"Apple","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":35601,"friends_count":0,"listed_count":215,"created_at":"Tue
+        Sep 27 05:02:03 +0000 2011","favourites_count":0,"utc_offset":-36000,"time_zone":"Hawaii","geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}]'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:20:25 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/friends/ids.json?cursor=-1&user_id=3578893755
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="0900af297782a3436871f341fbe72b87",
+        oauth_signature="fiU%2B9X1%2FA38Yw7DWy1AfFUt72ec%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138425", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '154'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513842526624762; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:20:25 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - bdd9e55a9c2f4da0673622ca26f26ac0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1445139325'
+      X-Response-Time:
+      - '13'
+      X-Transaction:
+      - c0a5bd517f3e62c3
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ids":[5402612,2467791,3108351,807095,85452649,352145373,77888423,95023423,20536157,31311757,428333,759251,203680448],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:20:25 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/friendships/create.json
+    body:
+      encoding: UTF-8
+      string: user_id=380749300
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_CONSUMER_KEY>", oauth_nonce="c8a88627be234909790732701bdfc99b",
+        oauth_signature="mjyj4dtLUjYm4OzgASQlRKI8eLM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1445138425", oauth_token="3578893755-If0SL1j4UJLuhpuDnuHWMc0rPBoNJVE2YsGWWwp",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '529'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 18 Oct 2015 03:20:25 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A144513842551403462; Domain=.twitter.com; Path=/; Expires=Tue,
+        17-Oct-2017 03:20:25 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 6173a50ba756cf0df0f9ad52d9ef9545
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '127'
+      X-Transaction:
+      - ab8795787f2b9714
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":380749300,"id_str":"380749300","name":"@apple","screen_name":"Apple","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":35601,"friends_count":0,"listed_count":215,"created_at":"Tue
+        Sep 27 05:02:03 +0000 2011","favourites_count":0,"utc_offset":-36000,"time_zone":"Hawaii","geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false,"muting":false}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 03:20:25 GMT
+recorded_with: VCR 2.9.3
