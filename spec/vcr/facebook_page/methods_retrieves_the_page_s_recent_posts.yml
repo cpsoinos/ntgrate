@@ -1,0 +1,453 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBAD2qZBY898PtlQdcYw6oOGIY5nRXi5qi2nJfhPJRhbU8M9NUlOhuFXT1QVu6LOwkO3lPAZA5bPY7S7lQZBnatbyZAiRB3YBVN99xHdn1GjBYKTxpxcCAASbFUnIbK2ChoDWUsiloOfgxEmZBoKl2icanr0M5aOEOHBBCN36Cd&appsecret_proof=454894ea427326d533d6b54ca5155322c953b7942593c4407914c7696b0dac58&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments%7Bfrom,%20created_time,%20message,%20likes%7D,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - BNWesStcWBQ
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"5f4d6bdb81d5e573f7d57a728590e9907a18a2c5"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - UdqTn+17CtIFzLPDYHIQkNb+dc6S263+qPSfGf9rLIemevgMMy9wjwKDrEEI98O8KQm0vrpwNhI8XSLnaHYvfQ==
+      Date:
+      - Sun, 18 Oct 2015 15:35:32 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '812'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"test post 10","id":"118369055187956_118383685186493","from":{"name":"Test
+        Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:44+0000","updated_time":"2015-10-18T15:27:44+0000"},{"message":"test
+        post 9","id":"118369055187956_118383518519843","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:39+0000","updated_time":"2015-10-18T15:27:39+0000"},{"message":"test
+        post 8","id":"118369055187956_118383441853184","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:34+0000","updated_time":"2015-10-18T15:27:34+0000"},{"message":"test
+        post 7","id":"118369055187956_118383425186519","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:30+0000","updated_time":"2015-10-18T15:27:30+0000"},{"message":"test
+        post 6","id":"118369055187956_118383398519855","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:25+0000","updated_time":"2015-10-18T15:27:25+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&since=1445182064&access_token=CAABZCqcXkxuUBAD2qZBY898PtlQdcYw6oOGIY5nRXi5qi2nJfhPJRhbU8M9NUlOhuFXT1QVu6LOwkO3lPAZA5bPY7S7lQZBnatbyZAiRB3YBVN99xHdn1GjBYKTxpxcCAASbFUnIbK2ChoDWUsiloOfgxEmZBoKl2icanr0M5aOEOHBBCN36Cd&__paging_token=enc_AdDF5y3j7pZChYz1dNLwKxPGWjibTjkNwfuZAxkxJtEreFEMqHWp0OZBxwZCzQIznrcvZCdf7FjfUBeWu2Hn9TPBv0Vh6fLBQQ0jmdt7ZBb0DPzRFtDQZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&access_token=CAABZCqcXkxuUBAD2qZBY898PtlQdcYw6oOGIY5nRXi5qi2nJfhPJRhbU8M9NUlOhuFXT1QVu6LOwkO3lPAZA5bPY7S7lQZBnatbyZAiRB3YBVN99xHdn1GjBYKTxpxcCAASbFUnIbK2ChoDWUsiloOfgxEmZBoKl2icanr0M5aOEOHBBCN36Cd&until=1445182045&__paging_token=enc_AdAoy6xtWDseVVKXSNQzWdYpgcYejnqnXVM13LPauArfbCCpGothIruP8RQlT5pUW0OQZBhh2lTZApTgUPpxGApT3wfukMZC5W4xR0fbXONVeH6bQZDZD"}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:35:32 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBAL0wF7Pi7h63QZB0Jlfn7LxQVL7XgtEFqQwWEWHFEqtVwwFcHDen1Y4BnfmIHSdsfyRTkRkhdiPFTerlUyZAigOP9euwfaCuqd1ZABm6j6i0cIDtJhoqOUswnwaFdD7EgPIC3RJCmSAZBZBexUwZCO7ThJuFcj66Jb5ogwMp5v&appsecret_proof=3eacb0fcae01360a2c7ea96a30c1bcb65ff0179aac7a2ef1bc8c0e5da8aad077&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments%7Bfrom,%20created_time,%20message,%20likes%7D,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - HZv46SjT9wd
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"ecbdb1569a56ca58b924ff970db87c6fa6dca908"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - l0sE4U3+M+SA4SdnSK+cJy57dEhkGJtS6Q+HbX7giGVrDCJUb63IBL13XY9pTlDVal6lwkf55llSuZHru4NMwA==
+      Date:
+      - Sun, 18 Oct 2015 15:36:12 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '812'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"test post 10","id":"118369055187956_118383685186493","from":{"name":"Test
+        Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:44+0000","updated_time":"2015-10-18T15:27:44+0000"},{"message":"test
+        post 9","id":"118369055187956_118383518519843","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:39+0000","updated_time":"2015-10-18T15:27:39+0000"},{"message":"test
+        post 8","id":"118369055187956_118383441853184","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:34+0000","updated_time":"2015-10-18T15:27:34+0000"},{"message":"test
+        post 7","id":"118369055187956_118383425186519","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:30+0000","updated_time":"2015-10-18T15:27:30+0000"},{"message":"test
+        post 6","id":"118369055187956_118383398519855","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:25+0000","updated_time":"2015-10-18T15:27:25+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&since=1445182064&access_token=CAABZCqcXkxuUBAL0wF7Pi7h63QZB0Jlfn7LxQVL7XgtEFqQwWEWHFEqtVwwFcHDen1Y4BnfmIHSdsfyRTkRkhdiPFTerlUyZAigOP9euwfaCuqd1ZABm6j6i0cIDtJhoqOUswnwaFdD7EgPIC3RJCmSAZBZBexUwZCO7ThJuFcj66Jb5ogwMp5v&__paging_token=enc_AdDF5y3j7pZChYz1dNLwKxPGWjibTjkNwfuZAxkxJtEreFEMqHWp0OZBxwZCzQIznrcvZCdf7FjfUBeWu2Hn9TPBv0Vh6fLBQQ0jmdt7ZBb0DPzRFtDQZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&access_token=CAABZCqcXkxuUBAL0wF7Pi7h63QZB0Jlfn7LxQVL7XgtEFqQwWEWHFEqtVwwFcHDen1Y4BnfmIHSdsfyRTkRkhdiPFTerlUyZAigOP9euwfaCuqd1ZABm6j6i0cIDtJhoqOUswnwaFdD7EgPIC3RJCmSAZBZBexUwZCO7ThJuFcj66Jb5ogwMp5v&until=1445182045&__paging_token=enc_AdAoy6xtWDseVVKXSNQzWdYpgcYejnqnXVM13LPauArfbCCpGothIruP8RQlT5pUW0OQZBhh2lTZApTgUPpxGApT3wfukMZC5W4xR0fbXONVeH6bQZDZD"}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:36:12 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBANoMuv8J0uQIl5VQFMEEXkBZBZCHe64h1Vj0uaCjyTiAW7yUPQ71VltdBJoMzUiNFGgfWzYTjuuYCqNBh6dfqbqDucK7Yq4Ek1D3LLnZAR1kjb935V2pGcAVzcRBVNHaZAyZCYm4V3rloL9BCIVDKbdgAsd7ShBgaZAXtSGJNiJCoj4hp2gtwZD&appsecret_proof=a7608949d2c52935d2a0731f14b3b15b0efa86356d2e0e6b175387193cff4c37
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - DKmJ9PdARSo
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"a78afe0ba2bf37892c56cb8974f8f4fa463cf55d"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - FIX/ZvC6NU60SPHqUFg1H88s+q4rO990i1Me/BTAT2N2zJxnzd+xWgPecCh5VYx3oT5/M775KwKkvO2mJDWdJA==
+      Date:
+      - Sun, 18 Oct 2015 15:37:03 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '544'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAF7tkfrHHPkhZC3stY16oCdR55SEu6lxOmZCp0J7KZAJZA4JeDqGuvdG5rKq7LkALCAf5UhU0qkqUgWBX2JO70VUEy6bBPpGcpc3KYfTaX6upqDuF4NACNSoXAgDJZBg4GzTLu8mmtXHvY9ZAtBnHP4ao8nzO7UoargexFTwYymD4Xn11dEIMZD","category":"Shopping\/Retail","category_list":[{"id":"2521","name":"Shopping\/Retail"}],"name":"Test
+        Shop","id":"118369055187956","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"MTE4MzY5MDU1MTg3OTU2","after":"MTE4MzY5MDU1MTg3OTU2"}}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:37:03 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/118369055187956/picture?access_token=CAABZCqcXkxuUBANoMuv8J0uQIl5VQFMEEXkBZBZCHe64h1Vj0uaCjyTiAW7yUPQ71VltdBJoMzUiNFGgfWzYTjuuYCqNBh6dfqbqDucK7Yq4Ek1D3LLnZAR1kjb935V2pGcAVzcRBVNHaZAyZCYm4V3rloL9BCIVDKbdgAsd7ShBgaZAXtSGJNiJCoj4hp2gtwZD&appsecret_proof=a7608949d2c52935d2a0731f14b3b15b0efa86356d2e0e6b175387193cff4c37
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - image/jpeg
+      X-Fb-Trace-Id:
+      - Eulk+dOX+y+
+      X-Fb-Rev:
+      - '1994858'
+      Pragma:
+      - no-cache
+      Location:
+      - https://fbcdn-profile-a.akamaihd.net/static-ak/rsrc.php/v2/y5/r/j258ei8TIHu.png
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - gDoAtYhZFch2TN/c/LxbPy2kD6btP2OUcrzKt/eDQjxwqNbV0SjU4NlEQ7SMpXSCVFHToa8D96BTUnDhdie9Dg==
+      Date:
+      - Sun, 18 Oct 2015 15:37:04 GMT
+      X-Cache-Ts:
+      - '1445182624'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:37:04 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBAF7tkfrHHPkhZC3stY16oCdR55SEu6lxOmZCp0J7KZAJZA4JeDqGuvdG5rKq7LkALCAf5UhU0qkqUgWBX2JO70VUEy6bBPpGcpc3KYfTaX6upqDuF4NACNSoXAgDJZBg4GzTLu8mmtXHvY9ZAtBnHP4ao8nzO7UoargexFTwYymD4Xn11dEIMZD&appsecret_proof=2c10c3982768892b016b5319f9f760ecc08bba4633927c72f17cbced307687b2&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments%7Bfrom,%20created_time,%20message,%20likes%7D,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - A5825AkRT0G
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"81c433ae83753860f96446ba2d3f1e24b5e1e4ec"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - XZFskIa5IeuHxjzJEx805Zp1Dqtx0aoaYZYV4FdLWGNAWp6It6X8wizNqZavtP0uU8MBf/6eINdulwEg4R0h+w==
+      Date:
+      - Sun, 18 Oct 2015 15:37:04 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '822'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"test post 10","id":"118369055187956_118383685186493","from":{"name":"Test
+        Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:44+0000","updated_time":"2015-10-18T15:27:44+0000"},{"message":"test
+        post 9","id":"118369055187956_118383518519843","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:39+0000","updated_time":"2015-10-18T15:27:39+0000"},{"message":"test
+        post 8","id":"118369055187956_118383441853184","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:34+0000","updated_time":"2015-10-18T15:27:34+0000"},{"message":"test
+        post 7","id":"118369055187956_118383425186519","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:30+0000","updated_time":"2015-10-18T15:27:30+0000"},{"message":"test
+        post 6","id":"118369055187956_118383398519855","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:25+0000","updated_time":"2015-10-18T15:27:25+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&since=1445182064&access_token=CAABZCqcXkxuUBAF7tkfrHHPkhZC3stY16oCdR55SEu6lxOmZCp0J7KZAJZA4JeDqGuvdG5rKq7LkALCAf5UhU0qkqUgWBX2JO70VUEy6bBPpGcpc3KYfTaX6upqDuF4NACNSoXAgDJZBg4GzTLu8mmtXHvY9ZAtBnHP4ao8nzO7UoargexFTwYymD4Xn11dEIMZD&__paging_token=enc_AdDF5y3j7pZChYz1dNLwKxPGWjibTjkNwfuZAxkxJtEreFEMqHWp0OZBxwZCzQIznrcvZCdf7FjfUBeWu2Hn9TPBv0Vh6fLBQQ0jmdt7ZBb0DPzRFtDQZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&access_token=CAABZCqcXkxuUBAF7tkfrHHPkhZC3stY16oCdR55SEu6lxOmZCp0J7KZAJZA4JeDqGuvdG5rKq7LkALCAf5UhU0qkqUgWBX2JO70VUEy6bBPpGcpc3KYfTaX6upqDuF4NACNSoXAgDJZBg4GzTLu8mmtXHvY9ZAtBnHP4ao8nzO7UoargexFTwYymD4Xn11dEIMZD&until=1445182045&__paging_token=enc_AdAoy6xtWDseVVKXSNQzWdYpgcYejnqnXVM13LPauArfbCCpGothIruP8RQlT5pUW0OQZBhh2lTZApTgUPpxGApT3wfukMZC5W4xR0fbXONVeH6bQZDZD"}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:37:04 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAABZCqcXkxuUBANoMuv8J0uQIl5VQFMEEXkBZBZCHe64h1Vj0uaCjyTiAW7yUPQ71VltdBJoMzUiNFGgfWzYTjuuYCqNBh6dfqbqDucK7Yq4Ek1D3LLnZAR1kjb935V2pGcAVzcRBVNHaZAyZCYm4V3rloL9BCIVDKbdgAsd7ShBgaZAXtSGJNiJCoj4hp2gtwZD&appsecret_proof=a7608949d2c52935d2a0731f14b3b15b0efa86356d2e0e6b175387193cff4c37
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - HGkh1M3pdWR
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"4e9ecffd64e44164b3a168ca0835d2db59019b8a"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - oOOAwU1ibLDhR3MHnopdDaYJONPXZHyDzvDI9d8nUq6yzy0z3F1qygLnADlaemmuFEb4MCnaQHA4waBdYu/7ng==
+      Date:
+      - Sun, 18 Oct 2015 15:38:28 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '532'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"access_token":"CAABZCqcXkxuUBAH13hitFbdGg6TPZBv2PTTrNASGe0kr5F19rgZCVPnxU33XHCiHwodPoot9lnKVBj7oXplQCTa3PQVHNpVrYJ2IFk5OEZBPcGkiDznGV2XO3z39VoZCJh0y3mFsWmEc33LZAQ7avSC1V2YGl25OeZCx9P4e1xFFZCKwug89dgRD","category":"Shopping\/Retail","category_list":[{"id":"2521","name":"Shopping\/Retail"}],"name":"Test
+        Shop","id":"118369055187956","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"MTE4MzY5MDU1MTg3OTU2","after":"MTE4MzY5MDU1MTg3OTU2"}}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:38:28 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/118369055187956/picture?access_token=CAABZCqcXkxuUBANoMuv8J0uQIl5VQFMEEXkBZBZCHe64h1Vj0uaCjyTiAW7yUPQ71VltdBJoMzUiNFGgfWzYTjuuYCqNBh6dfqbqDucK7Yq4Ek1D3LLnZAR1kjb935V2pGcAVzcRBVNHaZAyZCYm4V3rloL9BCIVDKbdgAsd7ShBgaZAXtSGJNiJCoj4hp2gtwZD&appsecret_proof=a7608949d2c52935d2a0731f14b3b15b0efa86356d2e0e6b175387193cff4c37
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - image/jpeg
+      X-Fb-Trace-Id:
+      - F24GMemkyTB
+      X-Fb-Rev:
+      - '1994858'
+      Pragma:
+      - no-cache
+      Location:
+      - https://fbcdn-profile-a.akamaihd.net/static-ak/rsrc.php/v2/y5/r/j258ei8TIHu.png
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      X-Fb-Debug:
+      - Fp/2/quAIcbXz1+y+PmqxLlkqSvqqvyOzs35Uk3UlPA7t3N1LFpwrVg5UQiulq9xJWxmfFIuEu0HGBUjpKC3Rw==
+      Date:
+      - Sun, 18 Oct 2015 15:38:28 GMT
+      X-Cache-Ts:
+      - '1445182708'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:38:28 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/feed?access_token=CAABZCqcXkxuUBAH13hitFbdGg6TPZBv2PTTrNASGe0kr5F19rgZCVPnxU33XHCiHwodPoot9lnKVBj7oXplQCTa3PQVHNpVrYJ2IFk5OEZBPcGkiDznGV2XO3z39VoZCJh0y3mFsWmEc33LZAQ7avSC1V2YGl25OeZCx9P4e1xFFZCKwug89dgRD&appsecret_proof=ebf4a849b38bb15f98457536593b00d1eca8c6ff7e5ce686c920dd59d712e6da&fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments%7Bfrom,%20created_time,%20message,%20likes%7D,attachments%7Bmedia,%20title,%20type,%20url%7D&limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - FMFUNisgCq7
+      X-Fb-Rev:
+      - '1994858'
+      Etag:
+      - '"3b19417fd0eb77a279c818509c17bae42228ef19"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Stats-Contexts:
+      - ": V3"
+      - ": api"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - pYOHP4eGMAGXPtFdii2vtLPg77z32gbuC8fE+W4lEGoCBGX3Z8BAZNjs8bLZVtRIvqxbc+xFgFMvIEXz+INeNA==
+      Date:
+      - Sun, 18 Oct 2015 15:38:28 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '811'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"message":"test post 10","id":"118369055187956_118383685186493","from":{"name":"Test
+        Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:44+0000","updated_time":"2015-10-18T15:27:44+0000"},{"message":"test
+        post 9","id":"118369055187956_118383518519843","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:39+0000","updated_time":"2015-10-18T15:27:39+0000"},{"message":"test
+        post 8","id":"118369055187956_118383441853184","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:34+0000","updated_time":"2015-10-18T15:27:34+0000"},{"message":"test
+        post 7","id":"118369055187956_118383425186519","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:30+0000","updated_time":"2015-10-18T15:27:30+0000"},{"message":"test
+        post 6","id":"118369055187956_118383398519855","from":{"name":"Test Shop","id":"118369055187956"},"type":"status","created_time":"2015-10-18T15:27:25+0000","updated_time":"2015-10-18T15:27:25+0000"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&since=1445182064&access_token=CAABZCqcXkxuUBAH13hitFbdGg6TPZBv2PTTrNASGe0kr5F19rgZCVPnxU33XHCiHwodPoot9lnKVBj7oXplQCTa3PQVHNpVrYJ2IFk5OEZBPcGkiDznGV2XO3z39VoZCJh0y3mFsWmEc33LZAQ7avSC1V2YGl25OeZCx9P4e1xFFZCKwug89dgRD&__paging_token=enc_AdDF5y3j7pZChYz1dNLwKxPGWjibTjkNwfuZAxkxJtEreFEMqHWp0OZBxwZCzQIznrcvZCdf7FjfUBeWu2Hn9TPBv0Vh6fLBQQ0jmdt7ZBb0DPzRFtDQZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.4\/118369055187956\/feed?fields=message,id,from,type,full_picture,link,created_time,updated_time,likes,comments\u00257Bfrom,created_time,message,likes\u00257D,attachments\u00257Bmedia,title,type,url\u00257D&limit=5&access_token=CAABZCqcXkxuUBAH13hitFbdGg6TPZBv2PTTrNASGe0kr5F19rgZCVPnxU33XHCiHwodPoot9lnKVBj7oXplQCTa3PQVHNpVrYJ2IFk5OEZBPcGkiDznGV2XO3z39VoZCJh0y3mFsWmEc33LZAQ7avSC1V2YGl25OeZCx9P4e1xFFZCKwug89dgRD&until=1445182045&__paging_token=enc_AdAoy6xtWDseVVKXSNQzWdYpgcYejnqnXVM13LPauArfbCCpGothIruP8RQlT5pUW0OQZBhh2lTZApTgUPpxGApT3wfukMZC5W4xR0fbXONVeH6bQZDZD"}}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:38:28 GMT
+recorded_with: VCR 2.9.3

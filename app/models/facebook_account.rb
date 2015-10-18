@@ -29,15 +29,6 @@ class FacebookAccount < ActiveRecord::Base
     end
   end
 
-  def feed
-    respond_to do |format|
-      format.js do
-        @facebook_account = FacebookAccount.find(params[:account_id].to_i)
-        @feed = FacebookFeedRetriever.new(@facebook_account, params[:limit]).get_feed
-      end
-    end
-  end
-
   private
 
   def graph

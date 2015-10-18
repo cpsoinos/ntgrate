@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/self/media/recent.json?access_token=2240370469.92f033e.64737687d75245e1945ac9c4c5b097e5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="2240370469.92f033e.64737687d75245e1945ac9c4c5b097e5"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4996'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sun, 18 Oct 2015 15:46:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=4001bb9064e271fbd7a55ef6cb0167c6; expires=Sun, 16-Oct-2016 15:46:23
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '526'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"pagination":{},"meta":{"code":200},"data":[{"attribution":null,"tags":[],"type":"image","location":null,"comments":{"count":0,"data":[]},"filter":"Normal","created_time":"1445127471","link":"https:\/\/instagram.com\/p\/89WJVzh1lY\/","likes":{"count":0,"data":[]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s320x320\/e35\/12093667_122074721482828_1842136844_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s150x150\/e35\/12093667_122074721482828_1842136844_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s640x640\/sh0.08\/e35\/12093667_122074721482828_1842136844_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1445127471","text":"Test
+        test","from":{"username":"testacctntgrate","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12081198_415612321971519_1327520224_a.jpg","id":"2240370469","full_name":"Test
+        Name"},"id":"1098131286079789624"},"user_has_liked":false,"id":"1098131283059890520_2240370469","user":{"username":"testacctntgrate","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12081198_415612321971519_1327520224_a.jpg","id":"2240370469","full_name":"Test
+        Name"}}]}'
+    http_version: 
+  recorded_at: Sun, 18 Oct 2015 15:46:23 GMT
+recorded_with: VCR 2.9.3

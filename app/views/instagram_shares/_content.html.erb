@@ -3,8 +3,10 @@
 </div>
 <div class="message">
   <p>
-    <% instagram.caption.try(:text).gsub!(/\B#\w+/) { |tag| link_to("#{tag}", "http://instagram.com/explore/tags/#{tag.gsub(/#/, '')}") } %>
-    <% instagram.caption.try(:text).gsub!(/\B@\w+/) { |tag| link_to("#{tag}", "http://instagram.com/#{tag.gsub(/@/, '')}") } %>
-    <%= instagram.caption.try(:text).html_safe %>
+    <% if instagram.caption %>
+      <% instagram.caption.try(:text).gsub!(/\B#\w+/) { |tag| link_to("#{tag}", "http://instagram.com/explore/tags/#{tag.gsub(/#/, '')}") } %>
+      <% instagram.caption.try(:text).gsub!(/\B@\w+/) { |tag| link_to("#{tag}", "http://instagram.com/#{tag.gsub(/@/, '')}") } %>
+      <%= instagram.caption.try(:text).html_safe %>
+    <% end %>
   </p>
 </div>
